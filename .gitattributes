@@ -1,0 +1,14 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.java text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.c text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Machine-generated research evidence, retained for browsing and comparison.
+analysis/** linguist-generated=true -whitespace
+decompiled/** linguist-generated=true -whitespace
+resources/** linguist-generated=true -whitespace

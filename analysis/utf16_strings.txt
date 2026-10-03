@@ -1,0 +1,319 @@
+Fjjh
+jjjj
+Fjjh
+jjjj
+Fjjh
+jjjj
+Fjjjj
+Fjjh
+jjjj
+jjjj
+jjjjj
+BEdit
+%I64u
+ToolbarWindow32
+msctls_statusbar32
+f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winctrl2.cpp
+AfxWnd90su
+AfxControlBar90su
+AfxMDIFrame90su
+AfxFrameOrView90su
+AfxOleControl90su
+AfxOldWndProc423
+USER32
+YaccParent
+accChildCount
+accChild
+accName
+accValue
+accDescription
+accRole
+accState
+accHelp
+accHelpTopic
+accKeyboardShortcut
+accFocus
+accSelection
+accDefaultAction
+accSelect
+accLocation
+accNavigate
+accHitTest
+accDoDefaultAction
+#32768
+f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl
+Afx:%p:%x:%p:%p:%p
+Afx:%p:%x
+commctrl_DragListMsg
+BReBarWindow32
+AInProcServer32
+f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\filecore.cpp
+{%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}
+B*.*
+STATIC
+BLISTBOX
+CCOMBOBOX
+Bf:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp
+pRecent File List
+File%d
+Settings
+PreviewPages
+KERNEL32
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+NoRun
+NoDrives
+RestrictRun
+NoNetConnectDisconnect
+NoRecentDocsHistory
+NoClose
+Software\Microsoft\Windows\CurrentVersion\Policies\Network
+NoEntireNetwork
+Software\Microsoft\Windows\CurrentVersion\Policies\Comdlg32
+NoPlacesBar
+NoBackButton
+NoFileMru
+ntdll.dll
+kernel32.dll
+%s%s.dll
+f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appcore.cpp
+RichEdit Text and Objects
+Rich Text Format
+FileNameW
+FileName
+Link Source Descriptor
+Object Descriptor
+Link Source
+Embed Source
+Embedded Object
+ObjectLink
+OwnerLink
+Native
+Bsoftware
+CSoftware\Classes\
+Software\
+BMFC
+f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\viewcore.cpp
+Ccomctl32.dll
+Ccomdlg32.dll
+Cshell32.dll
+mfcm90u.dll
+f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\auxdata.cpp
+Ccombobox
+System
+.INI
+.HLP
+.CHM
+user32.dll
+REBAR
+\...
+C&%d 
+1&0 
+r%s\shell\open\%s
+%s\shell\print\%s
+%s\shell\printto\%s
+%s\DefaultIcon
+%s\ShellNew
+command
+ "%1"
+ /p "%1"
+ /pt "%1" "%2" "%3" "%4"
+ /dde
+ddeexec
+[open("%1")]
+[print("%1")]
+[printto("%1","%2","%3","%4")]
+NullFile
+[printto("
+[print("
+[open("
+%2\CLSID
+%2\Insertable
+%2\protocol\StdFileEditing\verb\0
+&Edit
+%2\protocol\StdFileEditing\server
+CLSID\%1
+CLSID\%1\ProgID
+CLSID\%1\InprocHandler32
+ole32.dll
+CLSID\%1\LocalServer32
+CLSID\%1\Verb\0
+&Edit,0,2
+CLSID\%1\Verb\1
+&Open,0,2
+CLSID\%1\Insertable
+CLSID\%1\AuxUserType\2
+CLSID\%1\AuxUserType\3
+CLSID\%1\DefaultIcon
+%3,%7
+CLSID\%1\MiscStatus
+CLSID\%1\InProcServer32
+CLSID\%1\DocObject
+%2\DocObject
+CLSID\%1\Printable
+CLSID\%1\DefaultExtension
+%9, %8
+@UxTheme.dll
+Dtooltips_class32
+eShell32.dll
+commdlg_SetRGBColor
+commdlg_help
+commdlg_ColorOK
+commdlg_FileNameOK
+commdlg_ShareViolation
+commdlg_LBSelChangedNotify
+mscoree.dll
+KERNEL32.DLL
+(null)
+         (((((                  H
+         h((((                  H
+                                 H
+2000
+MAZO
+.psi
+*.psi
+\pic\
+\cg%05d.jpg
+\pic\
+\cg%05d.jpg
+\pic\
+\cg%05d.jpg
+\pic\
+\cg%05d.jpg
+\pic\
+:%d/%d
+*.jpg
+JAWS
+POWER
+WALKER
+BSYSTEM40.EXE
+SYS42VM.DLL
+\pic\
+\cg55322.jpg
+NewPerson.psa
+ModPerson.psa
+\*.psi
+\NewPerson.psa
+BD:\Microsoft Visual Studio 9.0\VC\atlmfc\include\afxwin1.inl
+Exception thrown in destructor
+%s (%s:%d)
+%s (%s:%d)
+BSysListView32
+DOWN1
+DOWN2
+ATTACK
+FANS
+Delete
+NoRemove
+ForceRemove
+CLSID
+G G<G
+hG<G
+[EoE
+Apartment
+Both
+Free
+(&F)
+(&X)
+(&E)
+(&A)
+(&L)
+900000
+(&N)
+(&V)
+(&S)
+(&H)
+ Rance7Editor(&A)...
+ Rance7Editor
+MS Shell Dlg
+Rance7Editor, Version 1.07
+Created by Snowrabbit2000
+MS Shell Dlg
+MS Shell Dlg
+MS Shell Dlg
+MS Shell Dlg
+MS Shell Dlg
+MS Shell Dlg
+MS Shell Dlg
+(1-100)
+MS Shell Dlg
+(0-24)
+MS Shell Dlg
+MS Shell Dlg
+MS Shell Dlg
+Ef--
+MS Shell Dlg
+>;--
+u;--
+>p--
+up--
+MS Shell Dlg
+(&N) 
+(&H)
+MS Shell Dlg
+OLE 
+ OLE 
+_Rance7Editor
+Rance7Editor
+Rance7Editor.Document
+Rance7Editor.Document
+900000
+...	
+25%	
+50%	
+Rance7Editor
+SCRL
+(*.*)
+(&H)
+ %1 
+ INI 
+ INI 
+ %s (
+ %s 
+ %s 
+ %1 
+ %2 
+ %1 
+ %2 
+ %1 
+ 255 
+ GUID
+ %1 
+ %1 
+ %1 
+ %1 
+%1: %2
+: %1
+ DLL 
+ %1 
+ %1 
+ %1 
+ %1 
+ %1 
+ I/O 
+ %1 
+ %1 
+ %1 
+ %1 
+ %1 
+ %1 
+ %1 
+ %1 
+VS_VERSION_INFO
+StringFileInfo
+080403a8
+CompanyName
+by snowrabbit2000
+FileDescription
+FileVersion
+1.0.7.0
+InternalName
+Rance7Editor.exe
+LegalCopyright
+by snowrabbit2000
+OriginalFilename
+Rance7Editor.exe
+ProductName
+ProductVersion
+1.0.7.0
+VarFileInfo
+Translation
