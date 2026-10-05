@@ -1,319 +1,818 @@
-Fjjh
-jjjj
-Fjjh
-jjjj
-Fjjh
-jjjj
-Fjjjj
-Fjjh
-jjjj
-jjjj
-jjjjj
-BEdit
-%I64u
-ToolbarWindow32
-msctls_statusbar32
-f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winctrl2.cpp
-AfxWnd90su
-AfxControlBar90su
-AfxMDIFrame90su
-AfxFrameOrView90su
-AfxOleControl90su
-AfxOldWndProc423
-USER32
-YaccParent
-accChildCount
-accChild
-accName
-accValue
-accDescription
-accRole
-accState
-accHelp
-accHelpTopic
-accKeyboardShortcut
-accFocus
-accSelection
-accDefaultAction
-accSelect
-accLocation
-accNavigate
-accHitTest
-accDoDefaultAction
-#32768
-f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl
-Afx:%p:%x:%p:%p:%p
-Afx:%p:%x
-commctrl_DragListMsg
-BReBarWindow32
-AInProcServer32
-f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\filecore.cpp
-{%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}
-B*.*
-STATIC
-BLISTBOX
-CCOMBOBOX
-Bf:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp
-pRecent File List
-File%d
-Settings
-PreviewPages
-KERNEL32
-Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
-NoRun
-NoDrives
-RestrictRun
-NoNetConnectDisconnect
-NoRecentDocsHistory
-NoClose
-Software\Microsoft\Windows\CurrentVersion\Policies\Network
-NoEntireNetwork
-Software\Microsoft\Windows\CurrentVersion\Policies\Comdlg32
-NoPlacesBar
-NoBackButton
-NoFileMru
-ntdll.dll
-kernel32.dll
-%s%s.dll
-f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appcore.cpp
-RichEdit Text and Objects
-Rich Text Format
-FileNameW
-FileName
-Link Source Descriptor
-Object Descriptor
-Link Source
-Embed Source
-Embedded Object
-ObjectLink
-OwnerLink
-Native
-Bsoftware
-CSoftware\Classes\
-Software\
-BMFC
-f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\viewcore.cpp
-Ccomctl32.dll
-Ccomdlg32.dll
-Cshell32.dll
-mfcm90u.dll
-f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\auxdata.cpp
-Ccombobox
-System
-.INI
-.HLP
-.CHM
-user32.dll
-REBAR
-\...
-C&%d 
-1&0 
-r%s\shell\open\%s
-%s\shell\print\%s
-%s\shell\printto\%s
-%s\DefaultIcon
-%s\ShellNew
-command
- "%1"
- /p "%1"
- /pt "%1" "%2" "%3" "%4"
- /dde
-ddeexec
-[open("%1")]
-[print("%1")]
-[printto("%1","%2","%3","%4")]
-NullFile
-[printto("
-[print("
-[open("
-%2\CLSID
-%2\Insertable
-%2\protocol\StdFileEditing\verb\0
-&Edit
-%2\protocol\StdFileEditing\server
-CLSID\%1
-CLSID\%1\ProgID
-CLSID\%1\InprocHandler32
-ole32.dll
-CLSID\%1\LocalServer32
-CLSID\%1\Verb\0
-&Edit,0,2
-CLSID\%1\Verb\1
-&Open,0,2
-CLSID\%1\Insertable
-CLSID\%1\AuxUserType\2
-CLSID\%1\AuxUserType\3
-CLSID\%1\DefaultIcon
-%3,%7
-CLSID\%1\MiscStatus
-CLSID\%1\InProcServer32
-CLSID\%1\DocObject
-%2\DocObject
-CLSID\%1\Printable
-CLSID\%1\DefaultExtension
-%9, %8
-@UxTheme.dll
-Dtooltips_class32
-eShell32.dll
-commdlg_SetRGBColor
-commdlg_help
-commdlg_ColorOK
-commdlg_FileNameOK
-commdlg_ShareViolation
-commdlg_LBSelChangedNotify
-mscoree.dll
-KERNEL32.DLL
-(null)
-         (((((                  H
-         h((((                  H
-                                 H
-2000
-MAZO
-.psi
-*.psi
-\pic\
-\cg%05d.jpg
-\pic\
-\cg%05d.jpg
-\pic\
-\cg%05d.jpg
-\pic\
-\cg%05d.jpg
-\pic\
-:%d/%d
-*.jpg
-JAWS
-POWER
-WALKER
-BSYSTEM40.EXE
-SYS42VM.DLL
-\pic\
-\cg55322.jpg
-NewPerson.psa
-ModPerson.psa
-\*.psi
-\NewPerson.psa
-BD:\Microsoft Visual Studio 9.0\VC\atlmfc\include\afxwin1.inl
-Exception thrown in destructor
-%s (%s:%d)
-%s (%s:%d)
-BSysListView32
-DOWN1
-DOWN2
-ATTACK
-FANS
-Delete
-NoRemove
-ForceRemove
-CLSID
-G G<G
-hG<G
-[EoE
-Apartment
-Both
-Free
-(&F)
-(&X)
-(&E)
-(&A)
-(&L)
-900000
-(&N)
-(&V)
-(&S)
-(&H)
- Rance7Editor(&A)...
- Rance7Editor
-MS Shell Dlg
-Rance7Editor, Version 1.07
-Created by Snowrabbit2000
-MS Shell Dlg
-MS Shell Dlg
-MS Shell Dlg
-MS Shell Dlg
-MS Shell Dlg
-MS Shell Dlg
-MS Shell Dlg
-(1-100)
-MS Shell Dlg
-(0-24)
-MS Shell Dlg
-MS Shell Dlg
-MS Shell Dlg
-Ef--
-MS Shell Dlg
->;--
-u;--
->p--
-up--
-MS Shell Dlg
-(&N) 
-(&H)
-MS Shell Dlg
-OLE 
- OLE 
-_Rance7Editor
-Rance7Editor
-Rance7Editor.Document
-Rance7Editor.Document
-900000
-...	
-25%	
-50%	
-Rance7Editor
-SCRL
-(*.*)
-(&H)
- %1 
- INI 
- INI 
- %s (
- %s 
- %s 
- %1 
- %2 
- %1 
- %2 
- %1 
- 255 
- GUID
- %1 
- %1 
- %1 
- %1 
-%1: %2
-: %1
- DLL 
- %1 
- %1 
- %1 
- %1 
- %1 
- I/O 
- %1 
- %1 
- %1 
- %1 
- %1 
- %1 
- %1 
- %1 
-VS_VERSION_INFO
-StringFileInfo
-080403a8
-CompanyName
-by snowrabbit2000
-FileDescription
-FileVersion
-1.0.7.0
-InternalName
-Rance7Editor.exe
-LegalCopyright
-by snowrabbit2000
-OriginalFilename
-Rance7Editor.exe
-ProductName
-ProductVersion
-1.0.7.0
-VarFileInfo
-Translation
+UTF-16LE string candidates; addresses are preferred-image VAs.
+0x004617DE A殘B佃敬硅散瑰潩n
+0x00461838 捸灥楴湯
+0x00461852 捸灥楴湯
+0x00461864 捸灥楴湯
+0x00461878 捸灥楴湯
+0x00461886 捸灥楴湯
+0x00461B16 BEdit
+0x00461BF8 %I64u
+0x00461C06 慭敧楌瑳
+0x00461C34 ToolbarWindow32
+0x00461C54 msctls_statusbar32
+0x00461CA2 獩彴敄瑳潲y
+0x00461CB0 f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winctrl2.cpp
+0x00461D40 AfxWnd90su
+0x00461D58 AfxControlBar90su
+0x00461D7C AfxMDIFrame90su
+0x00461D9C AfxFrameOrView90su
+0x00461DC4 AfxOleControl90su
+0x00461DE8 AfxOldWndProc423
+0x00461E80 潲偭楯瑮
+0x00461EA4 潲坭湩潤w
+0x00461EC4 USER32
+0x00461EDA YaccParent
+0x00461EF0 accChildCount
+0x00461F0C accChild
+0x00461F20 accName
+0x00461F30 accValue
+0x00461F44 accDescription
+0x00461F64 accRole
+0x00461F74 accState
+0x00461F88 accHelp
+0x00461F98 accHelpTopic
+0x00461FB4 accKeyboardShortcut
+0x00461FDC accFocus
+0x00461FF0 accSelection
+0x0046200C accDefaultAction
+0x00462030 accSelect
+0x00462044 accLocation
+0x0046205C accNavigate
+0x00462074 accHitTest
+0x0046208C accDoDefaultAction
+0x004622C2 A湉瑩潃浭湯潃瑮潲獬
+0x004622D8 湉瑩潃浭湯潃瑮潲獬硅
+0x004622FC 摤敲獳潃瑮潲l
+0x0046230C 瑈汭效灬W
+0x00462318 桨瑣汲漮硣
+0x00462424 #32768
+0x00462438 f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl
+0x00462780 Afx:%p:%x:%p:%p:%p
+0x004627A8 Afx:%p:%x
+0x004627BC commctrl_DragListMsg
+0x004627EA 摭慔杲瑥
+0x004628D2 BReBarWindow32
+0x004629AA AInProcServer32
+0x004629D0 f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\filecore.cpp
+0x00462A40 {%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}
+0x00462AAC 瑥汃獡佳橢捥t
+0x00462B36 B*.*
+0x00462B52 浯潢潂x
+0x00462BE0 STATIC
+0x00462D36 BLISTBOX
+0x00462E9A B厠C厠CCOMBOBOX
+0x00463192 楤扏敪瑣
+0x004631CA 捸灥楴湯
+0x004631DE 捸灥楴湯
+0x0046322C 嫣B俔F
+0x0046329C 嬄B俔F
+0x0046337E @匦B匵B卄B卉B华B厁B徽B忾B參B吨B呛B垮B埭B堬B填B墶B壵B咍B噵B嚍B嚢B囀B囧B土B圽B坞B垐B
+0x004633FE @匦B匵B卄B卉B华B厁B徽B忾B參B吨B呛B垮B埭B堬B填B墶B壵B咍B噵B嚍B嚢B囀B囧B土B圽B坞B垐B
+0x0046347E @匦B匵B卄B卉B华B厁B徽B忾B參B吨B呛B垮B埭B堬B填B墶B壵B咍B噵B嚍B嚢B囀B囧B土B圽B坞B垐B
+0x004635AE 湯牴汯慂r噃敩w
+0x004635C2 慲敭湗d
+0x00463656 獩彴牄睡
+0x0046366E 慭敧湉潦
+0x0046380E Bf:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp
+0x00464010 坃湩灁pRecent File List
+0x0046403C File%d
+0x0046404C Settings
+0x00464060 PreviewPages
+0x00464144 KERNEL32
+0x00464158 Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+0x004641D0 NoRun
+0x004641DC NoDrives
+0x004641F0 RestrictRun
+0x00464208 NoNetConnectDisconnect
+0x00464238 NoRecentDocsHistory
+0x00464260 NoClose
+0x00464270 Software\Microsoft\Windows\CurrentVersion\Policies\Network
+0x004642E8 NoEntireNetwork
+0x00464308 Software\Microsoft\Windows\CurrentVersion\Policies\Comdlg32
+0x00464380 NoPlacesBar
+0x00464398 NoBackButton
+0x004643B4 NoFileMru
+0x004643D0 畁潴慭楴湯
+0x004643DC 浅敢摤湩g
+0x004643E8 摤e湕敲獧牥敶偲牥獕牥
+0x00464400 湕敲楧瑳牥敐啲敳r
+0x00464414 湕敲獧牥敶r湕敲楧瑳牥
+0x0046442C 敒獧牥敶偲牥獕牥
+0x00464440 敒楧瑳牥敐啲敳r敒獧牥敶r
+0x0046445C 敒楧瑳牥
+0x00464470 ntdll.dll
+0x00464496 慌杮慵敧
+0x004644B0 慌杮慵敧
+0x004644BC kernel32.dll
+0x004644D8 %s%s.dll
+0x004645C8 f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appcore.cpp
+0x00464634 RichEdit Text and Objects
+0x00464668 Rich Text Format
+0x0046468C FileNameW
+0x004646A0 FileName
+0x004646B4 Link Source Descriptor
+0x004646E4 Object Descriptor
+0x00464708 Link Source
+0x00464720 Embed Source
+0x0046473C Embedded Object
+0x0046475C ObjectLink
+0x00464774 OwnerLink
+0x00464788 Native
+0x004647F6 Bsoftware
+0x00464814 捯敔灭慬整
+0x004648CE CSoftware\Classes\
+0x004648F8 Software\
+0x0046490C 坃湩桔敲摡
+0x004649BA 捯浵湥t
+0x00464AAE BMFC
+0x00464AC6 獩噴敩w
+0x00464CBE 牴噬敩w
+0x00464CC8 千汰瑩整坲摮
+0x00464E70 f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\viewcore.cpp
+0x00464F42 Ccomctl32.dll
+0x00464F66 Ccomdlg32.dll
+0x00464F8A Cshell32.dll
+0x0046502A 捲楨敶硅散瑰潩n
+0x00465080 湡条摥敒敦敲据獥
+0x00465094 mfcm90u.dll
+0x004650B0 f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\auxdata.cpp
+0x00465122 Ccombobox
+0x00465138 System
+0x0046514A 灡瑐呲偯牴
+0x004651BE C餥C砭C偃牴楌瑳
+0x00465206 捸灥楴湯
+0x0046522C .INI
+0x00465238 .HLP
+0x00465244 .CHM
+0x00465260 user32.dll
+0x004652E8 瑥敖獲潩n
+0x00465318 REBAR
+0x004654E0 \...
+0x004654EE F枘C楂C旾C槨C柢C效C旝C&%d 
+0x00465518 1&0 
+0x004655EE F溪C溂C準C滄C瀓C炔C蹄F8
+0x004657A2 F矷C約C砑C砥C茜C砭C
+0x00465C4E 捯敔灭慬整
+0x00465C7A 捯慍慮敧r%s\shell\open\%s
+0x00465CA8 %s\shell\print\%s
+0x00465CCC %s\shell\printto\%s
+0x00465CF4 %s\DefaultIcon
+0x00465D14 %s\ShellNew
+0x00465D34 command
+0x00465D44  "%1"
+0x00465D50  /p "%1"
+0x00465D64  /pt "%1" "%2" "%3" "%4"
+0x00465D98  /dde
+0x00465DA4 ddeexec
+0x00465DB4 [open("%1")]
+0x00465DD0 [print("%1")]
+0x00465DEC [printto("%1","%2","%3","%4")]
+0x00465E2C NullFile
+0x00466048 [printto("
+0x00466060 [print("
+0x00466074 [open("
+0x004660B4 %2\CLSID
+0x004660CC %2\Insertable
+0x004660F0 %2\protocol\StdFileEditing\verb\0
+0x00466134 &Edit
+0x00466140 %2\protocol\StdFileEditing\server
+0x0046618C CLSID\%1
+0x004661A4 CLSID\%1\ProgID
+0x004661D0 CLSID\%1\InprocHandler32
+0x00466202 ole32.dll
+0x00466218 CLSID\%1\LocalServer32
+0x0046624C CLSID\%1\Verb\0
+0x0046626C &Edit,0,2
+0x00466280 CLSID\%1\Verb\1
+0x004662A0 &Open,0,2
+0x004662B4 CLSID\%1\Insertable
+0x004662E0 CLSID\%1\AuxUserType\2
+0x00466314 CLSID\%1\AuxUserType\3
+0x00466348 CLSID\%1\DefaultIcon
+0x00466372 %3,%7
+0x00466380 CLSID\%1\MiscStatus
+0x004663B0 CLSID\%1\InProcServer32
+0x004663E8 CLSID\%1\DocObject
+0x00466414 %2\DocObject
+0x00466434 CLSID\%1\Printable
+0x00466460 CLSID\%1\DefaultExtension
+0x00466494 %9, %8
+0x004664A4 您F惌F惰F憌F扌F技F抴F拠F挔F掀F
+0x004664D0 您F惌F惰F憌F扌F抴F拠F挔F掀F
+0x004664F8 您F惌F惰F憌F扌F技F抴F拠F挔F掀F揨F搔F搴F
+0x00466530 悴F慀F憤F懐F战F捈F
+0x0046654C 悴F慀F憤F掰F捈F
+0x00466564 您F憌F
+0x00466570 悴F憤F懐F战F捈F
+0x00466588 您F憌F
+0x00466594 悴F憤F懐F战F
+0x004665A8 悴F憤F掰F
+0x004665B8 悴F慀F憤F懐F战F捈F摠F
+0x00466632 D谸B偃牴牁慲y
+0x0046666E @UxTheme.dll
+0x004666A4 汃獯呥敨敭慄慴
+0x004666BE 捡杫潲湵d敇呴敨敭慐瑲楓敺
+0x004666E4 捡杫潲湵偤牡楴污祬牔湡灳牡湥t
+0x00466714 捡杫潲湵d
+0x0046675A @呃潯呬灩瑃汲
+0x004668D2 Dtooltips_class32
+0x00466A12 D佃敬畂祳楄污杯
+0x00466A24 佃敬楄污杯
+0x00466D36 B佃敬楄灳瑡档硅散瑰潩n
+0x00466F00 汩乥浡坥
+0x00466F14 汩乥浡坥
+0x00467116 牃慥整瑉浥牆浯慐獲湩乧浡eShell32.dll
+0x004671E8 commdlg_SetRGBColor
+0x00467210 commdlg_help
+0x0046722C commdlg_ColorOK
+0x0046724C commdlg_FileNameOK
+0x00467274 commdlg_ShareViolation
+0x004672A4 commdlg_LBSelChangedNotify
+0x004672E0 污潬慣楴湯
+0x00467310 楸側潲散獳
+0x0046731C mscoree.dll
+0x0046736A 普牯慭楴湯
+0x004679B8 湅潣敤潐湩整r
+0x004679C8 KERNEL32.DLL
+0x004679E4 敄潣敤潐湩整r
+0x00467AC0 硥散瑰潩n
+0x00467B34 慥畴敲牐獥湥t
+0x00467B76 普牯慭楴湯A
+0x00467B8C 瑣癩健灯灵
+0x00467BC0 (null)
+0x00467CA6 捯瑡牯'
+0x00467D06 敄捳楲瑰牯'
+0x00467E34 瑩牥瑡牯'
+0x00467E84 瑩牥瑡牯'
+0x00467EDC 搠汥瑥孥]
+0x00467EF0 池捯污瘠瑦扡敬挠湯瑳畲瑣牯挠潬畳敲'池捯污瘠瑦扡敬'剠呔I
+0x0046803C 瑩牥瑡牯'
+0x00468068 摠晥畡瑬挠湯瑳畲瑣牯挠潬畳敲'
+0x004680EC 癠慣汬'癠瑢扡敬'
+0x00468100 癠瑦扡敬'
+0x00468188 灯牥瑡牯
+0x004681AC 搠汥瑥e渠睥
+0x004681BC 彟湵污杩敮d彟敲瑳楲瑣
+0x004681DA 4彟汣捲污l
+0x004681E8 彟慦瑳慣汬
+0x004681F4 彟桴獩慣汬
+0x00468200 彟瑳捤污l
+0x0046820C 彟慰捳污
+0x00468230 舠F舘F舌F舀F致F臨F臜F臔F臈F膼F窪F紀F糤F糐F粰F粔F膴F膬F窨F膨F膤F膠F膜F膘F膔F膈F膄F膀F腼F腸F腴F腰F腬F腨F腤F腠F腜F腘F腔F腐F腌F腈F腄F腀F脼F脸F脴F脰F脬F脨F脤F脠F脜F脘F脔F脐F脌F脀F胴F胬F胠F胈F肼F肨F肈F聨F聈F耨F耈F翤F翈F群F羄F罜F罀F缰F缬F缤F缔F绰F绨F络F绌F纰F纐F繨F繀F縘F緬F緐F綬F綈F絜F細F純F窪F
+0x00468BF4 敄散扭牥
+0x00468C00 潎敶扭牥
+0x00468C0C 捏潴敢r敓瑰浥敢r
+0x00468C48 敆牢慵祲
+0x00468C54 慊畮牡y敄c潎v捏t敓p畁g畊l畊n慍y灁r慍r敆b慊n慓畴摲祡
+0x00468CA0 桔牵摳祡
+0x00468CAC 敗湤獥慤y
+0x00468CB8 畔獥慤y潍摮祡
+0x00468D00 硥散瑰潩n
+0x00468D2C 佃低呕$
+0x004695A0 魔物(无效)
+0x004695C8 魔物_红
+0x004695D4 魔物_绿
+0x004695E0 魔物_蓝
+0x004695EC 魔物_魔
+0x00469796 B回合数
+0x004697B8 下次合战准备
+0x004697C8 回合剩余行动次数
+0x004697DC 回合行动次数最大值
+0x004697F0 通关最高点
+0x004697FC 通关可使用点数
+0x004699C0 上总2000
+0x004699EC MAZO
+0x00469A00 德克萨斯
+0x00469A0C 毒蛇油田
+0x00469A7C 战舰长门
+0x00469AB8 迷宫探索层数
+0x00469AD0 敮祭牐灯牯楴湯汄g
+0x00469C6A 浯慢剴畯摮汄g鱨Fx
+0x00469DFE B织田家
+0x00469E30 巫女机关
+0x00469E3C 浅井朝仓家
+0x00469E48 种子岛家
+0x00469E84 独眼流家
+0x00469EB0 在野武将
+0x00469EBC 追加武将\
+0x00469EC8 .psi
+0x00469ED4 *.psi
+0x00469FC2 A鼰F新武将\pic\大头像\cg%05d.jpg
+0x00469FF8 新武将\pic\中头像\cg%05d.jpg
+0x0046A028 新武将\pic\小头像\cg%05d.jpg
+0x0046A058 新武将\pic\战斗头像\cg%05d.jpg
+0x0046A21C 新武将\pic\
+0x0046A2AE F页号:%d/%d
+0x0046A2C4 大头像\
+0x0046A2D0 中头像\
+0x0046A2DC 小头像\
+0x0046A2E8 战斗头像\
+0x0046A2F4 *.jpg
+0x0046A300 战国兰斯修改器
+0x0046A646 B天狗的面具
+0x0046A654 情色蜡烛
+0x0046A660 死的幻觉药
+0x0046A674 鹿波H卷
+0x0046A688 坏掉的中华贝
+0x0046A6D0 成吉思汗
+0x0046A6DC 珍珠20颗
+0x0046A6F8 尊氏的屏风
+0x0046A714 透明胶带
+0x0046A722 越前螃蟹
+0x0046A736 巨大珍珠
+0x0046A768 收纳箱【青】
+0x0046A778 收纳箱【赤】
+0x0046A788 收纳箱名称
+0x0046A794 物品名称
+0x0046A7A0 是否收纳
+0x0046A946 B物品名
+0x0046A950 持有数目
+0x0046A95C 兰斯情色日记
+0x0046A96C 收纳箱(青)
+0x0046A97C 收纳箱(赤)
+0x0046A994 幸福薯条
+0x0046A9A0 全知全能的神
+0x0046A9B8 百药的超酒
+0x0046A9C4 良药艾仙比罗
+0x0046A9D4 让人有干劲的信
+0x0046A9E4 千利Q的茶碗
+0x0046A9F4 狩野A德的挂画
+0x0046AA04 达人的太鼓
+0x0046AA10 JAWS屏风
+0x0046AA20 攻之学习书
+0x0046AA2C 防之学习书
+0x0046AA38 知之学习书
+0x0046AA44 速之学习书
+0x0046AA50 技之学习书
+0x0046AA5C 攻之学习书2
+0x0046AA6C 防之学习书2
+0x0046AA7C 知之学习书2
+0x0046AA8C 速之学习书2
+0x0046AA9C 技之学习书2
+0x0046AAAC 问答无用的红纸
+0x0046AABC 雇佣放大镜
+0x0046AAC8 建设好吃棒
+0x0046AAD4 八手八口味噌
+0x0046AAE4 里美的发现便当
+0x0046AAF4 魔剑卡奥斯
+0x0046AB00 圣刀日光
+0x0046AB0C 帝王之剑
+0x0046AB18 帝王指环
+0x0046AB24 帝王头巾
+0x0046AB30 POWER纯金熊
+0x0046AB44 骗人的面具
+0x0046AB50 世界的黑河
+0x0046AB5C 迅捷之虫
+0x0046AB70 川之口宏二介
+0x0046AB80 大江千里眼
+0x0046AB8C 二枚舌三郎
+0x0046AB98 根越荣太
+0x0046ABAC 迷宫WALKER
+0x0046ABC0 攻城百选
+0x0046ABCC 日本野战周刊
+0x0046ABDC 不死狐仙的护身符
+0x0046ABF8 鬼畜照片
+0x0046AC04 兰斯的爱
+0x0046AC10 专属护士
+0x0046AC1C 人望之杖
+0x0046AC30 谷町先生
+0x0046AC42 丁目先生
+0x0046AC4C 迷之村雨
+0x0046AC58 长江蜻蜓斩
+0x0046AC64 曹操猛毒短刀
+0x0046AC74 巨兽的牙
+0x0046AC80 对魔物凿
+0x0046AC8C 龙宫密剑浦死丸
+0x0046AC9C 青色的小盒
+0x0046ACA8 减少痛觉头盔
+0x0046ACB8 大毅力盔甲
+0x0046ACC4 肝脏面具
+0x0046ACD0 黄泉时钟
+0x0046ACDC 黄金面具
+0x0046ACF8 上杉突击队
+0x0046AD04 将军护卫队
+0x0046AD10 武田骑马军团
+0x0046AD20 战巫女战队
+0x0046AD2C 头金地藏
+0x0046AD38 半金地蔵
+0x0046AD44 全金地蔵
+0x0046AD50 入队打折券
+0x0046AD5C 战地特派员
+0x0046AD68 黒医三连星
+0x0046AD74 游击五人众
+0x0046AD80 高野七人
+0x0046AD9C 作战许可证(足)
+0x0046ADB0 作战许可证(武)
+0x0046ADC4 作战许可证(忍)
+0x0046ADD8 作战许可证(军)
+0x0046ADEC 作战许可证(阴)
+0x0046B026 BSYSTEM40.EXE
+0x0046B044 SYS42VM.DLL
+0x0046B05C 乃睥敐獲湯汄g
+0x0046B0CC 新武将\pic\小头像\cg55322.jpg
+0x0046B266 B新武将\
+0x0046B274 NewPerson.psa
+0x0046B2D8 武将 "
+0x0046B2FC ModPerson.psa
+0x0046B364 现在体力
+0x0046B370 最大体力
+0x0046B37C 现在兵力
+0x0046B388 最大兵力
+0x0046B394 现在等级
+0x0046B3A0 最大等级
+0x0046B3CC 兵种所属势力
+0x0046B3E4 基础消耗
+0x0046B3F8 合战-技能1
+0x0046B408 合战-技能2
+0x0046B418 合战-技能3
+0x0046B428 合战-技能4
+0x0046B438 合战-技能5
+0x0046B448 个人战-技能1
+0x0046B458 个人战-技能2
+0x0046B468 个人战-技能3
+0x0046B478 个人战-技能4
+0x0046B488 个人战-技能5
+0x0046B498 基本-行动
+0x0046B4A4 基本-攻击
+0x0046B4B0 基本-防御
+0x0046B4BC 基本-智慧
+0x0046B4C8 基本-速度
+0x0046B4D4 基本-探索
+0x0046B4E0 基本-交涉
+0x0046B4EC 基本-建设
+0x0046B4F8 当前-攻击次数
+0x0046B508 当前-攻击
+0x0046B514 当前-防御
+0x0046B520 当前-智慧
+0x0046B52C 当前-速度
+0x0046B538 当前-探索
+0x0046B544 当前-交涉
+0x0046B550 当前-建设
+0x0046B55C 禁止解雇
+0x0046B568 行动状态
+0x0046B574 大头像ID
+0x0046B580 中头像ID
+0x0046B58C 小头像ID
+0x0046B598 战斗头像ID
+0x0046B5A8 战斗伴随头像ID
+0x0046B5C4 行动终了
+0x0046B662 F追加武将\*.psi
+0x0046B67C 新武将\NewPerson.psa
+0x0046B9D6 B偃捩瑓瑡捩
+0x0046BB7E BD:\Microsoft Visual Studio 9.0\VC\atlmfc\include\afxwin1.inl
+0x0046BBFC Exception thrown in destructor
+0x0046BC58 %s (%s:%d)
+0x0046BD3E F应用程序向导生成的本地应用程序
+0x0046C07C 楤潴噲敩w
+0x0046CBBC 确实要删除武将"
+0x0046CD62 BSysListView32
+0x0046CDA8 远距离贯通
+0x0046CDB4 近距离贯通
+0x0046CDC0 全体敌人
+0x0046CDCC 全体盟友
+0x0046CE04 千楫汬湉潦汄g
+0x0046CF96 B技能名
+0x0046CFA0 射程种类
+0x0046CFAC 硬直时间
+0x0046CFB8 行动消费
+0x0046CFCC 损伤值修正
+0x0046CFE8 防御式神
+0x0046CFF4 精神统一
+0x0046D000 时间经过
+0x0046D00C S怪物基本攻击
+0x0046D01C 精密射击
+0x0046D028 亲卫队突击
+0x0046D034 郁金香连射
+0x0046D040 僧兵突击
+0x0046D04C 武士攻击
+0x0046D058 大声突击
+0x0046D064 骑马突击
+0x0046D080 迂回攻击
+0x0046D094 全力武士攻击
+0x0046D0A4 留手突击
+0x0046D0B0 战果UP2
+0x0046D0BC 同伴防御
+0x0046D0C8 同伴防御 改
+0x0046D0D8 全体防御
+0x0046D0E4 未设定技能
+0x0046D0F0 战果UP1
+0x0046D0FC 同胞的复仇
+0x0046D118 狙击武将
+0x0046D124 弓攻击 改
+0x0046D148 音速手里剑
+0x0046D154 僧兵突击 改
+0x0046D16C 忍法 木隐之术
+0x0046D17C 战果DOWN1
+0x0046D18C 战果DOWN2
+0x0046D1A4 上级式神
+0x0046D1B8 鬼召唤 改
+0x0046D1D4 A切割器
+0x0046D1E0 白色破坏光线
+0x0046D1F0 早云召唤
+0x0046D1FC 朱雀召唤
+0x0046D208 巫女之舞
+0x0046D214 治愈之雾
+0x0046D220 巫女之舞 改
+0x0046D230 S动物攻击
+0x0046D23C S强动物攻击
+0x0046D24C 哈尼攻击
+0x0046D258 魔物回复
+0x0046D264 S隆美尔系术攻击
+0x0046D278 天志的加护
+0x0046D284 贯通攻击
+0x0046D290 合战战术(全)
+0x0046D2A0 合战战术(甲)
+0x0046D2B0 合战战术(乙)
+0x0046D2C0 合战战术(丙)
+0x0046D2D0 S火焰放射
+0x0046D2E8 机智大逆转
+0x0046D2F4 巫女之岚2
+0x0046D300 人道毁灭拳
+0x0046D314 状态解除(丙)
+0x0046D324 状态解除(乙)
+0x0046D334 状态解除(甲)
+0x0046D344 防御解除
+0x0046D350 S僵尸攻击
+0x0046D364 骑士攻击
+0x0046D370 魔法全体攻击
+0x0046D380 大蛇光线
+0x0046D394 全力武士攻击2
+0x0046D3A4 政宗的眼药水
+0x0046D3B4 哈维尔斩击
+0x0046D3C0 必杀 国崩炮
+0x0046D3D0 完全回复
+0x0046D3EC 一齐射击
+0x0046D400 击溃后卫
+0x0046D40C 兰斯ATTACK
+0x0046D420 疾风点破
+0x0046D42C 武将突击
+0x0046D438 死神之镰
+0x0046D444 101只汪汪
+0x0046D454 健太郎痛击
+0x0046D468 巫女之岚
+0x0046D47C 草鞋手里剑
+0x0046D488 自动回复(希露)
+0x0046D49C 自动回复1
+0x0046D4A8 自动回复2
+0x0046D4B4 军神的威光
+0x0046D4C0 帝王的威光
+0x0046D4CC FANS俱乐部
+0x0046D4DC 魔法绝对防御
+0x0046D4F4 反击率UP1
+0x0046D504 反击率UP2
+0x0046D51C 落武者狩猎
+0x0046D538 熟悉野战
+0x0046D544 熟悉攻城战
+0x0046D550 熟悉迷宫战
+0x0046D564 金钱管理
+0x0046D590 出张巫女
+0x0046D59C 先手必胜
+0x0046D5B0 天志的加护2
+0x0046D5C0 强化初期防御
+0x0046D5D8 风林火山
+0x0046D5E4 白虎之牙
+0x0046D5F0 足轻攻击
+0x0046D60C 戏骸拳击
+0x0046D618 合战战术(单)
+0x0046D628 初期时间经过
+0x0046D638 初期战果
+0x0046D64C 足轻狙击
+0x0046D658 狙击忍者
+0x0046D664 巫女之舞/风
+0x0046D674 妖怪退散
+0x0046D680 全体防御式神
+0x0046D698 石明之剑
+0x0046D6A4 迷宫侦测
+0x0046D6B8 火钵突击
+0x0046D6C4 结束时得分
+0x0046D6D0 时间经过2
+0x0046D6DC 强化弓攻击
+0x0046D6E8 未熟练的一齐射击
+0x0046D6FC 贯通射击2
+0x0046D708 忍法 阵地构筑1
+0x0046D71C 忍法 阵地构筑2
+0x0046D730 忍法 阵地构筑3
+0x0046D744 手里剑2
+0x0046D750 201只汪汪
+0x0046D760 小小手里剑
+0x0046D774 延长战2
+0x0046D788 使用幼迷肿
+0x0046D794 使徒雷击
+0x0046D7A0 骑马突击2
+0x0046D7B4 德川家康的必杀技
+0x0046D7C8 赌博突击
+0x0046D7D4 赌博突击2
+0x0046D7E0 射击+狙击
+0x0046D7EC 山本弓扫射
+0x0046D7F8 S兰斯攻击
+0x0046D804 S健太郎的猛击
+0x0046D814 活动转换
+0x0046D820 活动转换2
+0x0046D82C 魔王特性
+0x0046D838 7人首之爪
+0x0046D844 征夷大将军龙卷
+0x0046D854 元就拳击
+0x0046D868 破坏土俑
+0x0046D874 武士攻击2
+0x0046D880 足轻攻击2
+0x0046D88C S刀攻击
+0x0046D898 S强刀攻击
+0x0046D8A4 S枪攻击
+0x0046D8B0 S强枪攻击
+0x0046D8BC S刺突攻击
+0x0046D8C8 S弓攻击
+0x0046D8D4 S强弓攻击
+0x0046D8E0 S铁炮攻击
+0x0046D8EC S殴打攻击
+0x0046D8F8 S强殴打攻击
+0x0046D908 S郁金香
+0x0046D914 S手里剑
+0x0046D920 S强手里剑
+0x0046D92C S式神发放
+0x0046D938 S强式神召唤
+0x0046D948 S火爆破
+0x0046D954 S天使切断
+0x0046D960 S哈尼闪光
+0x0046D96C 动物攻击
+0x0046D978 魔物的普通单体魔法
+0x0046D98C 鬼鬼攻击
+0x0046D998 S炼狱攻击
+0x0046D9A4 九娜光线
+0x0046D9B0 S弩箭攻击
+0x0046D9BC 金海龟攻击
+0x0046D9C8 S骑马突击
+0x0046D9D4 S强骑马突击
+0x0046D9E4 驱邪攻击
+0x0046D9F0 暗杀防御
+0x0046D9FC 宣传效果大
+0x0046DA10 阴阳防御
+0x0046DA1C 双生行动王
+0x0046DA28 双生谍报王
+0x0046DA34 粘着地面
+0x0046DA40 暗杀技能+
+0x0046DA4C Delete
+0x0046DA5C NoRemove
+0x0046DA70 ForceRemove
+0x0046DAA0 CLSID
+0x00474B34 暷D曠D
+0x00474DC4 [EoE
+0x00474F28 估G佌G
+0x00476B00 捣獥楳汢佥橢捥t
+0x00476B1A 潲佭橢捥t
+0x00477374 楓敺景敒潳牵散
+0x00477386 潌正敒潳牵散
+0x00477396 潌摡敒潳牵散
+0x004773C6 湓灡桳瑯
+0x0047743A 牗瑩健潲散獳敍潭祲
+0x00477458 摯健潲散獳
+0x004774A2 楲楴慣卬捥楴湯
+0x004774BA 楲楴慣卬捥楴湯
+0x004774E2 獬牴敬坮
+0x00477504 潆浲瑡敍獳条坥
+0x00477516 汇扯污湕潬正
+0x00477526 汇扯污潌正
+0x00477542 汇扯污牆敥
+0x00477570 牆敥敒潳牵散
+0x00477580 潌摡楌牢牡坹
+0x004775C6 獬牴浣坰
+0x004775E0 U潃灭牡卥牴湩坧
+0x00477612 汇扯污敄敬整瑁浯
+0x0047764E 牵敲瑮桔敲摡摉
+0x004776AC 敒摡楆敬
+0x004776C8 汩健楯瑮牥
+0x004776EA 潌正楆敬
+0x004776F6 湕潬正楆敬
+0x00477708 摮晏楆敬
+0x00477782 汵偬瑡乨浡坥
+0x004777B0 汩乥浡坥
+0x004777DA 楆敬楔敭潔祓瑳浥楔敭
+0x0047782A 潴乭浡坥
+0x0047787C 湅浵敒潳牵散慌杮慵敧坳
+0x0047789E 晥畡瑬潌慣敬
+0x004778B2 牵敲瑮桔敲摡
+0x004778EA 牗瑩健楲慶整牐景汩卥牴湩坧
+0x00477908 敇側楲慶整牐景汩卥牴湩坧
+0x0047792C 瑴楲畢整坳
+0x0047795E 汩乥浡坥
+0x0047798A 捥敲敭瑮
+0x004779A2 祓瑳浥楔敭潔楆敬楔敭
+0x004779C6 据敲敭瑮
+0x004779FE 汇扯污慈摮敬
+0x00477A88 牲牯潍敤
+0x00477AC2 牵敲瑮楄敲瑣牯坹
+0x00477AF4 楖瑲慵偬潲整瑣
+0x00477B26 楖瑲慵公敵祲
+0x00477B36 效灡牆敥
+0x00477B92 捸灥楴湯
+0x00477B9E 效灡楓敺
+0x00477BC8 敇却摴慈摮敬
+0x00477C0C 癮物湯敭瑮瑓楲杮坳
+0x00477C66 效灡牃慥整
+0x00477C9C 敔浲湩瑡健潲散獳
+0x00477CBA 捸灥楴湯楆瑬牥
+0x00477D16 慍印牴湩坧
+0x00477D58 普牯慭楴湯
+0x00477D6A 湯潳敬偃
+0x00477D7A 湯潳敬潍敤
+0x00477DAA 敇却牴湩呧灹坥
+0x00477DF6 敓却摴慈摮敬
+0x00477E1A 湯潳敬畏灴瑵偃
+0x00477E72 敓摮敍獳条坥
+0x00477E82 湅扡敬楗摮睯
+0x00477E92 湉慶楬慤整敒瑣
+0x00477EB4 瑐湉敒瑣
+0x00477EC0 敓呴浩牥
+0x00477F0C 灕慤整楗摮睯
+0x00477F28 敇却扵敍畮
+0x00477F3A 牵潳偲獯
+0x00477F7C 湥卵牴湩坧
+0x00477F8E 湥卵慴整
+0x00477FF8 獉楗摮睯
+0x00478004 敄瑳潲坹湩潤w[牃慥整楄污杯湉楤敲瑣慐慲坭
+0x0047805A 獥瑫灯楗摮睯
+0x00478082 敇坴湩潤呷硥坴
+0x004780AA O潃祰敒瑣
+0x004780E0 敇坴湩潤偷慬散敭瑮
+0x004780F6 獉捉湯捩
+0x0047812A 晏獦瑥敒瑣
+0x00478138 敓坴湩潤偷獯
+0x00478176 敄坦湩潤偷潲坣
+0x00478198 敄敦坲湩潤偷獯
+0x004781B6 捓敲湥潔汃敩瑮
+0x004781C8 摁番瑳楗摮睯敒瑣硅
+0x004781EC 敒楧瑳牥汃獡坳
+0x00478232 潐瑳敍獳条坥
+0x00478282 牔捡偫灯灵敍畮
+0x004782A6 敐步敍獳条坥
+0x004782CA 獥慳敧楔敭
+0x004782EE 敇呴灯楗摮睯
+0x00478328 楄灳瑡档敍獳条坥
+0x00478344 瑣癩健灯灵
+0x0047836C 敇側潲坰
+0x00478378 敓側潲坰
+0x004783A4 慃汬敎瑸潈歯硅
+0x00478426 敒楧瑳牥楗摮睯敍獳条坥
+0x00478450 湅扡敬敍畮瑉浥
+0x00478486 敨正慍歲楄敭獮潩獮
+0x004784B2 獉楄污杯敍獳条坥
+0x004784C6 敓坴湩潤呷硥坴
+0x004784D8 潍敶楗摮睯
+0x004784E6 桓睯楗摮睯
+0x004784F2 :桃牡灕数坲
+0x00478502 楆汬敒瑣
+0x0047850E 慔扢摥敔瑸畏坴
+0x0047853A 片祡瑓楲杮WE汃敩瑮潔捓敲湥
+0x00478568 敂楧偮楡瑮
+0x00478576 湅偤楡瑮
+0x0047859A 牂湩坧湩潤呷呯灯
+0x00478614 敇坴湩潤呷牨慥偤潲散獳摉
+0x00478662 獉潚浯摥
+0x004786B6 湯整瑸效灬摉
+0x004786C6 慖楬慤整敒瑣
+0x00478774 敄敬整敍畮
+0x0047879E 潐瑳桔敲摡敍獳条坥
+0x00478828 湕敲楧瑳牥汃獡坳
+0x00478848 敄敬整扏敪瑣
+0x00478870 敓敬瑣扏敪瑣
+0x00478894 潃潬呲扡敬
+0x004788CA 潃潬呲扡敬
+0x004788D8 敇佴橢捥坴
+0x004788EE 卂捥楴湯
+0x0047894C (牃慥整楂浴灡
+0x004789E4 敇側硩汥
+0x00478A0A 敔瑸畏坴
+0x00478A2E 敓噴敩灷牯佴杲硅
+0x00478AD2 敇却潴正扏敪瑣
+0x00478AF6 -牃慥整潃灭瑡扩敬楂浴灡
+0x00478BDE 汃獯健楲瑮牥
+0x00478C04 灏湥牐湩整坲
+0x00478C30 敒卧瑥慖畬坥
+0x00478CC6 敒內敵祲慖畬坥
+0x00478CDC 汩卥捥牵瑩坹
+0x00478CF0 汩卥捥牵瑩坹
+0x00478D30 牄条楆楮桳
+0x00478D66 汤lz湉瑩潃浭湯潃瑮潲獬硅
+0x00478D92 慐桴瑓楲呰副潯坴
+0x00478DA4 q慐桴獉乕坃
+0x00478DB2 G慐桴楆摮硅整獮潩坮
+0x00478E0C 汯摥杬搮汬
+0x00478E9A 潃牃慥整湉瑳湡散
+0x00478EB4 慬獳扏敪瑣
+0x00478F70 潬慢lk潃湕湩瑩慩楬敺
+0x00478F88 >潃湉瑩慩楬敺硅
+0x00478FD8 摇灩敄敬整片灡楨獣
+0x00479020 摇灩牆敥
+0x00479048 P摇灩牃慥整楂浴灡牆浯捓湡0.摇灩楂浴灡湕潬正楂獴
+0x0047907C +摇灩楂浴灡潌正楂獴
+0x004790E0 慭敧效杩瑨
+0x00479100 牯慭tI摇灩牃慥整楂浴灡牆浯楆敬
+0x00479124 摇灩畬即慴瑲灵
+0x0047B63C Apartment
+0x0047B650 Both
+0x0047B65C Free
+0x0047B92C 狜F狰F
+0x0047BD6E 扡摣晥桧橩汫湭灯牱瑳癵硷穹
+0x0047BD9A 乍偏剑呓噕塗婙
+0x0047BF78 愀换敤杦楨歪浬潮煰獲畴睶祸z
+0x0047BFA6 低児卒啔坖奘Z
+0x0047C350 怵E怵E怵E怵E怵E怵E怵E怵E怵E怵E狜F狰F

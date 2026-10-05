@@ -1,135 +1,250 @@
-total candidate entries: 134
-rdata@0x00461B38  cmdID=     1..     1 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004400D4
-rdata@0x00463B58  cmdID=     0..     0 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 14 handler=0x0042770F
-rdata@0x00463B70  cmdID= 59393.. 59393 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x0042803F
-rdata@0x00463B88  cmdID= 59393.. 59393 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 60 handler=0x00428082
-rdata@0x00463BA0  cmdID= 59392.. 59392 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x0042803F
-rdata@0x00463BB8  cmdID= 59392.. 59392 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 60 handler=0x00428082
-rdata@0x00463BD0  cmdID= 59396.. 59396 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x0042803F
-rdata@0x00463BE8  cmdID= 59396.. 59396 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 60 handler=0x00428082
-rdata@0x00463C00  cmdID= 59137.. 59137 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x004280C0
-rdata@0x00463C18  cmdID= 59138.. 59138 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x004280C0
-rdata@0x00463C30  cmdID= 59139.. 59139 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x004280C0
-rdata@0x00463C48  cmdID= 59142.. 59142 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x004280C0
-rdata@0x00463C60  cmdID= 57669.. 57669 WM_NOTIFY                                 sig= 65 handler=0x0042811D
-rdata@0x00463C78  cmdID=     0.. 65535 WM_NOTIFY                                 sig= 64 handler=0x00428EE3
-rdata@0x00463C90  cmdID=     0.. 65535 WM_NOTIFY                                 sig= 64 handler=0x00428EE3
-rdata@0x004640A8  cmdID= 57665.. 57665 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 57 handler=0x0042E0BC
-rdata@0x004640C0  cmdID= 57616.. 57616 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x0042E04F
-rdata@0x004649F0  cmdID= 57602.. 57602 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x0042E1B5
-rdata@0x00464A08  cmdID= 57603.. 57603 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x0042E1D0
-rdata@0x00464D68  cmdID=     0..     0 WM_COMMAND         ON_COMMAND             sig= 19 handler=0x0042F46A
-rdata@0x00464D80  cmdID= 57653.. 57653 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 60 handler=0x0042F852
-rdata@0x00464D98  cmdID= 57653.. 57653 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x0042F818
-rdata@0x00464DB0  cmdID= 57680.. 57680 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x0042F86E
-rdata@0x00464DC8  cmdID= 57680.. 57680 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 60 handler=0x0042F8B1
-rdata@0x00464DE0  cmdID= 57681.. 57681 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x0042F86E
-rdata@0x004653C8  cmdID=     0..     0 WM_LBUTTONDOWN                            sig= 21 handler=0x004353A0
-rdata@0x00469F38  cmdID=  1038..  1038 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00404E10
-rdata@0x00469F50  cmdID=  1039..  1039 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00404F50
-rdata@0x00469F68  cmdID=  1040..  1040 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004050E0
-rdata@0x00469F80  cmdID=  1044..  1044 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00405270
-rdata@0x0046A238  cmdID=  1050..  1050 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00405A50
-rdata@0x0046A250  cmdID=  1051..  1051 WM_LBUTTONDOWN                            sig= 57 handler=0x00405BF0
-rdata@0x0046A268  cmdID=     0..     0 WM_COMMAND         ON_COMMAND             sig= 53 handler=0x00406220
-rdata@0x0046AE30  cmdID=     0..     0 WM_TIMER                                  sig= 13 handler=0x004087B0
-rdata@0x0046BCE0  cmdID= 57664.. 57664 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004151A0
-rdata@0x0046BCF8  cmdID= 57600.. 57600 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x0042AA73
-rdata@0x0046C0C8  cmdID=     0..     0 WM_COMMAND         ON_COMMAND             sig= 53 handler=0x00416490
-rdata@0x0046C0E0  cmdID= 32782.. 32782 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416510
-rdata@0x0046C0F8  cmdID= 32783.. 32783 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004165F0
-rdata@0x0046C110  cmdID= 32779.. 32779 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004164B0
-rdata@0x0046C128  cmdID= 32871.. 32871 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416600
-rdata@0x0046C140  cmdID= 32872.. 32872 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416610
-rdata@0x0046C158  cmdID= 32873.. 32873 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416620
-rdata@0x0046C170  cmdID= 32874.. 32874 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416630
-rdata@0x0046C188  cmdID= 32875.. 32875 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416640
-rdata@0x0046C1A0  cmdID= 32876.. 32876 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416650
-rdata@0x0046C1B8  cmdID= 32877.. 32877 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416660
-rdata@0x0046C1D0  cmdID= 32878.. 32878 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416670
-rdata@0x0046C1E8  cmdID= 32879.. 32879 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416680
-rdata@0x0046C200  cmdID= 32880.. 32880 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416690
-rdata@0x0046C218  cmdID= 32881.. 32881 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004166A0
-rdata@0x0046C230  cmdID= 32882.. 32882 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004166B0
-rdata@0x0046C248  cmdID= 32883.. 32883 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004166C0
-rdata@0x0046C260  cmdID= 32884.. 32884 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004166D0
-rdata@0x0046C278  cmdID= 32885.. 32885 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004166E0
-rdata@0x0046C290  cmdID= 32886.. 32886 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004166F0
-rdata@0x0046C2A8  cmdID= 32887.. 32887 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416700
-rdata@0x0046C2C0  cmdID= 32888.. 32888 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416710
-rdata@0x0046C2D8  cmdID= 32889.. 32889 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416720
-rdata@0x0046C2F0  cmdID= 32890.. 32890 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416730
-rdata@0x0046C308  cmdID= 32891.. 32891 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416740
-rdata@0x0046C320  cmdID= 32833.. 32833 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416750
-rdata@0x0046C338  cmdID= 32835.. 32835 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416830
-rdata@0x0046C350  cmdID= 32837.. 32837 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416910
-rdata@0x0046C368  cmdID= 32846.. 32846 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416A60
-rdata@0x0046C380  cmdID= 32848.. 32848 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 57 handler=0x00416A90
-rdata@0x0046C398  cmdID= 32848.. 32848 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x00417860
-rdata@0x0046C3B0  cmdID= 32851.. 32851 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416AE0
-rdata@0x0046C3C8  cmdID= 32852.. 32852 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416B30
-rdata@0x0046C3E0  cmdID= 32853.. 32853 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 57 handler=0x00416B80
-rdata@0x0046C3F8  cmdID= 32851.. 32851 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417890
-rdata@0x0046C410  cmdID= 32852.. 32852 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x004178C0
-rdata@0x0046C428  cmdID= 32853.. 32853 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x004178F0
-rdata@0x0046C440  cmdID= 32898.. 32898 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416CE0
-rdata@0x0046C458  cmdID= 32899.. 32899 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416FD0
-rdata@0x0046C470  cmdID= 32895.. 32895 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004172C0
-rdata@0x0046C488  cmdID= 32896.. 32896 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00417320
-rdata@0x0046C4A0  cmdID= 32865.. 32865 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004173E0
-rdata@0x0046C4B8  cmdID= 32866.. 32866 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00417440
-rdata@0x0046C4D0  cmdID= 32868.. 32868 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 57 handler=0x004174A0
-rdata@0x0046C4E8  cmdID= 32898.. 32898 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417950
-rdata@0x0046C500  cmdID= 32899.. 32899 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417A40
-rdata@0x0046C518  cmdID= 32895.. 32895 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417B30
-rdata@0x0046C530  cmdID= 32896.. 32896 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417B60
-rdata@0x0046C548  cmdID= 32865.. 32865 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417BC0
-rdata@0x0046C560  cmdID= 32866.. 32866 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417BF0
-rdata@0x0046C578  cmdID= 32868.. 32868 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x00417C20
-rdata@0x0046C590  cmdID= 32913.. 32913 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416D50
-rdata@0x0046C5A8  cmdID= 32914.. 32914 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416DC0
-rdata@0x0046C5C0  cmdID= 32915.. 32915 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416E30
-rdata@0x0046C5D8  cmdID= 32918.. 32918 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00416EA0
-rdata@0x0046C5F0  cmdID= 32919.. 32919 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00417040
-rdata@0x0046C608  cmdID= 32920.. 32920 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004170B0
-rdata@0x0046C620  cmdID= 32921.. 32921 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00417120
-rdata@0x0046C638  cmdID= 32922.. 32922 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 57 handler=0x00417190
-rdata@0x0046C650  cmdID= 32913.. 32913 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417980
-rdata@0x0046C668  cmdID= 32914.. 32914 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x004179B0
-rdata@0x0046C680  cmdID= 32915.. 32915 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x004179E0
-rdata@0x0046C698  cmdID= 32918.. 32918 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417A10
-rdata@0x0046C6B0  cmdID= 32919.. 32919 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417A70
-rdata@0x0046C6C8  cmdID= 32920.. 32920 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417AA0
-rdata@0x0046C6E0  cmdID= 32921.. 32921 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 65 handler=0x00417AD0
-rdata@0x0046C6F8  cmdID= 32922.. 32922 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x00417B00
-rdata@0x0046C710  cmdID= 32924.. 32924 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 57 handler=0x00417500
-rdata@0x0046C728  cmdID= 32924.. 32924 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x00417C50
-rdata@0x0046C740  cmdID= 32927.. 32927 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 57 handler=0x00417380
-rdata@0x0046C770  cmdID=     0..     0 WM_COMMAND         ON_COMMAND             sig= 61 handler=0x00417F60
-rdata@0x0046C788  cmdID= 32941.. 32941 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C7A0  cmdID= 32943.. 32943 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C7B8  cmdID= 32944.. 32944 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004180E0
-rdata@0x0046C7D0  cmdID= 32945.. 32945 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C7E8  cmdID= 32946.. 32946 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418170
-rdata@0x0046C800  cmdID= 32947.. 32947 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C818  cmdID= 32948.. 32948 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C830  cmdID= 32950.. 32950 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418210
-rdata@0x0046C848  cmdID= 32956.. 32956 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C860  cmdID= 32955.. 32955 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C878  cmdID= 32962.. 32962 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004169F0
-rdata@0x0046C890  cmdID= 32897.. 32897 WM_COMMAND         ON_UPDATE_COMMAND_UI   sig= 57 handler=0x00416BD0
-rdata@0x0046C8A8  cmdID= 32897.. 32897 WM_COMMAND         ON_COMMAND             sig= 65 handler=0x00417920
-rdata@0x0046C8C0  cmdID= 32970.. 32970 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00417560
-rdata@0x0046C8D8  cmdID= 32971.. 32971 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004175C0
-rdata@0x0046C8F0  cmdID= 32974.. 32974 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00417620
-rdata@0x0046C908  cmdID= 32976.. 32976 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004182F0
-rdata@0x0046C920  cmdID= 32978.. 32978 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418560
-rdata@0x0046C938  cmdID= 32985.. 32985 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418660
-rdata@0x0046C950  cmdID= 32991.. 32991 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00417770
-rdata@0x0046C968  cmdID= 32989.. 32989 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00417680
-rdata@0x0046C980  cmdID= 32994.. 32994 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C998  cmdID= 32995.. 32995 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418200
-rdata@0x0046C9B0  cmdID= 32999.. 32999 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004188F0
-rdata@0x0046C9C8  cmdID= 33000.. 33000 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x00418680
-rdata@0x0046C9E0  cmdID= 33004.. 33004 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004182D0
-rdata@0x0046C9F8  cmdID= 33005.. 33005 WM_COMMAND         ON_COMMAND             sig= 57 handler=0x004182D0
+descriptor-backed maps: 21; entries: 227
+entry layout: nMessage, nCode, nID, nLastID, nSig, pfn (24 bytes)
+=== MAP 0x00461B24 entries@0x00461B30 ===
+rdata@0x00461B30 cmdID=     1..     1 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004400D4 code=0x00000000
+rdata@0x00461B48 cmdID=     2..     2 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0041B4C8 code=0x00000000
+rdata@0x00461B60 cmdID=     0..     0 MSG_0x0365           MSG_0x0365                 sig= 14 handler=0x0041B8F6 code=0x00000000
+rdata@0x00461B78 cmdID=     0..     0 MSG_0x0366           MSG_0x0366                 sig= 14 handler=0x0041B4AF code=0x00000000
+rdata@0x00461B90 cmdID=     0..     0 MSG_0x0110           MSG_0x0110                 sig= 14 handler=0x0041B716 code=0x00000000
+rdata@0x00461BA8 cmdID=     0..     0 MSG_0x0030           MSG_0x0030                 sig= 14 handler=0x0041B6EF code=0x00000000
+rdata@0x00461BC0 cmdID=     0..     0 WM_PAINT             WM_PAINT                   sig= 19 handler=0x0041B3CC code=0x00000000
+=== MAP 0x0046388C entries@0x00463898 ===
+rdata@0x00463898 cmdID=     0..     0 MSG_0x0116           MSG_0x0116                 sig= 33 handler=0x00426B2D code=0x00000000
+rdata@0x004638B0 cmdID=     0..     0 MSG_0x0117           MSG_0x0117                 sig= 34 handler=0x00427C54 code=0x00000000
+rdata@0x004638C8 cmdID=     0..     0 MSG_0x011F           MSG_0x011F                 sig= 52 handler=0x00427DF5 code=0x00000000
+rdata@0x004638E0 cmdID=     0..     0 MSG_0x0120           MSG_0x0120                 sig= 15 handler=0x00428642 code=0x00000000
+rdata@0x004638F8 cmdID=     0..     0 MSG_0x0375           MSG_0x0375                 sig= 14 handler=0x00427F9A code=0x00000000
+rdata@0x00463910 cmdID=     0..     0 MSG_0x0362           MSG_0x0362                 sig= 14 handler=0x00428D1C code=0x00000000
+rdata@0x00463928 cmdID=     0..     0 MSG_0x0376           MSG_0x0376                 sig= 14 handler=0x00426B58 code=0x00000000
+rdata@0x00463940 cmdID=     0..     0 MSG_0x0363           MSG_0x0363                 sig= 19 handler=0x004283BC code=0x00000000
+rdata@0x00463958 cmdID=     0..     0 MSG_0x0121           MSG_0x0121                 sig= 26 handler=0x00428C04 code=0x00000000
+rdata@0x00463970 cmdID=     0..     0 MSG_0x0114           MSG_0x0114                 sig= 42 handler=0x004276BB code=0x00000000
+rdata@0x00463988 cmdID=     0..     0 MSG_0x0115           MSG_0x0115                 sig= 42 handler=0x004276E5 code=0x00000000
+rdata@0x004639A0 cmdID=     0..     0 MSG_0x0007           MSG_0x0007                 sig= 35 handler=0x00426B0D code=0x00000000
+rdata@0x004639B8 cmdID=     0..     0 WM_CREATE            WM_CREATE                  sig= 13 handler=0x00428BE7 code=0x00000000
+rdata@0x004639D0 cmdID=     0..     0 WM_DESTROY           WM_DESTROY                 sig= 19 handler=0x004290DD code=0x00000000
+rdata@0x004639E8 cmdID=     0..     0 MSG_0x0010           MSG_0x0010                 sig= 19 handler=0x00427527 code=0x00000000
+rdata@0x00463A00 cmdID=     0..     0 WM_SIZE              WM_SIZE                    sig= 25 handler=0x00428591 code=0x00000000
+rdata@0x00463A18 cmdID=     0..     0 MSG_0x0014           MSG_0x0014                 sig=  1 handler=0x004285B5 code=0x00000000
+rdata@0x00463A30 cmdID=     0..     0 MSG_0x0006           MSG_0x0006                 sig= 41 handler=0x004277A5 code=0x00000000
+rdata@0x00463A48 cmdID=     0..     0 MSG_0x0086           MSG_0x0086                 sig=  2 handler=0x00426A4F code=0x00000000
+rdata@0x00463A60 cmdID=     0..     0 MSG_0x0112           MSG_0x0112                 sig= 30 handler=0x004278A2 code=0x00000000
+rdata@0x00463A78 cmdID=     0..     0 MSG_0x0233           MSG_0x0233                 sig= 17 handler=0x00427945 code=0x00000000
+rdata@0x00463A90 cmdID=     0..     0 MSG_0x0011           MSG_0x0011                 sig= 29 handler=0x004279F0 code=0x00000000
+rdata@0x00463AA8 cmdID=     0..     0 MSG_0x0016           MSG_0x0016                 sig= 20 handler=0x00427A16 code=0x00000000
+rdata@0x00463AC0 cmdID=     0..     0 MSG_0x0020           MSG_0x0020                 sig=  5 handler=0x0042710F code=0x00000000
+rdata@0x00463AD8 cmdID=     0..     0 MSG_0x000A           MSG_0x000A                 sig= 20 handler=0x00428B02 code=0x00000000
+rdata@0x00463AF0 cmdID=     0..     0 MSG_0x030F           MSG_0x030F                 sig= 29 handler=0x0042706E code=0x00000000
+rdata@0x00463B08 cmdID=     0..     0 MSG_0x0311           MSG_0x0311                 sig= 35 handler=0x00427047 code=0x00000000
+rdata@0x00463B20 cmdID=     0..     0 MSG_0x0365           MSG_0x0365                 sig= 14 handler=0x00427144 code=0x00000000
+rdata@0x00463B38 cmdID=     0..     0 MSG_0x0366           MSG_0x0366                 sig= 14 handler=0x0042683C code=0x00000000
+rdata@0x00463B50 cmdID=     0..     0 MSG_0x036E           MSG_0x036E                 sig= 14 handler=0x0042770F code=0x00000000
+rdata@0x00463B68 cmdID= 59393.. 59393 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x0042803F code=0xFFFFFFFF
+rdata@0x00463B80 cmdID= 59393.. 59393 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 60 handler=0x00428082 code=0x00000000
+rdata@0x00463B98 cmdID= 59392.. 59392 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x0042803F code=0xFFFFFFFF
+rdata@0x00463BB0 cmdID= 59392.. 59392 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 60 handler=0x00428082 code=0x00000000
+rdata@0x00463BC8 cmdID= 59396.. 59396 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x0042803F code=0xFFFFFFFF
+rdata@0x00463BE0 cmdID= 59396.. 59396 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 60 handler=0x00428082 code=0x00000000
+rdata@0x00463BF8 cmdID= 59137.. 59137 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x004280C0 code=0xFFFFFFFF
+rdata@0x00463C10 cmdID= 59138.. 59138 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x004280C0 code=0xFFFFFFFF
+rdata@0x00463C28 cmdID= 59139.. 59139 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x004280C0 code=0xFFFFFFFF
+rdata@0x00463C40 cmdID= 59142.. 59142 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x004280C0 code=0xFFFFFFFF
+rdata@0x00463C58 cmdID= 57669.. 57669 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x0042811D code=0xFFFFFFFF
+rdata@0x00463C70 cmdID=     0.. 65535 WM_NOTIFY            WM_NOTIFY                  sig= 64 handler=0x00428EE3 code=0x0000FDEE
+rdata@0x00463C88 cmdID=     0.. 65535 WM_NOTIFY            WM_NOTIFY                  sig= 64 handler=0x00428EE3 code=0x0000FDF8
+rdata@0x00463CA0 cmdID=     0.. 65535 WM_NOTIFY            WM_NOTIFY                  sig= 64 handler=0x0042960A code=0x0000FCB7
+rdata@0x00463CB8 cmdID=     0..     0 MSG_0x03E0           MSG_0x03E0                 sig= 14 handler=0x00427A53 code=0x00000000
+rdata@0x00463CD0 cmdID=     0..     0 MSG_0x03E8           MSG_0x03E8                 sig= 14 handler=0x00429523 code=0x00000000
+rdata@0x00463CE8 cmdID=     0..     0 MSG_0x03E1           MSG_0x03E1                 sig= 14 handler=0x00426A89 code=0x00000000
+=== MAP 0x00463F00 entries@0x00463F08 ===
+rdata@0x00463F08 cmdID=     0..     0 MSG_0x0084           MSG_0x0084                 sig= 70 handler=0x00429DBB code=0x00000000
+rdata@0x00463F20 cmdID=     0..     0 MSG_0x0085           MSG_0x0085                 sig= 19 handler=0x00429DFA code=0x00000000
+rdata@0x00463F38 cmdID=     0..     0 WM_PAINT             WM_PAINT                   sig= 19 handler=0x0042A5B6 code=0x00000000
+rdata@0x00463F50 cmdID=     0..     0 MSG_0x0083           MSG_0x0083                 sig= 50 handler=0x00429FE6 code=0x00000000
+rdata@0x00463F68 cmdID=     0..     0 WM_SIZE              WM_SIZE                    sig= 25 handler=0x0042A5CC code=0x00000000
+rdata@0x00463F80 cmdID=     0..     0 MSG_0x0046           MSG_0x0046                 sig= 51 handler=0x00429E22 code=0x00000000
+rdata@0x00463F98 cmdID=     0..     0 MSG_0x000C           MSG_0x000C                 sig= 14 handler=0x0042A338 code=0x00000000
+rdata@0x00463FB0 cmdID=     0..     0 MSG_0x000D           MSG_0x000D                 sig= 14 handler=0x0042A0D6 code=0x00000000
+rdata@0x00463FC8 cmdID=     0..     0 MSG_0x000E           MSG_0x000E                 sig= 14 handler=0x0042A131 code=0x00000000
+rdata@0x00463FE0 cmdID=     0..     0 MSG_0x0408           MSG_0x0408                 sig= 14 handler=0x00429E4A code=0x00000000
+=== MAP 0x00464098 entries@0x004640A0 ===
+rdata@0x004640A0 cmdID= 57665.. 57665 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0042E0BC code=0x00000000
+rdata@0x004640B8 cmdID= 57616.. 57616 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x0042E04F code=0xFFFFFFFF
+rdata@0x004640D0 cmdID= 57616.. 57631 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 60 handler=0x0042E103 code=0x00000000
+=== MAP 0x004649E0 entries@0x004649E8 ===
+rdata@0x004649E8 cmdID= 57602.. 57602 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0042E1B5 code=0x00000000
+rdata@0x00464A00 cmdID= 57603.. 57603 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0042E1D0 code=0x00000000
+rdata@0x00464A18 cmdID= 57604.. 57604 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0042E1D8 code=0x00000000
+=== MAP 0x00464C84 entries@0x00464C8C ===
+rdata@0x00464C8C cmdID=     0..     0 MSG_0x0082           MSG_0x0082                 sig= 19 handler=0x0042F3C1 code=0x00000000
+=== MAP 0x00464D10 entries@0x00464D18 ===
+rdata@0x00464D18 cmdID=     0..     0 WM_PAINT             WM_PAINT                   sig= 19 handler=0x0042F50C code=0x00000000
+rdata@0x00464D30 cmdID=     0..     0 MSG_0x0021           MSG_0x0021                 sig= 12 handler=0x0042F6C0 code=0x00000000
+rdata@0x00464D48 cmdID=     0..     0 WM_CREATE            WM_CREATE                  sig= 13 handler=0x0042F614 code=0x00000000
+rdata@0x00464D60 cmdID=     0..     0 WM_DESTROY           WM_DESTROY                 sig= 19 handler=0x0042F46A code=0x00000000
+rdata@0x00464D78 cmdID= 57653.. 57653 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 60 handler=0x0042F852 code=0x00000000
+rdata@0x00464D90 cmdID= 57653.. 57653 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x0042F818 code=0xFFFFFFFF
+rdata@0x00464DA8 cmdID= 57680.. 57680 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x0042F86E code=0xFFFFFFFF
+rdata@0x00464DC0 cmdID= 57680.. 57680 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 60 handler=0x0042F8B1 code=0x00000000
+rdata@0x00464DD8 cmdID= 57681.. 57681 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x0042F86E code=0xFFFFFFFF
+rdata@0x00464DF0 cmdID= 57681.. 57681 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 60 handler=0x0042F8B1 code=0x00000000
+rdata@0x00464E08 cmdID=     0..     0 MSG_0x0364           MSG_0x0364                 sig= 19 handler=0x0042F5B7 code=0x00000000
+=== MAP 0x00464E38 entries@0x00464E40 ===
+rdata@0x00464E40 cmdID=     0..     0 WM_PAINT             WM_PAINT                   sig= 19 handler=0x00446298 code=0x00000000
+=== MAP 0x00465324 entries@0x00465330 ===
+rdata@0x00465330 cmdID=     0..     0 WM_TIMER             WM_TIMER                   sig= 20 handler=0x00435457 code=0x00000000
+rdata@0x00465348 cmdID=     0..     0 WM_PAINT             WM_PAINT                   sig= 19 handler=0x004350F9 code=0x00000000
+rdata@0x00465360 cmdID=     0..     0 MSG_0x0019           MSG_0x0019                 sig=  8 handler=0x004358A3 code=0x00000000
+rdata@0x00465378 cmdID=     0..     0 MSG_0x0363           MSG_0x0363                 sig= 14 handler=0x004362E1 code=0x00000000
+rdata@0x00465390 cmdID=     0..     0 MSG_0x0361           MSG_0x0361                 sig= 14 handler=0x00435987 code=0x00000000
+rdata@0x004653A8 cmdID=     0..     0 MSG_0x0046           MSG_0x0046                 sig= 51 handler=0x0043560D code=0x00000000
+rdata@0x004653C0 cmdID=     0..     0 MSG_0x0018           MSG_0x0018                 sig= 21 handler=0x004353A0 code=0x00000000
+rdata@0x004653D8 cmdID=     0..     0 WM_LBUTTONDOWN       WM_LBUTTONDOWN             sig= 53 handler=0x004358FD code=0x00000000
+rdata@0x004653F0 cmdID=     0..     0 WM_LBUTTONDBLCLK     WM_LBUTTONDBLCLK           sig= 53 handler=0x0043594B code=0x00000000
+rdata@0x00465408 cmdID=     0..     0 MSG_0x0021           MSG_0x0021                 sig= 12 handler=0x004357B8 code=0x00000000
+rdata@0x00465420 cmdID=     0..     0 MSG_0x001F           MSG_0x001F                 sig= 19 handler=0x00446298 code=0x00000000
+rdata@0x00465438 cmdID=     0..     0 WM_CREATE            WM_CREATE                  sig= 13 handler=0x0043571C code=0x00000000
+rdata@0x00465450 cmdID=     0..     0 WM_DESTROY           WM_DESTROY                 sig= 19 handler=0x00435064 code=0x00000000
+rdata@0x00465468 cmdID=     0..     0 MSG_0x031A           MSG_0x031A                 sig= 69 handler=0x0043501C code=0x00000000
+rdata@0x00465480 cmdID=     0..     0 MSG_0x0364           MSG_0x0364                 sig= 19 handler=0x00436397 code=0x00000000
+rdata@0x00465498 cmdID=     0..     0 MSG_0x0366           MSG_0x0366                 sig= 14 handler=0x004355C3 code=0x00000000
+rdata@0x004654B0 cmdID=     0..     0 MSG_0x0014           MSG_0x0014                 sig=  1 handler=0x00426F17 code=0x00000000
+=== MAP 0x00466008 entries@0x00466010 ===
+rdata@0x00466010 cmdID=   100..   100 WM_COMMAND           ON_CONTROL(code=0x00000002) sig= 57 handler=0x004400D4 code=0x00000002
+=== MAP 0x004668F8 entries@0x00466900 ===
+rdata@0x00466900 cmdID=     0..     0 MSG_0x036C           MSG_0x036C                 sig= 14 handler=0x00442AF5 code=0x00000000
+rdata@0x00466918 cmdID=     0..     0 MSG_0x0410           MSG_0x0410                 sig= 14 handler=0x00442B28 code=0x00000000
+rdata@0x00466930 cmdID=     0..     0 MSG_0x0432           MSG_0x0432                 sig= 14 handler=0x00442A76 code=0x00000000
+rdata@0x00466948 cmdID=     0..     0 MSG_0x000A           MSG_0x000A                 sig= 20 handler=0x00442B0C code=0x00000000
+=== MAP 0x00467194 entries@0x004671A0 ===
+rdata@0x004671A0 cmdID=     0..     0 MSG_0x0053           MSG_0x0053                 sig=  7 handler=0x0044629D code=0x00000000
+rdata@0x004671B8 cmdID=     0..     0 WM_PAINT             WM_PAINT                   sig= 19 handler=0x00446298 code=0x00000000
+=== MAP 0x00469FC0 entries@0x00469F30 ===
+rdata@0x00469F30 cmdID=  1038..  1038 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00404E10 code=0x00000000
+rdata@0x00469F48 cmdID=  1039..  1039 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00404F50 code=0x00000000
+rdata@0x00469F60 cmdID=  1040..  1040 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004050E0 code=0x00000000
+rdata@0x00469F78 cmdID=  1044..  1044 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00405270 code=0x00000000
+rdata@0x00469F90 cmdID=  1046..  1046 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004053B0 code=0x00000000
+=== MAP 0x0046A2A8 entries@0x0046A230 ===
+rdata@0x0046A230 cmdID=  1050..  1050 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00405A50 code=0x00000000
+rdata@0x0046A248 cmdID=  1051..  1051 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00405BF0 code=0x00000000
+rdata@0x0046A260 cmdID=     0..     0 WM_LBUTTONDOWN       WM_LBUTTONDOWN             sig= 53 handler=0x00406220 code=0x00000000
+rdata@0x0046A278 cmdID=     1..     1 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004062E0 code=0x00000000
+=== MAP 0x0046AE88 entries@0x0046AE28 ===
+rdata@0x0046AE28 cmdID=     0..     0 WM_CREATE            WM_CREATE                  sig= 13 handler=0x004087B0 code=0x00000000
+rdata@0x0046AE40 cmdID=     0..     0 WM_TIMER             WM_TIMER                   sig= 20 handler=0x00408890 code=0x00000000
+rdata@0x0046AE58 cmdID=     0..     0 MSG_0x0010           MSG_0x0010                 sig= 19 handler=0x004088B0 code=0x00000000
+=== MAP 0x0046B0B8 entries@0x0046B088 ===
+rdata@0x0046B088 cmdID=  1036..  1036 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00409350 code=0x00000000
+=== MAP 0x0046B65C entries@0x0046B62C ===
+rdata@0x0046B62C cmdID=     1..     1 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0040D170 code=0x00000000
+=== MAP 0x0046B864 entries@0x0046B834 ===
+rdata@0x0046B834 cmdID=  1036..  1036 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0040F970 code=0x00000000
+=== MAP 0x0046BA30 entries@0x0046BA00 ===
+rdata@0x0046BA00 cmdID=     0..     0 WM_PAINT             WM_PAINT                   sig= 19 handler=0x00413E40 code=0x00000000
+=== MAP 0x0046BD38 entries@0x0046BCD8 ===
+rdata@0x0046BCD8 cmdID= 57664.. 57664 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004151A0 code=0x00000000
+rdata@0x0046BCF0 cmdID= 57600.. 57600 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0042AA73 code=0x00000000
+rdata@0x0046BD08 cmdID= 57601.. 57601 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x0042AA82 code=0x00000000
+=== MAP 0x0046CA38 entries@0x0046C0A8 ===
+rdata@0x0046C0A8 cmdID=     0..     0 WM_CREATE            WM_CREATE                  sig= 13 handler=0x004154E0 code=0x00000000
+rdata@0x0046C0C0 cmdID=     0..     0 WM_LBUTTONDBLCLK     WM_LBUTTONDBLCLK           sig= 53 handler=0x00416490 code=0x00000000
+rdata@0x0046C0D8 cmdID= 32782.. 32782 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416510 code=0x00000000
+rdata@0x0046C0F0 cmdID= 32783.. 32783 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004165F0 code=0x00000000
+rdata@0x0046C108 cmdID= 32779.. 32779 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004164B0 code=0x00000000
+rdata@0x0046C120 cmdID= 32871.. 32871 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416600 code=0x00000000
+rdata@0x0046C138 cmdID= 32872.. 32872 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416610 code=0x00000000
+rdata@0x0046C150 cmdID= 32873.. 32873 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416620 code=0x00000000
+rdata@0x0046C168 cmdID= 32874.. 32874 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416630 code=0x00000000
+rdata@0x0046C180 cmdID= 32875.. 32875 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416640 code=0x00000000
+rdata@0x0046C198 cmdID= 32876.. 32876 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416650 code=0x00000000
+rdata@0x0046C1B0 cmdID= 32877.. 32877 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416660 code=0x00000000
+rdata@0x0046C1C8 cmdID= 32878.. 32878 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416670 code=0x00000000
+rdata@0x0046C1E0 cmdID= 32879.. 32879 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416680 code=0x00000000
+rdata@0x0046C1F8 cmdID= 32880.. 32880 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416690 code=0x00000000
+rdata@0x0046C210 cmdID= 32881.. 32881 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004166A0 code=0x00000000
+rdata@0x0046C228 cmdID= 32882.. 32882 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004166B0 code=0x00000000
+rdata@0x0046C240 cmdID= 32883.. 32883 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004166C0 code=0x00000000
+rdata@0x0046C258 cmdID= 32884.. 32884 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004166D0 code=0x00000000
+rdata@0x0046C270 cmdID= 32885.. 32885 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004166E0 code=0x00000000
+rdata@0x0046C288 cmdID= 32886.. 32886 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004166F0 code=0x00000000
+rdata@0x0046C2A0 cmdID= 32887.. 32887 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416700 code=0x00000000
+rdata@0x0046C2B8 cmdID= 32888.. 32888 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416710 code=0x00000000
+rdata@0x0046C2D0 cmdID= 32889.. 32889 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416720 code=0x00000000
+rdata@0x0046C2E8 cmdID= 32890.. 32890 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416730 code=0x00000000
+rdata@0x0046C300 cmdID= 32891.. 32891 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416740 code=0x00000000
+rdata@0x0046C318 cmdID= 32833.. 32833 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416750 code=0x00000000
+rdata@0x0046C330 cmdID= 32835.. 32835 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416830 code=0x00000000
+rdata@0x0046C348 cmdID= 32837.. 32837 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416910 code=0x00000000
+rdata@0x0046C360 cmdID= 32846.. 32846 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416A60 code=0x00000000
+rdata@0x0046C378 cmdID= 32848.. 32848 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416A90 code=0x00000000
+rdata@0x0046C390 cmdID= 32848.. 32848 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417860 code=0xFFFFFFFF
+rdata@0x0046C3A8 cmdID= 32851.. 32851 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416AE0 code=0x00000000
+rdata@0x0046C3C0 cmdID= 32852.. 32852 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416B30 code=0x00000000
+rdata@0x0046C3D8 cmdID= 32853.. 32853 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416B80 code=0x00000000
+rdata@0x0046C3F0 cmdID= 32851.. 32851 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417890 code=0xFFFFFFFF
+rdata@0x0046C408 cmdID= 32852.. 32852 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x004178C0 code=0xFFFFFFFF
+rdata@0x0046C420 cmdID= 32853.. 32853 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x004178F0 code=0xFFFFFFFF
+rdata@0x0046C438 cmdID= 32898.. 32898 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416CE0 code=0x00000000
+rdata@0x0046C450 cmdID= 32899.. 32899 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416FD0 code=0x00000000
+rdata@0x0046C468 cmdID= 32895.. 32895 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004172C0 code=0x00000000
+rdata@0x0046C480 cmdID= 32896.. 32896 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417320 code=0x00000000
+rdata@0x0046C498 cmdID= 32865.. 32865 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004173E0 code=0x00000000
+rdata@0x0046C4B0 cmdID= 32866.. 32866 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417440 code=0x00000000
+rdata@0x0046C4C8 cmdID= 32868.. 32868 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004174A0 code=0x00000000
+rdata@0x0046C4E0 cmdID= 32898.. 32898 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417950 code=0xFFFFFFFF
+rdata@0x0046C4F8 cmdID= 32899.. 32899 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417A40 code=0xFFFFFFFF
+rdata@0x0046C510 cmdID= 32895.. 32895 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417B30 code=0xFFFFFFFF
+rdata@0x0046C528 cmdID= 32896.. 32896 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417B60 code=0xFFFFFFFF
+rdata@0x0046C540 cmdID= 32865.. 32865 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417BC0 code=0xFFFFFFFF
+rdata@0x0046C558 cmdID= 32866.. 32866 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417BF0 code=0xFFFFFFFF
+rdata@0x0046C570 cmdID= 32868.. 32868 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417C20 code=0xFFFFFFFF
+rdata@0x0046C588 cmdID= 32913.. 32913 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416D50 code=0x00000000
+rdata@0x0046C5A0 cmdID= 32914.. 32914 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416DC0 code=0x00000000
+rdata@0x0046C5B8 cmdID= 32915.. 32915 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416E30 code=0x00000000
+rdata@0x0046C5D0 cmdID= 32918.. 32918 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416EA0 code=0x00000000
+rdata@0x0046C5E8 cmdID= 32919.. 32919 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417040 code=0x00000000
+rdata@0x0046C600 cmdID= 32920.. 32920 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004170B0 code=0x00000000
+rdata@0x0046C618 cmdID= 32921.. 32921 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417120 code=0x00000000
+rdata@0x0046C630 cmdID= 32922.. 32922 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417190 code=0x00000000
+rdata@0x0046C648 cmdID= 32913.. 32913 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417980 code=0xFFFFFFFF
+rdata@0x0046C660 cmdID= 32914.. 32914 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x004179B0 code=0xFFFFFFFF
+rdata@0x0046C678 cmdID= 32915.. 32915 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x004179E0 code=0xFFFFFFFF
+rdata@0x0046C690 cmdID= 32918.. 32918 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417A10 code=0xFFFFFFFF
+rdata@0x0046C6A8 cmdID= 32919.. 32919 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417A70 code=0xFFFFFFFF
+rdata@0x0046C6C0 cmdID= 32920.. 32920 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417AA0 code=0xFFFFFFFF
+rdata@0x0046C6D8 cmdID= 32921.. 32921 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417AD0 code=0xFFFFFFFF
+rdata@0x0046C6F0 cmdID= 32922.. 32922 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417B00 code=0xFFFFFFFF
+rdata@0x0046C708 cmdID= 32924.. 32924 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417500 code=0x00000000
+rdata@0x0046C720 cmdID= 32924.. 32924 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417C50 code=0xFFFFFFFF
+rdata@0x0046C738 cmdID= 32927.. 32927 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417380 code=0x00000000
+rdata@0x0046C750 cmdID= 32927.. 32927 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417B90 code=0xFFFFFFFF
+rdata@0x0046C768 cmdID=     0..     0 MSG_0xBC4E           MSG_0xBC4E                 sig= 61 handler=0x00417F60 code=0x0000FFFB
+rdata@0x0046C780 cmdID= 32941.. 32941 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C798 cmdID= 32943.. 32943 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C7B0 cmdID= 32944.. 32944 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004180E0 code=0x00000000
+rdata@0x0046C7C8 cmdID= 32945.. 32945 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C7E0 cmdID= 32946.. 32946 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418170 code=0x00000000
+rdata@0x0046C7F8 cmdID= 32947.. 32947 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C810 cmdID= 32948.. 32948 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C828 cmdID= 32950.. 32950 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418210 code=0x00000000
+rdata@0x0046C840 cmdID= 32956.. 32956 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C858 cmdID= 32955.. 32955 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C870 cmdID= 32962.. 32962 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004169F0 code=0x00000000
+rdata@0x0046C888 cmdID= 32897.. 32897 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00416BD0 code=0x00000000
+rdata@0x0046C8A0 cmdID= 32897.. 32897 WM_COMMAND           ON_UPDATE_COMMAND_UI       sig= 65 handler=0x00417920 code=0xFFFFFFFF
+rdata@0x0046C8B8 cmdID= 32970.. 32970 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417560 code=0x00000000
+rdata@0x0046C8D0 cmdID= 32971.. 32971 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004175C0 code=0x00000000
+rdata@0x0046C8E8 cmdID= 32974.. 32974 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417620 code=0x00000000
+rdata@0x0046C900 cmdID= 32976.. 32976 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004182F0 code=0x00000000
+rdata@0x0046C918 cmdID= 32978.. 32978 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418560 code=0x00000000
+rdata@0x0046C930 cmdID= 32985.. 32985 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418660 code=0x00000000
+rdata@0x0046C948 cmdID= 32991.. 32991 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417770 code=0x00000000
+rdata@0x0046C960 cmdID= 32989.. 32989 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00417680 code=0x00000000
+rdata@0x0046C978 cmdID= 32994.. 32994 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C990 cmdID= 32995.. 32995 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418200 code=0x00000000
+rdata@0x0046C9A8 cmdID= 32999.. 32999 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004188F0 code=0x00000000
+rdata@0x0046C9C0 cmdID= 33000.. 33000 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418680 code=0x00000000
+rdata@0x0046C9D8 cmdID= 33004.. 33004 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004182D0 code=0x00000000
+rdata@0x0046C9F0 cmdID= 33005.. 33005 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004182D0 code=0x00000000
+rdata@0x0046CA08 cmdID= 33006.. 33006 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x00418660 code=0x00000000

@@ -1,13 +1,13 @@
 --- VERSION INFO ---
   CompanyName: by snowrabbit2000
-  FileDescription: 鎴樺浗鍏版柉淇�鏀瑰櫒
+  FileDescription: 战国兰斯修改器
   FileVersion: 1.0.7.0
   InternalName: Rance7Editor.exe
   LegalCopyright: by snowrabbit2000
   OriginalFilename: Rance7Editor.exe
-  ProductName: 鎴樺浗鍏版柉淇�鏀瑰櫒
+  ProductName: 战国兰斯修改器
   ProductVersion: 1.0.7.0
---- MANIFEST ---
+--- MANIFEST 1 lang=0x0409 ---
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
   <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
     <security>

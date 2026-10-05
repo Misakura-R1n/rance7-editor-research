@@ -498,63 +498,100 @@
 0x00467378  runtime error 
 0x004673AC  DOMAIN error
 
+
 0x004673C0  R6034
+
 An application has made an attempt to load the C runtime library incorrectly.
 Please contact the application's support team for more information.
 
+
 0x00467460  R6033
+
 - Attempt to use MSIL code from this assembly during native code initialization
 This indicates a bug in your application. It is most likely the result of calling an MSIL-compiled (/clr) function from a native constructor or from DllMain.
 
+
 0x00467558  R6032
+
 - not enough space for locale information
 
+
 0x00467590  R6031
+
 - Attempt to initialize the CRT more than once.
 This indicates a bug in your application.
 
+
 0x004675F4  R6030
+
 - CRT not initialized
 
+
 0x00467614  R6028
+
 - unable to initialize heap
 
+
 0x0046763C  R6027
+
 - not enough space for lowio initialization
 
+
 0x00467674  R6026
+
 - not enough space for stdio initialization
 
+
 0x004676AC  R6025
+
 - pure virtual function call
 
+
 0x004676D4  R6024
+
 - not enough space for _onexit/atexit table
 
+
 0x0046770C  R6019
+
 - unable to open console device
 
+
 0x00467738  R6018
+
 - unexpected heap error
 
+
 0x0046775C  R6017
+
 - unexpected multithread lock error
 
+
 0x0046778C  R6016
+
 - not enough space for thread data
 
+
 0x004677B8  
+
 This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 
+
 0x00467850  R6009
+
 - not enough space for environment
 
+
 0x0046787C  R6008
+
 - not enough space for arguments
 
+
 0x004678A8  R6002
+
 - floating point support not loaded
+
 
 0x004678D8  Microsoft Visual C++ Runtime Library
 0x00467904  ...
@@ -812,7 +849,8 @@ Program:
 0x0046A720  &妽MR儑鶉
 0x0046A734  &鑍'Y蛃鄐
 0x0046A760  6e硚眥
-0x0046A788  6e硚眥T饄
+0x0046A788  6e硚眥
+T饄
 0x0046A7A0  /f&T6e硚
 0x0046A7B4  CItemInfoDlg
 0x0046A7E4   u@
@@ -1408,7 +1446,8 @@ Program:
 0x00477E82  EnableWindow
 0x00477EB2  )PtInRect
 0x00477ED6  %GetForegroundWindow
-0x00477EFA  GetClientRect
+0x00477EFA  
+GetClientRect
 0x00477F26  kGetSubMenu
 0x00477F34  GetCursorPos
 0x00477F44  BGetMenuItemCount
@@ -1522,7 +1561,8 @@ Program:
 0x00478ABC  CreatePatternBrush
 0x00478AE4  CreateSolidBrush
 0x00478AF8  CreateCompatibleBitmap
-0x00478B10  GetTextMetricsW
+0x00478B10  
+GetTextMetricsW
 0x00478B22  GetTextExtentPoint32W
 0x00478B3C  CreateFontIndirectW
 0x00478B88  GDI32.dll

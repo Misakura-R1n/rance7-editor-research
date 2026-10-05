@@ -10,15 +10,22 @@ import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.io.File;
 
 public class ExportAll extends GhidraScript {
+
+    private String csv(String value) {
+        return "\"" + value.replace("\"", "\"\"") + "\"";
+    }
 
     @Override
     public void run() throws Exception {
         String[] args = getScriptArgs();
-        String outDir = args.length > 0 ? args[0] : "C:\\temp";
-        String decompPath = outDir + "\\all_functions.c";
-        String listPath = outDir + "\\functions.csv";
+        if (args.length != 1) throw new IllegalArgumentException("ExportAll <output-directory>");
+        File outDir = new File(args[0]);
+        if (!outDir.isDirectory() && !outDir.mkdirs()) throw new IllegalArgumentException("Cannot create " + outDir);
+        String decompPath = new File(outDir, "all_functions.c").getPath();
+        String listPath = new File(outDir, "functions.csv").getPath();
 
         Writer listW = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(listPath), "UTF-8"));
         listW.write("entry,name,size,params\n");
@@ -43,7 +50,7 @@ public class ExportAll extends GhidraScript {
                 if (i > 0) params.append(";");
                 params.append(ps[i].getDataType().getName()).append(" ").append(ps[i].getName());
             }
-            listW.write(String.format("0x%08X,%s,%d,\"%s\"%n", ep, f.getName(), size, params));
+            listW.write(String.format("0x%08X,%s,%d,%s\n", ep, csv(f.getName()), size, csv(params.toString())));
             n++;
 
             decompW.write(String.format("//==================== %s @ 0x%08X (size %d) ====================%n",

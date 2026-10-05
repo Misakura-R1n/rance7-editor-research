@@ -3820,6 +3820,181 @@ undefined ** FUN_00405a40(void)
 
 
 
+//==================== Handler_00405A50 @ 0x00405A50 (size 398) ====================
+
+void Handler_00405A50(void)
+
+{
+  int *piVar1;
+  rsize_t _DstSize;
+  void *_Src;
+  HGDIOBJ ho;
+  int iVar2;
+  undefined4 *puVar3;
+  int in_ECX;
+  int *piVar4;
+  LPCWSTR unaff_EDI;
+  int *piVar5;
+  RECT *lpRect;
+  int iStack_4;
+  
+  if (*(int *)(in_ECX + 0x924) == 1) {
+    iVar2 = *(int *)(in_ECX + 0x928);
+  }
+  else {
+    iVar2 = *(int *)(in_ECX + 0x924) + -1;
+  }
+  *(int *)(in_ECX + 0x924) = iVar2;
+  FUN_00401e70((undefined4 *)(in_ECX + 0x1248),L"页号:%d/%d");
+  FID_conflict_SetWindowTextW(*(HWND *)(in_ECX + 0x1248),unaff_EDI);
+  iStack_4 = 0;
+  piVar5 = (int *)(in_ECX + 0xcc);
+  do {
+    _Src = *(void **)(in_ECX + 0x9e8 + (*(int *)(in_ECX + 0x924) * 0xf + iStack_4) * 4);
+    piVar4 = (int *)((int)_Src + -0x10);
+    puVar3 = (undefined4 *)(**(code **)(**(int **)((int)_Src + -0x10) + 0x10))();
+    if ((*(int *)((int)_Src + -4) < 0) || (puVar3 != (undefined4 *)*piVar4)) {
+      piVar4 = (int *)(**(code **)*puVar3)(*(undefined4 *)((int)_Src + -0xc),2);
+      if (piVar4 == (int *)0x0) {
+                    /* WARNING: Subroutine does not return */
+        FUN_0040ab50();
+      }
+      piVar4[1] = *(int *)((int)_Src + -0xc);
+      _DstSize = *(int *)((int)_Src + -0xc) * 2 + 2;
+      _memcpy_s(piVar4 + 4,_DstSize,_Src,_DstSize);
+    }
+    else {
+      LOCK();
+      *(int *)((int)_Src + -4) = *(int *)((int)_Src + -4) + 1;
+      UNLOCK();
+    }
+    if ((*piVar5 != 0) && (ho = (HGDIOBJ)*piVar5, ho != (HGDIOBJ)0x0)) {
+      *piVar5 = 0;
+      piVar5[1] = 0;
+      piVar5[2] = 0;
+      piVar5[3] = 0;
+      piVar5[5] = 0;
+      piVar5[4] = 0;
+      piVar5[7] = -1;
+      *(undefined1 *)((int)piVar5 + 0x19) = 0;
+      *(undefined1 *)(piVar5 + 6) = 0;
+      DeleteObject(ho);
+    }
+    iVar2 = FUN_00414860(piVar5 + -1,(LPCWSTR)(piVar4 + 4));
+    piVar1 = piVar4 + 3;
+    piVar5[0xb] = (uint)(-1 < iVar2);
+    LOCK();
+    iVar2 = *piVar1;
+    *piVar1 = *piVar1 + -1;
+    UNLOCK();
+    if (iVar2 == 1 || iVar2 + -1 < 0) {
+      (**(code **)(*(int *)*piVar4 + 4))(piVar4);
+    }
+    iStack_4 = iStack_4 + 1;
+    piVar5 = piVar5 + 0x25;
+  } while (iStack_4 < 0xf);
+  lpRect = (RECT *)(in_ECX + 0x92c);
+  puVar3 = (undefined4 *)(in_ECX + 0xfc);
+  iVar2 = 0xf;
+  do {
+    *puVar3 = 0;
+    InvalidateRect(*(HWND *)(in_ECX + 0x20),lpRect,1);
+    puVar3 = puVar3 + 0x25;
+    lpRect = lpRect + 1;
+    iVar2 = iVar2 + -1;
+  } while (iVar2 != 0);
+  return;
+}
+
+
+
+//==================== Handler_00405BF0 @ 0x00405BF0 (size 405) ====================
+
+void Handler_00405BF0(void)
+
+{
+  int *piVar1;
+  rsize_t _DstSize;
+  void *_Src;
+  HGDIOBJ ho;
+  undefined4 *puVar2;
+  int iVar3;
+  int in_ECX;
+  int *piVar4;
+  LPCWSTR unaff_EDI;
+  int *piVar5;
+  RECT *lpRect;
+  int iStack_4;
+  
+  if (*(int *)(in_ECX + 0x924) < *(int *)(in_ECX + 0x928)) {
+    *(int *)(in_ECX + 0x924) = *(int *)(in_ECX + 0x924) + 1;
+  }
+  else {
+    *(undefined4 *)(in_ECX + 0x924) = 1;
+  }
+  FUN_00401e70((undefined4 *)(in_ECX + 0x1248),L"页号:%d/%d");
+  FID_conflict_SetWindowTextW(*(HWND *)(in_ECX + 0x1248),unaff_EDI);
+  iStack_4 = 0;
+  piVar5 = (int *)(in_ECX + 0xcc);
+  do {
+    _Src = *(void **)(in_ECX + 0x9e8 + (*(int *)(in_ECX + 0x924) * 0xf + iStack_4) * 4);
+    piVar4 = (int *)((int)_Src + -0x10);
+    puVar2 = (undefined4 *)(**(code **)(**(int **)((int)_Src + -0x10) + 0x10))();
+    if ((*(int *)((int)_Src + -4) < 0) || (puVar2 != (undefined4 *)*piVar4)) {
+      piVar4 = (int *)(**(code **)*puVar2)(*(undefined4 *)((int)_Src + -0xc),2);
+      if (piVar4 == (int *)0x0) {
+                    /* WARNING: Subroutine does not return */
+        FUN_0040ab50();
+      }
+      piVar4[1] = *(int *)((int)_Src + -0xc);
+      _DstSize = *(int *)((int)_Src + -0xc) * 2 + 2;
+      _memcpy_s(piVar4 + 4,_DstSize,_Src,_DstSize);
+    }
+    else {
+      LOCK();
+      *(int *)((int)_Src + -4) = *(int *)((int)_Src + -4) + 1;
+      UNLOCK();
+    }
+    if ((*piVar5 != 0) && (ho = (HGDIOBJ)*piVar5, ho != (HGDIOBJ)0x0)) {
+      *piVar5 = 0;
+      piVar5[1] = 0;
+      piVar5[2] = 0;
+      piVar5[3] = 0;
+      piVar5[5] = 0;
+      piVar5[4] = 0;
+      piVar5[7] = -1;
+      *(undefined1 *)((int)piVar5 + 0x19) = 0;
+      *(undefined1 *)(piVar5 + 6) = 0;
+      DeleteObject(ho);
+    }
+    iVar3 = FUN_00414860(piVar5 + -1,(LPCWSTR)(piVar4 + 4));
+    piVar1 = piVar4 + 3;
+    piVar5[0xb] = (uint)(-1 < iVar3);
+    LOCK();
+    iVar3 = *piVar1;
+    *piVar1 = *piVar1 + -1;
+    UNLOCK();
+    if (iVar3 == 1 || iVar3 + -1 < 0) {
+      (**(code **)(*(int *)*piVar4 + 4))(piVar4);
+    }
+    iStack_4 = iStack_4 + 1;
+    piVar5 = piVar5 + 0x25;
+  } while (iStack_4 < 0xf);
+  lpRect = (RECT *)(in_ECX + 0x92c);
+  puVar2 = (undefined4 *)(in_ECX + 0xfc);
+  iVar3 = 0xf;
+  do {
+    *puVar2 = 0;
+    InvalidateRect(*(HWND *)(in_ECX + 0x20),lpRect,1);
+    puVar2 = puVar2 + 0x25;
+    lpRect = lpRect + 1;
+    iVar3 = iVar3 + -1;
+  } while (iVar3 != 0);
+  return;
+}
+
+
+
 //==================== FUN_00405d90 @ 0x00405D90 (size 1137) ====================
 
 /* WARNING (jumptable): Unable to track spacebase fully for stack */
@@ -6107,6 +6282,42 @@ void __fastcall FUN_00408740(CFrameWnd *param_1)
   FUN_004291b0(param_1);
   ExceptionList = local_c;
   return;
+}
+
+
+
+//==================== Handler_004087B0 @ 0x004087B0 (size 180) ====================
+
+undefined4 Handler_004087B0(undefined4 *param_1)
+
+{
+  int iVar1;
+  UINT_PTR UVar2;
+  void *in_ECX;
+  uint unaff_EDI;
+  int aiStack_1c [3];
+  
+  aiStack_1c[2] = 0x4087c0;
+  iVar1 = OnCreate(in_ECX,param_1);
+  if (iVar1 == -1) {
+    return 0xffffffff;
+  }
+  aiStack_1c[2] = 0xe801;
+  aiStack_1c[1] = 0x50008200;
+  iVar1 = (**(code **)(*(int *)((int)in_ECX + 0xec) + 0x17c))();
+  if (iVar1 != 0) {
+    iVar1 = func_0x0042a658(0x47ce9c,2);
+    if (iVar1 != 0) {
+      CStatusBar::GetPaneInfo
+                ((CStatusBar *)((int)in_ECX + 0xec),1,(uint *)&stack0xfffffff0,
+                 (uint *)(aiStack_1c + 1),aiStack_1c);
+      CStatusBar::SetPaneInfo((CStatusBar *)((int)in_ECX + 0xec),1,unaff_EDI,0,500);
+      UVar2 = SetTimer(*(HWND *)((int)in_ECX + 0x20),1000,200,(TIMERPROC)0x0);
+      *(UINT_PTR *)((int)in_ECX + 0xe8) = UVar2;
+      return 0;
+    }
+  }
+  return 0xffffffff;
 }
 
 
@@ -9474,6 +9685,39 @@ void __fastcall FUN_0040cf10(CDialog *param_1)
   }
   ExceptionList = local_14;
   __security_check_cookie(local_1c ^ (uint)&local_1cc);
+  return;
+}
+
+
+
+//==================== Handler_0040D170 @ 0x0040D170 (size 132) ====================
+
+void Handler_0040D170(void)
+
+{
+  LRESULT LVar1;
+  int *in_ECX;
+  int iVar2;
+  WPARAM *lParam;
+  
+  LVar1 = SendMessageW((HWND)in_ECX[0x25],400,0,0);
+  in_ECX[0x96] = LVar1;
+  if (100 < LVar1) {
+    in_ECX[0x96] = 100;
+  }
+  lParam = (WPARAM *)(in_ECX + 0x98);
+  SendMessageW((HWND)in_ECX[0x25],0x191,100,(LPARAM)lParam);
+  iVar2 = 0;
+  if (0 < in_ECX[0x96]) {
+    do {
+      FID_conflict_GetLBText(in_ECX + 0x1d,*lParam,(CSimpleStringT<wchar_t,0> *)(lParam + -0x66));
+      iVar2 = iVar2 + 1;
+      lParam = lParam + 1;
+    } while (iVar2 < in_ECX[0x96]);
+  }
+                    /* WARNING: Could not recover jumptable at 0x0040d1f2. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*in_ECX + 0x158))();
   return;
 }
 
@@ -15244,6 +15488,21 @@ void __fastcall FUN_00415490(int *param_1)
 
 
 
+//==================== Handler_004154E0 @ 0x004154E0 (size 33) ====================
+
+int Handler_004154E0(int *param_1)
+
+{
+  int iVar1;
+  void *in_ECX;
+  
+  param_1[8] = param_1[8] & 0xfffffffdU | 5;
+  iVar1 = OnCreate(in_ECX,param_1);
+  return (iVar1 != -1) - 1;
+}
+
+
+
 //==================== FUN_00415510 @ 0x00415510 (size 259) ====================
 
 /* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
@@ -15932,6 +16191,1018 @@ void __fastcall FUN_00416510(int param_1)
 
 
 
+//==================== Handler_004165F0 @ 0x004165F0 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_004165F0(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 2;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416600 @ 0x00416600 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416600(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x65;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416610 @ 0x00416610 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416610(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x66;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416620 @ 0x00416620 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416620(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x67;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416630 @ 0x00416630 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416630(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x68;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416640 @ 0x00416640 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416640(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x69;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416650 @ 0x00416650 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416650(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x6a;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416660 @ 0x00416660 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416660(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x6b;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416670 @ 0x00416670 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416670(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x6c;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416680 @ 0x00416680 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416680(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x6d;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416690 @ 0x00416690 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416690(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x6e;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_004166A0 @ 0x004166A0 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_004166A0(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x6f;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_004166B0 @ 0x004166B0 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_004166B0(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x70;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_004166C0 @ 0x004166C0 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_004166C0(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x71;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_004166D0 @ 0x004166D0 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_004166D0(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x72;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_004166E0 @ 0x004166E0 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_004166E0(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x73;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_004166F0 @ 0x004166F0 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_004166F0(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x74;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416700 @ 0x00416700 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416700(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x75;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416710 @ 0x00416710 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416710(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x76;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416720 @ 0x00416720 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416720(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x77;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416730 @ 0x00416730 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416730(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x78;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
+//==================== Handler_00416740 @ 0x00416740 (size 12) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void Handler_00416740(void)
+
+{
+  uint uType;
+  BOOL BVar1;
+  void *this;
+  CListCtrl *in_ECX;
+  DWORD DStack_32b4;
+  int aiStack_32b0 [3240];
+  undefined4 uStack_10;
+  void *pvStack_c;
+  undefined1 *puStack_8;
+  undefined4 uStack_4;
+  
+  *(undefined4 *)(in_ECX + 0x60) = 0x79;
+  uStack_4 = 0xffffffff;
+  puStack_8 = &LAB_0045fe6b;
+  pvStack_c = ExceptionList;
+  uStack_10 = 0x415708;
+  uType = DAT_0047b94c ^ (uint)&stack0xffffcd44;
+  ExceptionList = &pvStack_c;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_32b4);
+  if ((BVar1 != 0) && (DStack_32b4 == 0x103)) {
+    FUN_0040faa0(aiStack_32b0,(int)(in_ECX + 100));
+    uStack_4 = 0;
+    this = (void *)FUN_00415510((int)in_ECX);
+    SendMessageW(*(HWND *)(in_ECX + 0x20),0x1009,0,0);
+    FUN_0040fc10(this,(int)aiStack_32b0);
+    FUN_0040ffa0();
+    FUN_00410410((int)aiStack_32b0,in_ECX);
+    uStack_4 = 0xffffffff;
+    _eh_vector_destructor_iterator_(aiStack_32b0,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+    ExceptionList = pvStack_c;
+    return;
+  }
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
+  ExceptionList = pvStack_c;
+  return;
+}
+
+
+
 //==================== FUN_00416750 @ 0x00416750 (size 213) ====================
 
 void __fastcall FUN_00416750(int param_1)
@@ -16094,6 +17365,98 @@ void __fastcall FUN_00416a60(int param_1)
 
 
 
+//==================== Handler_00416A90 @ 0x00416A90 (size 76) ====================
+
+void Handler_00416A90(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0x6c) = (uint)(*(int *)(in_ECX + 0x6c) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x6c) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00416AE0 @ 0x00416AE0 (size 76) ====================
+
+void Handler_00416AE0(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0x70) = (uint)(*(int *)(in_ECX + 0x70) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x70) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00416B30 @ 0x00416B30 (size 76) ====================
+
+void Handler_00416B30(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0x74) = (uint)(*(int *)(in_ECX + 0x74) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x74) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00416B80 @ 0x00416B80 (size 76) ====================
+
+void Handler_00416B80(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0x78) = (uint)(*(int *)(in_ECX + 0x78) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x78) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
 //==================== FUN_00416bd0 @ 0x00416BD0 (size 265) ====================
 
 void __fastcall FUN_00416bd0(int param_1)
@@ -16137,6 +17500,114 @@ void __fastcall FUN_00416bd0(int param_1)
   *(undefined4 *)(param_1 + 0x7c) = 0;
   FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
   ExceptionList = local_14;
+  return;
+}
+
+
+
+//==================== Handler_00416CE0 @ 0x00416CE0 (size 111) ====================
+
+void Handler_00416CE0(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0x84) = 0;
+    *(undefined4 *)(in_ECX + 0x88) = 0;
+    *(undefined4 *)(in_ECX + 0x8c) = 0;
+    *(undefined4 *)(in_ECX + 0x90) = 0;
+    *(uint *)(in_ECX + 0x80) = (uint)(*(int *)(in_ECX + 0x80) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x80) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00416D50 @ 0x00416D50 (size 111) ====================
+
+void Handler_00416D50(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0x80) = 0;
+    *(undefined4 *)(in_ECX + 0x88) = 0;
+    *(undefined4 *)(in_ECX + 0x8c) = 0;
+    *(undefined4 *)(in_ECX + 0x90) = 0;
+    *(uint *)(in_ECX + 0x84) = (uint)(*(int *)(in_ECX + 0x84) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x84) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00416DC0 @ 0x00416DC0 (size 111) ====================
+
+void Handler_00416DC0(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0x80) = 0;
+    *(undefined4 *)(in_ECX + 0x84) = 0;
+    *(undefined4 *)(in_ECX + 0x8c) = 0;
+    *(undefined4 *)(in_ECX + 0x90) = 0;
+    *(uint *)(in_ECX + 0x88) = (uint)(*(int *)(in_ECX + 0x88) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x88) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00416E30 @ 0x00416E30 (size 111) ====================
+
+void Handler_00416E30(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0x80) = 0;
+    *(undefined4 *)(in_ECX + 0x84) = 0;
+    *(undefined4 *)(in_ECX + 0x88) = 0;
+    *(undefined4 *)(in_ECX + 0x90) = 0;
+    *(uint *)(in_ECX + 0x8c) = (uint)(*(int *)(in_ECX + 0x8c) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x8c) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
   return;
 }
 
@@ -16194,6 +17665,114 @@ void __fastcall FUN_00416ea0(int param_1)
 
 
 
+//==================== Handler_00416FD0 @ 0x00416FD0 (size 111) ====================
+
+void Handler_00416FD0(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0x98) = 0;
+    *(undefined4 *)(in_ECX + 0x9c) = 0;
+    *(undefined4 *)(in_ECX + 0xa0) = 0;
+    *(undefined4 *)(in_ECX + 0xa4) = 0;
+    *(uint *)(in_ECX + 0x94) = (uint)(*(int *)(in_ECX + 0x94) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x94) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00417040 @ 0x00417040 (size 111) ====================
+
+void Handler_00417040(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0x94) = 0;
+    *(undefined4 *)(in_ECX + 0x9c) = 0;
+    *(undefined4 *)(in_ECX + 0xa0) = 0;
+    *(undefined4 *)(in_ECX + 0xa4) = 0;
+    *(uint *)(in_ECX + 0x98) = (uint)(*(int *)(in_ECX + 0x98) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x98) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_004170B0 @ 0x004170B0 (size 111) ====================
+
+void Handler_004170B0(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0x94) = 0;
+    *(undefined4 *)(in_ECX + 0x98) = 0;
+    *(undefined4 *)(in_ECX + 0xa0) = 0;
+    *(undefined4 *)(in_ECX + 0xa4) = 0;
+    *(uint *)(in_ECX + 0x9c) = (uint)(*(int *)(in_ECX + 0x9c) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0x9c) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00417120 @ 0x00417120 (size 111) ====================
+
+void Handler_00417120(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0x94) = 0;
+    *(undefined4 *)(in_ECX + 0x98) = 0;
+    *(undefined4 *)(in_ECX + 0x9c) = 0;
+    *(undefined4 *)(in_ECX + 0xa4) = 0;
+    *(uint *)(in_ECX + 0xa0) = (uint)(*(int *)(in_ECX + 0xa0) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0xa0) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
 //==================== FUN_00417190 @ 0x00417190 (size 294) ====================
 
 void __fastcall FUN_00417190(int param_1)
@@ -16241,6 +17820,311 @@ void __fastcall FUN_00417190(int param_1)
   *(undefined4 *)(param_1 + 0xa4) = 0;
   FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,uType);
   ExceptionList = local_14;
+  return;
+}
+
+
+
+//==================== Handler_004172C0 @ 0x004172C0 (size 95) ====================
+
+void Handler_004172C0(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0xac) = 0;
+    *(uint *)(in_ECX + 0xa8) = (uint)(*(int *)(in_ECX + 0xa8) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0xa8) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00417320 @ 0x00417320 (size 95) ====================
+
+void Handler_00417320(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(undefined4 *)(in_ECX + 0xa8) = 0;
+    *(uint *)(in_ECX + 0xac) = (uint)(*(int *)(in_ECX + 0xac) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0xac) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00417380 @ 0x00417380 (size 85) ====================
+
+void Handler_00417380(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0xb0) = (uint)(*(int *)(in_ECX + 0xb0) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0xb0) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_004173E0 @ 0x004173E0 (size 85) ====================
+
+void Handler_004173E0(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0xb4) = (uint)(*(int *)(in_ECX + 0xb4) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0xb4) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00417440 @ 0x00417440 (size 85) ====================
+
+void Handler_00417440(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0xb8) = (uint)(*(int *)(in_ECX + 0xb8) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0xb8) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_004174A0 @ 0x004174A0 (size 85) ====================
+
+void Handler_004174A0(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0xbc) = (uint)(*(int *)(in_ECX + 0xbc) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0xbc) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00417500 @ 0x00417500 (size 85) ====================
+
+void Handler_00417500(void)
+
+{
+  BOOL BVar1;
+  DWORD in_ECX;
+  UINT unaff_ESI;
+  DWORD DStack_4;
+  
+  DStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&DStack_4);
+  if ((BVar1 != 0) && (DStack_4 == 0x103)) {
+    *(uint *)(in_ECX + 0xc0) = (uint)(*(int *)(in_ECX + 0xc0) == 0);
+    return;
+  }
+  *(undefined4 *)(in_ECX + 0xc0) = 0;
+  FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_00417560 @ 0x00417560 (size 96) ====================
+
+void Handler_00417560(void)
+
+{
+  LPCVOID lpBaseAddress;
+  BOOL BVar1;
+  int iVar2;
+  SIZE_T in_ECX;
+  undefined4 extraout_ECX;
+  UINT unaff_EDI;
+  bool bVar3;
+  int iVar4;
+  SIZE_T SStack_4;
+  
+  SStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&SStack_4);
+  if ((BVar1 == 0) || (SStack_4 != 0x103)) {
+    FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_EDI);
+  }
+  else {
+    iVar4 = 0x24;
+    iVar2 = FID_conflict_MessageBoxW
+                      ((HWND)&UNK_0046cad0,L"战国兰斯修改器",(LPCWSTR)0x24,unaff_EDI);
+    if (iVar2 == 6) {
+      lpBaseAddress = (LPCVOID)FUN_00408c70(extraout_ECX,*(int *)(in_ECX + 0x68),0x948);
+      iVar2 = 0x83;
+      do {
+        ReadProcessMemory(*(HANDLE *)(in_ECX + 100),lpBaseAddress,&stack0xfffffff0,4,
+                          (SIZE_T *)&stack0xfffffff8);
+        bVar3 = iVar4 != 1;
+        iVar4 = 1;
+        if (bVar3) {
+          iVar4 = 1;
+          WriteProcessMemory(*(HANDLE *)(in_ECX + 100),lpBaseAddress,&stack0xfffffff0,4,&SStack_4);
+        }
+        lpBaseAddress = (LPCVOID)((int)lpBaseAddress + 4);
+        iVar2 = iVar2 + -1;
+      } while (iVar2 != 0);
+      return;
+    }
+  }
+  return;
+}
+
+
+
+//==================== Handler_004175C0 @ 0x004175C0 (size 96) ====================
+
+void Handler_004175C0(void)
+
+{
+  LPCVOID lpBaseAddress;
+  BOOL BVar1;
+  int iVar2;
+  SIZE_T in_ECX;
+  undefined4 extraout_ECX;
+  UINT unaff_EDI;
+  bool bVar3;
+  int iVar4;
+  SIZE_T SStack_4;
+  
+  SStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&SStack_4);
+  if ((BVar1 == 0) || (SStack_4 != 0x103)) {
+    FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_EDI);
+  }
+  else {
+    iVar4 = 0x24;
+    iVar2 = FID_conflict_MessageBoxW
+                      ((HWND)&UNK_0046cae8,L"战国兰斯修改器",(LPCWSTR)0x24,unaff_EDI);
+    if (iVar2 == 6) {
+      lpBaseAddress = (LPCVOID)FUN_00408c70(extraout_ECX,*(int *)(in_ECX + 0x68),0x94c);
+      iVar2 = 0x2b;
+      do {
+        ReadProcessMemory(*(HANDLE *)(in_ECX + 100),lpBaseAddress,&stack0xfffffff0,4,
+                          (SIZE_T *)&stack0xfffffff8);
+        bVar3 = iVar4 != 1;
+        iVar4 = 1;
+        if (bVar3) {
+          iVar4 = 1;
+          WriteProcessMemory(*(HANDLE *)(in_ECX + 100),lpBaseAddress,&stack0xfffffff0,4,&SStack_4);
+        }
+        lpBaseAddress = (LPCVOID)((int)lpBaseAddress + 4);
+        iVar2 = iVar2 + -1;
+      } while (iVar2 != 0);
+      return;
+    }
+  }
+  return;
+}
+
+
+
+//==================== Handler_00417620 @ 0x00417620 (size 96) ====================
+
+void Handler_00417620(void)
+
+{
+  BOOL BVar1;
+  int iVar2;
+  SIZE_T in_ECX;
+  undefined4 extraout_ECX;
+  LPCVOID lpBaseAddress;
+  UINT unaff_EDI;
+  bool bVar3;
+  int iVar4;
+  SIZE_T SStack_4;
+  
+  SStack_4 = in_ECX;
+  BVar1 = GetExitCodeProcess(*(HANDLE *)(in_ECX + 100),&SStack_4);
+  if ((BVar1 == 0) || (SStack_4 != 0x103)) {
+    FID_conflict_MessageBoxW((HWND)&DAT_0046ca60,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_EDI);
+  }
+  else {
+    iVar4 = 0x24;
+    iVar2 = FID_conflict_MessageBoxW
+                      ((HWND)&UNK_0046cb00,L"战国兰斯修改器",(LPCWSTR)0x24,unaff_EDI);
+    if (iVar2 == 6) {
+      iVar2 = FUN_00408c70(extraout_ECX,*(int *)(in_ECX + 0x68),0x950);
+      lpBaseAddress = (LPCVOID)(iVar2 + 0x28);
+      iVar2 = 0x2f;
+      do {
+        ReadProcessMemory(*(HANDLE *)(in_ECX + 100),lpBaseAddress,&stack0xfffffff0,4,
+                          (SIZE_T *)&stack0xfffffff8);
+        bVar3 = iVar4 != 1;
+        iVar4 = 1;
+        if (bVar3) {
+          iVar4 = 1;
+          WriteProcessMemory(*(HANDLE *)(in_ECX + 100),lpBaseAddress,&stack0xfffffff0,4,&SStack_4);
+        }
+        lpBaseAddress = (LPCVOID)((int)lpBaseAddress + 4);
+        iVar2 = iVar2 + -1;
+      } while (iVar2 != 0);
+      return;
+    }
+  }
   return;
 }
 
@@ -16337,6 +18221,468 @@ void __fastcall FUN_00417770(int param_1)
   }
   ExceptionList = local_1c;
   __security_check_cookie(uStack_24 ^ (uint)&uStack_9314);
+  return;
+}
+
+
+
+//==================== Handler_00417860 @ 0x00417860 (size 35) ====================
+
+void Handler_00417860(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x6c) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417877. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417881. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417890 @ 0x00417890 (size 35) ====================
+
+void Handler_00417890(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x70) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x004178a7. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x004178b1. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_004178C0 @ 0x004178C0 (size 35) ====================
+
+void Handler_004178C0(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x74) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x004178d7. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x004178e1. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_004178F0 @ 0x004178F0 (size 35) ====================
+
+void Handler_004178F0(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x78) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417907. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417911. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417920 @ 0x00417920 (size 35) ====================
+
+void Handler_00417920(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x7c) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417937. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417941. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417950 @ 0x00417950 (size 38) ====================
+
+void Handler_00417950(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x80) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x0041796a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417974. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417980 @ 0x00417980 (size 38) ====================
+
+void Handler_00417980(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x84) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x0041799a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x004179a4. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_004179B0 @ 0x004179B0 (size 38) ====================
+
+void Handler_004179B0(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x88) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x004179ca. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x004179d4. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_004179E0 @ 0x004179E0 (size 38) ====================
+
+void Handler_004179E0(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x8c) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x004179fa. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417a04. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417A10 @ 0x00417A10 (size 38) ====================
+
+void Handler_00417A10(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x90) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417a2a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417a34. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417A40 @ 0x00417A40 (size 38) ====================
+
+void Handler_00417A40(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x94) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417a5a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417a64. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417A70 @ 0x00417A70 (size 38) ====================
+
+void Handler_00417A70(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x98) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417a8a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417a94. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417AA0 @ 0x00417AA0 (size 38) ====================
+
+void Handler_00417AA0(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x9c) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417aba. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417ac4. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417AD0 @ 0x00417AD0 (size 38) ====================
+
+void Handler_00417AD0(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xa0) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417aea. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417af4. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417B00 @ 0x00417B00 (size 38) ====================
+
+void Handler_00417B00(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xa4) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417b1a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417b24. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417B30 @ 0x00417B30 (size 38) ====================
+
+void Handler_00417B30(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xa8) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417b4a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417b54. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417B60 @ 0x00417B60 (size 38) ====================
+
+void Handler_00417B60(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xac) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417b7a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417b84. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417B90 @ 0x00417B90 (size 38) ====================
+
+void Handler_00417B90(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xb0) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417baa. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417bb4. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417BC0 @ 0x00417BC0 (size 38) ====================
+
+void Handler_00417BC0(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xb4) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417bda. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417be4. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417BF0 @ 0x00417BF0 (size 38) ====================
+
+void Handler_00417BF0(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xb8) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417c0a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417c14. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417C20 @ 0x00417C20 (size 38) ====================
+
+void Handler_00417C20(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xbc) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417c3a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417c44. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
+  return;
+}
+
+
+
+//==================== Handler_00417C50 @ 0x00417C50 (size 38) ====================
+
+void Handler_00417C50(int *param_1)
+
+{
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xc0) != 0) {
+                    /* WARNING: Could not recover jumptable at 0x00417c6a. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*param_1 + 4))();
+    return;
+  }
+                    /* WARNING: Could not recover jumptable at 0x00417c74. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_1 + 4))();
   return;
 }
 
@@ -16686,6 +19032,316 @@ void __fastcall FUN_00418170(int param_1)
 
 
 
+//==================== thunk_FUN_00415c30 @ 0x00418200 (size 5) ====================
+
+/* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
+
+void __fastcall thunk_FUN_00415c30(CListCtrl *param_1)
+
+{
+  WPARAM WVar1;
+  CListCtrl *pCVar2;
+  uint uVar3;
+  LRESULT LVar4;
+  int iVar5;
+  int extraout_ECX;
+  WPARAM WStack_177d4;
+  CListCtrl *pCStack_177d0;
+  CListCtrl *pCStack_177cc;
+  undefined **appuStack_177c8 [31];
+  wchar_t *pwStack_1774c;
+  CListCtrl *pCStack_176c4;
+  ushort auStack_176c0 [368];
+  CDialog aCStack_173e0 [304];
+  undefined4 uStack_172b0;
+  int aiStack_16d50 [3242];
+  int aiStack_13aa8 [1328];
+  undefined4 auStack_125e8 [18805];
+  void *pvStack_14;
+  undefined1 *puStack_10;
+  uint uStack_c;
+  
+  uStack_c = 0xffffffff;
+  puStack_10 = &LAB_0045ff6a;
+  pvStack_14 = ExceptionList;
+  uVar3 = DAT_0047b94c ^ (uint)&WStack_177d4;
+  ExceptionList = &pvStack_14;
+  pCStack_177d0 = param_1 + 100;
+  pCStack_177cc = param_1;
+  FUN_0040faa0(aiStack_16d50,(int)pCStack_177d0);
+  uStack_c = 0;
+  LVar4 = SendMessageW(*(HWND *)(param_1 + 0x20),0x100c,0xffffffff,2);
+  iVar5 = LVar4 + 1;
+  if (iVar5 != 0) {
+    do {
+      WStack_177d4 = iVar5 - 1;
+      LVar4 = SendMessageW(*(HWND *)(param_1 + 0x20),0x100c,WStack_177d4,2);
+      iVar5 = LVar4 + 1;
+    } while (iVar5 != 0);
+    iVar5 = *(int *)(param_1 + 0x60);
+    if (iVar5 == 1) {
+      FUN_00401840();
+      uStack_c = CONCAT31(uStack_c._1_3_,1);
+      FUN_00401980();
+      iVar5 = FUN_0041bafa((CDialog *)appuStack_177c8);
+      if (iVar5 == 1) {
+        FUN_00401bc0();
+        pCStack_176c4 = pCStack_177d0;
+        FUN_004023e0();
+      }
+      uStack_c = uStack_c & 0xffffff00;
+      appuStack_177c8[0] = CBaseInfoDlg::vftable;
+      CDialog::~CDialog((CDialog *)appuStack_177c8);
+    }
+    else if (iVar5 == 3) {
+      FUN_00402620();
+      uStack_c._0_1_ = 2;
+      FUN_00402780();
+      iVar5 = FUN_0041bafa((CDialog *)appuStack_177c8);
+      pCVar2 = pCStack_177cc;
+      if (iVar5 == 1) {
+        FUN_004028c0();
+        FUN_00402a60(auStack_176c0,pCStack_177d0);
+        uStack_c._0_1_ = 3;
+        FUN_00403040(pCVar2);
+        uStack_c._0_1_ = 2;
+        _eh_vector_destructor_iterator_(auStack_176c0,0x10,0x1f,FUN_004195d0);
+      }
+      uStack_c = (uint)uStack_c._1_3_ << 8;
+      CHttpConnection::~CHttpConnection((CHttpConnection *)appuStack_177c8);
+    }
+    else if (iVar5 == 2) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00412a40((int)aiStack_16d50,&stack0xfffe8818);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x65) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e00);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x66) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e08);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x67) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e10);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x68) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e18);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x69) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e20);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x6a) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e28);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x6b) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e30);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x6c) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e3c);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x6d) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e48);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x6e) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e54);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x6f) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e5c);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x70) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e64);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x71) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e6c);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x72) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e74);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x73) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e7c);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x74) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e84);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x75) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,&DAT_00469e90);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x76) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469e98);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x77) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469ea0);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x78) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469ea8);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 0x79) {
+      pCStack_177d0 = (CListCtrl *)&stack0xfffe8818;
+      iVar5 = extraout_ECX;
+      FUN_00406a10(&stack0xfffe8818,(short *)&DAT_00469eb0);
+      FUN_00415800((int)param_1,param_1,iVar5);
+    }
+    else if (iVar5 == 4) {
+      FUN_00407530((CDialog *)appuStack_177c8);
+      WVar1 = WStack_177d4;
+      uStack_c._0_1_ = 4;
+      FUN_00407690();
+      iVar5 = FUN_0041bafa((CDialog *)appuStack_177c8);
+      pCVar2 = pCStack_177cc;
+      if (iVar5 == 1) {
+        FUN_00407750((CDialog *)appuStack_177c8,pCStack_177cc,WVar1);
+        FUN_00407810((int *)auStack_176c0,(int)pCStack_177d0);
+        uStack_c._0_1_ = 5;
+        FUN_00407ba0(pCVar2,(SIZE_T)auStack_176c0);
+        uStack_c._0_1_ = 4;
+        _eh_vector_destructor_iterator_(auStack_176c0,8,0x5b,FUN_004195d0);
+      }
+      uStack_c = (uint)uStack_c._1_3_ << 8;
+      CHttpConnection::~CHttpConnection((CHttpConnection *)appuStack_177c8);
+    }
+    else if (iVar5 == 5) {
+      FUN_00418ec0((CDialog *)appuStack_177c8);
+      uStack_c._0_1_ = 6;
+      FUN_004190c0();
+      iVar5 = FUN_0041bafa((CDialog *)appuStack_177c8);
+      pCVar2 = pCStack_177cc;
+      if (iVar5 == 1) {
+        FUN_00419280((wchar_t *)appuStack_177c8);
+        FUN_00419470(aiStack_13aa8,(int)pCStack_177d0);
+        uStack_c._0_1_ = 7;
+        FUN_00419c90(aiStack_13aa8,pCVar2);
+        uStack_c._0_1_ = 6;
+        _eh_vector_destructor_iterator_(aiStack_13aa8,0x18,0xdd,FUN_004195d0);
+      }
+      uStack_c = (uint)uStack_c._1_3_ << 8;
+      FUN_00418f80((CDialog *)appuStack_177c8);
+    }
+    else if (iVar5 == 6) {
+      FUN_00406ae0((CDialog *)appuStack_177c8);
+      WVar1 = WStack_177d4;
+      uStack_c._0_1_ = 8;
+      FUN_00406c50();
+      iVar5 = FUN_0041bafa((CDialog *)appuStack_177c8);
+      pCVar2 = pCStack_177cc;
+      if (iVar5 == 1) {
+        CListCtrl::SetItemText(pCStack_177cc,WVar1,2,pwStack_1774c);
+        FUN_00406d50(auStack_176c0,pCStack_177d0);
+        uStack_c._0_1_ = 9;
+        FUN_00407340(pCVar2,auStack_176c0);
+        uStack_c._0_1_ = 8;
+        _eh_vector_destructor_iterator_(auStack_176c0,0x10,0x1c,FUN_00407120);
+      }
+      uStack_c = (uint)uStack_c._1_3_ << 8;
+      FUN_00406b90((CDialog *)appuStack_177c8);
+    }
+    else {
+      if (iVar5 == 7) {
+        FUN_0040d250(aCStack_173e0);
+        WVar1 = WStack_177d4;
+        uStack_c._0_1_ = 10;
+        FUN_0040e460();
+        iVar5 = FUN_0041bafa(aCStack_173e0);
+        pCVar2 = pCStack_177cc;
+        if (iVar5 == 1) {
+          FUN_0040f230((wchar_t *)aCStack_173e0);
+          FUN_004094b0(auStack_125e8);
+          uStack_c._0_1_ = 0xb;
+          FUN_0040ada0(auStack_125e8,pCVar2,WVar1);
+          FUN_0040ad30(auStack_125e8);
+        }
+      }
+      else {
+        if (iVar5 != 8) goto LAB_0041644e;
+        FUN_0040d250(aCStack_173e0);
+        WVar1 = WStack_177d4;
+        uStack_c._0_1_ = 0xc;
+        uStack_172b0 = 0;
+        FUN_0040e460();
+        iVar5 = FUN_0041bafa(aCStack_173e0);
+        pCVar2 = pCStack_177cc;
+        if (iVar5 == 1) {
+          FUN_0040f230((wchar_t *)aCStack_173e0);
+          FUN_00404560(auStack_125e8);
+          uStack_c._0_1_ = 0xd;
+          FUN_0040ada0(auStack_125e8,pCVar2,WVar1);
+          FUN_0040ad30(auStack_125e8);
+        }
+      }
+      uStack_c = (uint)uStack_c._1_3_ << 8;
+      FUN_0040d6f0(aCStack_173e0);
+    }
+  }
+LAB_0041644e:
+  uStack_c = 0xffffffff;
+  _eh_vector_destructor_iterator_(aiStack_16d50,0xd8,0x3c,(_func_void_void_ptr *)&LAB_0040fb60);
+  ExceptionList = pvStack_14;
+  __security_check_cookie(uVar3 ^ (uint)&WStack_177d4);
+  return;
+}
+
+
+
 //==================== FUN_00418210 @ 0x00418210 (size 181) ====================
 
 /* WARNING: Function: __alloca_probe replaced with injection: alloca_probe */
@@ -16727,6 +19383,23 @@ void __fastcall FUN_00418210(CListCtrl *param_1)
   local_4 = 0xffffffff;
   _eh_vector_destructor_iterator_(local_14c8,0x18,0xdd,FUN_004195d0);
   ExceptionList = local_c;
+  return;
+}
+
+
+
+//==================== Handler_004182D0 @ 0x004182D0 (size 18) ====================
+
+void Handler_004182D0(void)
+
+{
+  ushort *puVar1;
+  int in_ECX;
+  int iVar2;
+  
+  iVar2 = 0;
+  puVar1 = (ushort *)FUN_00415510(in_ECX);
+  FUN_00415a00(puVar1,iVar2);
   return;
 }
 
@@ -16829,6 +19502,90 @@ void __fastcall FUN_004182f0(CListCtrl *param_1)
   }
   ExceptionList = local_c;
   __security_check_cookie(local_10 ^ (uint)&local_3440);
+  return;
+}
+
+
+
+//==================== Handler_00418560 @ 0x00418560 (size 256) ====================
+
+void Handler_00418560(void)
+
+{
+  WPARAM wParam;
+  int *piVar1;
+  LRESULT LVar2;
+  int iVar3;
+  undefined4 *puVar4;
+  SIZE_T SVar5;
+  undefined4 uVar6;
+  CListCtrl *in_ECX;
+  UINT unaff_ESI;
+  HWND hWnd;
+  int iStack_184;
+  CListCtrl *pCStack_180;
+  undefined4 uStack_17c;
+  undefined4 uStack_178;
+  undefined4 uStack_174;
+  undefined4 uStack_170;
+  undefined4 uStack_16c;
+  undefined1 auStack_168 [356];
+  uint uStack_4;
+  
+  uStack_4 = DAT_0047b94c ^ (uint)&iStack_184;
+  LVar2 = SendMessageW(*(HWND *)(in_ECX + 0x20),0x100c,0xffffffff,2);
+  iVar3 = LVar2 + 1;
+  if (iVar3 != 0) {
+    do {
+      wParam = iVar3 - 1;
+      LVar2 = SendMessageW(*(HWND *)(in_ECX + 0x20),0x100c,wParam,2);
+      iVar3 = LVar2 + 1;
+    } while (iVar3 != 0);
+    puVar4 = (undefined4 *)CListCtrl::GetItemText(in_ECX,(int)&iStack_184,wParam);
+    SVar5 = FUN_00446845((wchar_t *)*puVar4);
+    piVar1 = (int *)(iStack_184 + -4);
+    LOCK();
+    iVar3 = *piVar1;
+    *piVar1 = *piVar1 + -1;
+    UNLOCK();
+    if (iVar3 == 1 || iVar3 + -1 < 0) {
+      (**(code **)(**(int **)(iStack_184 + -0x10) + 4))((undefined4 *)(iStack_184 + -0x10));
+    }
+    pCStack_180 = in_ECX + 100;
+    uStack_17c = 0;
+    uStack_178 = 0;
+    uStack_174 = 0;
+    uStack_170 = 0;
+    uStack_16c = 0;
+    _memset(auStack_168,0,0x164);
+    uVar6 = FUN_00415510((int)in_ECX);
+    iVar3 = FUN_004137e0(&pCStack_180,uVar6,SVar5);
+    if (iVar3 == 0) {
+      hWnd = (HWND)&UNK_0046cba4;
+    }
+    else {
+      hWnd = (HWND)&UNK_0046cb94;
+    }
+    FID_conflict_MessageBoxW(hWnd,L"战国兰斯修改器",(LPCWSTR)0x40,unaff_ESI);
+  }
+  __security_check_cookie(uStack_4 ^ (uint)&iStack_184);
+  return;
+}
+
+
+
+//==================== Handler_00418660 @ 0x00418660 (size 18) ====================
+
+void Handler_00418660(void)
+
+{
+  ushort *puVar1;
+  int in_ECX;
+  int iVar2;
+  
+  iVar2 = 1;
+  puVar1 = (ushort *)FUN_00415510(in_ECX);
+  FUN_00415a00(puVar1,iVar2);
   return;
 }
 
@@ -19155,6 +21912,35 @@ void __thiscall CDialog::~CDialog(CDialog *this)
 
 
 
+//==================== Handler_0041B3CC @ 0x0041B3CC (size 67) ====================
+
+/* WARNING: Function: __EH_prolog3_GS replaced with injection: EH_prolog3 */
+
+void Handler_0041B3CC(void)
+
+{
+  int iVar1;
+  CWnd *in_ECX;
+  CPaintDC aCStack_68 [96];
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0x58;
+  uStack_8 = 0x41b3d8;
+  CPaintDC::CPaintDC(aCStack_68,in_ECX);
+  uStack_8 = 0;
+  iVar1 = FUN_00422c2e((int)in_ECX);
+  if (iVar1 == 0) {
+    CWnd::Default(in_ECX);
+  }
+  uStack_8 = 0xffffffff;
+  CPaintDC::~CPaintDC(aCStack_68);
+  FUN_00447e7f();
+  return;
+}
+
+
+
 //==================== FUN_0041b40f @ 0x0041B40F (size 18) ====================
 
 undefined4 __thiscall FUN_0041b40f(void *this,undefined4 param_1)
@@ -19248,12 +22034,46 @@ void __fastcall FUN_0041b4a7(CDialog *param_1)
 
 
 
+//==================== Handler_0041B4AF @ 0x0041B4AF (size 19) ====================
+
+int Handler_0041B4AF(void)
+
+{
+  int iVar1;
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0x54) == 0) {
+    iVar1 = 0;
+  }
+  else {
+    iVar1 = *(int *)(in_ECX + 0x54) + 0x20000;
+  }
+  return iVar1;
+}
+
+
+
 //==================== FUN_0041b4c2 @ 0x0041B4C2 (size 6) ====================
 
 undefined ** FUN_0041b4c2(void)
 
 {
   return &PTR_s_CDialog_00461994;
+}
+
+
+
+//==================== Handler_0041B4C8 @ 0x0041B4C8 (size 8) ====================
+
+void Handler_0041B4C8(void)
+
+{
+  int *in_ECX;
+  
+                    /* WARNING: Could not recover jumptable at 0x0041b4ca. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*in_ECX + 0x15c))();
+  return;
 }
 
 
@@ -19499,6 +22319,48 @@ long __thiscall CDialog::HandleSetFont(CDialog *this,uint param_1,long param_2)
   (**(code **)(*(int *)this + 0x154))(pCVar1);
   lVar2 = CWnd::Default((CWnd *)this);
   return lVar2;
+}
+
+
+
+//==================== Handler_0041B716 @ 0x0041B716 (size 136) ====================
+
+long Handler_0041B716(void)
+
+{
+  int *piVar1;
+  AFX_MODULE_STATE *pAVar2;
+  int iVar3;
+  long lVar4;
+  CWnd *this;
+  CDialog *in_ECX;
+  BOOL unaff_EDI;
+  
+  (**(code **)(*(int *)in_ECX + 0x160))();
+  pAVar2 = AfxGetModuleState();
+  piVar1 = *(int **)(pAVar2 + 0x3c);
+  if ((piVar1 != (int *)0x0) && (*(int *)(in_ECX + 0x70) != 0)) {
+    if (*(int *)(in_ECX + 100) == 0) {
+      iVar3 = (**(code **)(*piVar1 + 0x24))();
+    }
+    else {
+      iVar3 = (**(code **)(*piVar1 + 0x20))();
+    }
+    if (iVar3 == 0) {
+      CDialog::EndDialog(in_ECX,-1);
+      return 0;
+    }
+  }
+  lVar4 = CWnd::Default((CWnd *)in_ECX);
+  if ((lVar4 != 0) && ((*(uint *)(in_ECX + 0x3c) & 0x100) != 0)) {
+    *(undefined4 *)(*(int *)(in_ECX + 0x4c) + 0x70) = 0;
+    this = (CWnd *)FID_conflict_GetNextDlgGroupItem((HWND)0x0,(HWND)0x0,unaff_EDI);
+    if (this != (CWnd *)0x0) {
+      CWnd::SetFocus(this);
+      lVar4 = 0;
+    }
+  }
+  return lVar4;
 }
 
 
@@ -36730,6 +39592,25 @@ void __fastcall FUN_00426830(int *param_1)
 
 
 
+//==================== Handler_0042683C @ 0x0042683C (size 22) ====================
+
+int Handler_0042683C(void)
+
+{
+  int iVar1;
+  int in_ECX;
+  
+  if (*(int *)(in_ECX + 0xa4) == 0) {
+    iVar1 = 0;
+  }
+  else {
+    iVar1 = *(int *)(in_ECX + 0xa4) + 0x20000;
+  }
+  return iVar1;
+}
+
+
+
 //==================== AfxIsDescendant @ 0x00426852 (size 32) ====================
 
 /* Library Function - Single Match
@@ -37017,6 +39898,18 @@ void __thiscall CFrameWnd::OnInitMenu(CFrameWnd *this,CMenu *param_1)
   }
   CWnd::Default((CWnd *)this);
   return;
+}
+
+
+
+//==================== Handler_00426B58 @ 0x00426B58 (size 6) ====================
+
+int Handler_00426B58(void)
+
+{
+  int in_ECX;
+  
+  return in_ECX + 100;
 }
 
 
@@ -37448,6 +40341,19 @@ int __thiscall CBitmap::CreateCompatibleBitmap(CBitmap *this,CDC *param_1,int pa
 
 
 
+//==================== Handler_00426F17 @ 0x00426F17 (size 8) ====================
+
+void Handler_00426F17(void)
+
+{
+  CWnd *in_ECX;
+  
+  CWnd::Default(in_ECX);
+  return;
+}
+
+
+
 //==================== CPushRoutingFrame @ 0x00426F1F (size 55) ====================
 
 /* Library Function - Single Match
@@ -37585,6 +40491,38 @@ void __thiscall CFrameWnd::OnPaletteChanged(CFrameWnd *this,CWnd *param_1)
 
 
 
+//==================== Handler_0042706E @ 0x0042706E (size 42) ====================
+
+undefined4 Handler_0042706E(void)
+
+{
+  CNoTrackObject *pCVar1;
+  undefined4 uVar2;
+  int iVar3;
+  int *in_ECX;
+  undefined4 unaff_ESI;
+  
+  if (in_ECX[0x20] != 0) {
+    iVar3 = (**(code **)(*(int *)in_ECX[0x20] + 0x70))();
+    if (iVar3 != 0) {
+      return 1;
+    }
+  }
+  pCVar1 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar1 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  uVar2 = (**(code **)(*in_ECX + 0x118))
+                    (*(undefined4 *)(pCVar1 + 0x5c),*(undefined4 *)(pCVar1 + 0x60),
+                     *(undefined4 *)(pCVar1 + 100),unaff_ESI);
+  return uVar2;
+}
+
+
+
 //==================== ExitHelpMode @ 0x00427098 (size 119) ====================
 
 /* Library Function - Single Match
@@ -37619,6 +40557,34 @@ void __thiscall CFrameWnd::ExitHelpMode(CFrameWnd *this)
     PostMessageW(*(HWND *)(this + 0x20),0x36a,0,0);
   }
   return;
+}
+
+
+
+//==================== Handler_0042710F @ 0x0042710F (size 53) ====================
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+long Handler_0042710F(void)
+
+{
+  CFrameWnd *pCVar1;
+  long lVar2;
+  CWnd *in_ECX;
+  
+  pCVar1 = CWnd::GetTopLevelFrame(in_ECX);
+  if (pCVar1 == (CFrameWnd *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  if (*(int *)(pCVar1 + 0x68) == 0) {
+    lVar2 = CWnd::Default(in_ECX);
+  }
+  else {
+    SetCursor(_DAT_0047ee54);
+    lVar2 = 1;
+  }
+  return lVar2;
 }
 
 
@@ -38049,6 +41015,44 @@ CFrameWnd::OnCmdMsg(CFrameWnd *this,uint param_1,int param_2,void *param_3,
 
 
 
+//==================== Handler_004276BB @ 0x004276BB (size 42) ====================
+
+void Handler_004276BB(void)
+
+{
+  int iVar1;
+  tagMSG *ptVar2;
+  int in_ECX;
+  
+  iVar1 = *(int *)(in_ECX + 0xb0);
+  if (iVar1 != 0) {
+    ptVar2 = CWnd::GetCurrentMessage();
+    SendMessageW(*(HWND *)(iVar1 + 0x20),0x114,ptVar2->wParam,ptVar2->lParam);
+  }
+  return;
+}
+
+
+
+//==================== Handler_004276E5 @ 0x004276E5 (size 42) ====================
+
+void Handler_004276E5(void)
+
+{
+  int iVar1;
+  tagMSG *ptVar2;
+  int in_ECX;
+  
+  iVar1 = *(int *)(in_ECX + 0xb0);
+  if (iVar1 != 0) {
+    ptVar2 = CWnd::GetCurrentMessage();
+    SendMessageW(*(HWND *)(iVar1 + 0x20),0x115,ptVar2->wParam,ptVar2->lParam);
+  }
+  return;
+}
+
+
+
 //==================== OnActivateTopLevel @ 0x0042770F (size 150) ====================
 
 /* Library Function - Single Match
@@ -38238,6 +41242,29 @@ void __thiscall CFrameWnd::OnDropFiles(CFrameWnd *this,HDROP__ *param_1)
   DragFinish(param_1);
   __security_check_cookie(local_8 ^ (uint)&stack0xfffffffc);
   return;
+}
+
+
+
+//==================== Handler_004279F0 @ 0x004279F0 (size 38) ====================
+
+undefined4 Handler_004279F0(void)
+
+{
+  int *piVar1;
+  AFX_MODULE_STATE *pAVar2;
+  undefined4 uVar3;
+  int in_ECX;
+  
+  pAVar2 = AfxGetModuleState();
+  piVar1 = *(int **)(pAVar2 + 4);
+  if ((piVar1 != (int *)0x0) && (piVar1[8] == in_ECX)) {
+                    /* WARNING: Could not recover jumptable at 0x00427a0b. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    uVar3 = (**(code **)(*piVar1 + 0x94))();
+    return uVar3;
+  }
+  return 1;
 }
 
 
@@ -38916,6 +41943,33 @@ void __thiscall CFrameWnd::OnSetPreviewMode(CFrameWnd *this,int param_1,CPrintPr
 
 
 
+//==================== Handler_004283BC @ 0x004283BC (size 123) ====================
+
+void Handler_004283BC(void)
+
+{
+  CFrameWnd *in_ECX;
+  
+  if ((*(uint *)(in_ECX + 0xe4) & 1) != 0) {
+    *(uint *)(in_ECX + 0xe4) = *(uint *)(in_ECX + 0xe4) & 0xfffffffe;
+    (**(code **)(*(int *)in_ECX + 0x17c))(*(undefined4 *)(in_ECX + 0xc0));
+  }
+  if (((byte)in_ECX[0xe4] & 2) != 0) {
+    (**(code **)(*(int *)in_ECX + 0x178))(1);
+  }
+  if ((*(uint *)(in_ECX + 0xe4) & 8) != 0) {
+    (**(code **)(*(int *)in_ECX + 0x150))(*(uint *)(in_ECX + 0xe4) & 4);
+    UpdateWindow(*(HWND *)(in_ECX + 0x20));
+  }
+  if (*(uint *)(in_ECX + 0xa8) != *(uint *)(in_ECX + 0xac)) {
+    CFrameWnd::SetMessageText(in_ECX,*(uint *)(in_ECX + 0xa8));
+  }
+  *(undefined4 *)(in_ECX + 0xe4) = 0;
+  return;
+}
+
+
+
 //==================== RecalcLayout @ 0x00428437 (size 236) ====================
 
 /* Library Function - Single Match
@@ -39021,6 +42075,25 @@ void __thiscall CFrameWnd::OnSize(CFrameWnd *this,uint param_1,int param_2,int p
 
 
 
+//==================== Handler_004285B5 @ 0x004285B5 (size 22) ====================
+
+long Handler_004285B5(void)
+
+{
+  long lVar1;
+  CWnd *in_ECX;
+  
+  if (*(int *)(in_ECX + 0xb0) == 0) {
+    lVar1 = CWnd::Default(in_ECX);
+  }
+  else {
+    lVar1 = 1;
+  }
+  return lVar1;
+}
+
+
+
 //==================== FUN_004285cb @ 0x004285CB (size 33) ====================
 
 undefined4 * __thiscall FUN_004285cb(void *this,byte param_1)
@@ -39064,6 +42137,23 @@ void __thiscall CFrameWnd::ActivateFrame(CFrameWnd *this,int param_1)
     CWnd::ShowWindow((CWnd *)this,param_1);
     BringToTop(this,param_1);
   }
+  return;
+}
+
+
+
+//==================== Handler_00428642 @ 0x00428642 (size 49) ====================
+
+void Handler_00428642(void)
+
+{
+  CWnd *in_ECX;
+  
+  if ((*(int *)(in_ECX + 0xdc) != 0) && (*(int *)(in_ECX + 0xdc) = 0, ((byte)in_ECX[0xd0] & 1) == 0)
+     ) {
+    (**(code **)(*(int *)in_ECX + 0x160))(2);
+  }
+  CWnd::Default(in_ECX);
   return;
 }
 
@@ -39833,6 +42923,109 @@ void __thiscall CFrameWnd::RemoveFrameWnd(CFrameWnd *this)
 
 
 
+//==================== Handler_00428D1C @ 0x00428D1C (size 184) ====================
+
+/* WARNING: Function: __EH_prolog3 replaced with injection: EH_prolog3 */
+/* WARNING: Function: __EH_epilog3 replaced with injection: EH_epilog3 */
+
+int Handler_00428D1C(int param_1,HWND param_2)
+
+{
+  int iVar1;
+  CWnd *this;
+  CFrameWnd *pCVar2;
+  int *in_ECX;
+  LPCWSTR in_stack_ffffffd4;
+  HWND apHStack_14 [3];
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0xc;
+  uStack_8 = 0x428d28;
+  iVar1 = in_ECX[0x2b];
+  in_ECX[0xf] = in_ECX[0xf] & 0xffffffbf;
+  this = (CWnd *)(**(code **)(*in_ECX + 0x16c))();
+  if (this != (CWnd *)0x0) {
+    ATL::CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>::
+    CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>
+              ((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_> *)apHStack_14);
+    uStack_8 = 0;
+    if ((param_2 == (HWND)0x0) && (param_2 = (HWND)0x0, param_1 != 0)) {
+      if ((param_1 == 0xef06) && (in_ECX[0x2d] != 0)) {
+        param_1 = 0xf005;
+      }
+      (**(code **)(*in_ECX + 0x14c))(param_1,apHStack_14);
+      param_2 = apHStack_14[0];
+    }
+    FID_conflict_SetWindowTextW(param_2,in_stack_ffffffd4);
+    pCVar2 = CWnd::GetParentFrame(this);
+    if (pCVar2 != (CFrameWnd *)0x0) {
+      *(int *)(pCVar2 + 0xac) = param_1;
+      *(int *)(pCVar2 + 0xa8) = param_1;
+    }
+    FUN_00401810(apHStack_14[0] + -4);
+  }
+  in_ECX[0x2b] = param_1;
+  in_ECX[0x2a] = param_1;
+  return iVar1;
+}
+
+
+
+//==================== Handler_00428EE3 @ 0x00428EE3 (size 286) ====================
+
+/* WARNING: Function: __EH_prolog3_GS replaced with injection: EH_prolog3 */
+
+void Handler_00428EE3(undefined4 param_1,undefined4 *param_2,undefined4 *param_3)
+
+{
+  HWND hWnd;
+  uint uVar1;
+  LPCWSTR pWStack_218;
+  wchar_t awStack_214 [262];
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0x20c;
+  uStack_8 = 0x428ef2;
+  if ((param_2 == (undefined4 *)0x0) || (param_3 == (undefined4 *)0x0)) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  ATL::CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>::
+  CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>
+            ((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_> *)&pWStack_218);
+  hWnd = (HWND)param_2[1];
+  uStack_8 = 0;
+  if (((param_2[2] == -0x208) && ((*(byte *)(param_2 + 0x19) & 1) != 0)) ||
+     ((param_2[2] == -0x212 && ((*(byte *)(param_2 + 0x2d) & 1) != 0)))) {
+    hWnd = (HWND)GetDlgCtrlID(hWnd);
+  }
+  if (hWnd != (HWND)0x0) {
+    uVar1 = FUN_00424f77((uint)hWnd,awStack_214,0x100);
+    if (uVar1 == 0) {
+      FUN_00401810((undefined4 *)(pWStack_218 + -8));
+      goto LAB_00428ff9;
+    }
+    AfxExtractSubString((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_> *)
+                        &pWStack_218,awStack_214,1,L'\n');
+  }
+  if (param_2[2] == -0x208) {
+    WideCharToMultiByte(3,0,pWStack_218,-1,(LPSTR)(param_2 + 4),0x50,(LPCSTR)0x0,(LPBOOL)0x0);
+  }
+  else {
+    ATL::Checked::tcsncpy_s((wchar_t *)(param_2 + 4),0x50,pWStack_218,0xffffffff);
+  }
+  *param_3 = 0;
+  SetWindowPos((HWND)*param_2,(HWND)0x0,0,0,0,0,0x213);
+  FUN_00401810((undefined4 *)(pWStack_218 + -8));
+LAB_00428ff9:
+  FUN_00447e7f();
+  return;
+}
+
+
+
 //==================== CFrameWnd @ 0x00429001 (size 220) ====================
 
 /* WARNING: Function: __EH_prolog3 replaced with injection: EH_prolog3 */
@@ -39879,6 +43072,60 @@ CFrameWnd * __thiscall CFrameWnd::CFrameWnd(CFrameWnd *this)
   *(undefined4 *)(this + 0xe0) = 0;
   AddFrameWnd(this);
   return this;
+}
+
+
+
+//==================== Handler_004290DD @ 0x004290DD (size 151) ====================
+
+void Handler_004290DD(void)
+
+{
+  int *piVar1;
+  HMENU hMenu;
+  int iVar2;
+  CNoTrackObject *pCVar3;
+  HMENU pHVar4;
+  AFX_MODULE_STATE *pAVar5;
+  int *in_ECX;
+  undefined4 unaff_ESI;
+  
+  func_0x00428dd4();
+  if (in_ECX[0x17] != 0) {
+    hMenu = (HMENU)in_ECX[0x17];
+    pHVar4 = GetMenu((HWND)in_ECX[8]);
+    if (pHVar4 != hMenu) {
+      SetMenu((HWND)in_ECX[8],hMenu);
+    }
+  }
+  pAVar5 = AfxGetModuleState();
+  iVar2 = *(int *)(pAVar5 + 4);
+  if (((iVar2 != 0) && (*(int **)(iVar2 + 0x20) == in_ECX)) && (*(int *)(iVar2 + 0x6c) == 0)) {
+    WinHelpW((HWND)in_ECX[8],(LPCWSTR)0x0,2,0);
+  }
+  if ((int *)in_ECX[0x13] != (int *)0x0) {
+    (**(code **)(*(int *)in_ECX[0x13] + 4))(1,unaff_ESI);
+  }
+  piVar1 = (int *)in_ECX[0xb];
+  in_ECX[0x13] = 0;
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 0xc))(piVar1,0,0);
+  }
+  piVar1 = (int *)in_ECX[10];
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 8))(piVar1);
+  }
+  pCVar3 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar3 != (CNoTrackObject *)0x0) {
+    (**(code **)(*in_ECX + 0x118))
+              (*(undefined4 *)(pCVar3 + 0x5c),*(undefined4 *)(pCVar3 + 0x60),
+               *(undefined4 *)(pCVar3 + 100),unaff_ESI);
+    return;
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_0041b278();
 }
 
 
@@ -40169,6 +43416,52 @@ Create(void *this,undefined4 param_1,short *param_2,undefined4 param_3,int *para
 
 
 
+//==================== Handler_00429523 @ 0x00429523 (size 200) ====================
+
+/* WARNING: Function: __EH_prolog3_catch replaced with injection: EH_prolog3 */
+/* WARNING: Function: __EH_epilog3 replaced with injection: EH_epilog3 */
+
+undefined4 Handler_00429523(HWND param_1,LPARAM param_2)
+
+{
+  short *psVar1;
+  LPARAM lParam;
+  int iVar2;
+  wchar_t *pwVar3;
+  AFX_MODULE_STATE *pAVar4;
+  undefined1 auStack_24 [4];
+  CWnd *pCStack_20;
+  HGLOBAL pvStack_1c;
+  int aiStack_18 [4];
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0x18;
+  uStack_8 = 0x42952f;
+  func_0x0045bb78(1000,param_2,auStack_24,&pvStack_1c);
+  psVar1 = GlobalLock(pvStack_1c);
+  ATL::CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>::
+  CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>
+            ((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_> *)aiStack_18);
+  uStack_8 = 1;
+  FUN_00401710(aiStack_18,psVar1);
+  GlobalUnlock(pvStack_1c);
+  uStack_8 = 0;
+  lParam = ReuseDDElParam(param_2,1000,0x3e4,0x8000,(UINT_PTR)pvStack_1c);
+  PostMessageW(param_1,0x3e4,*(WPARAM *)(pCStack_20 + 0x20),lParam);
+  iVar2 = CWnd::IsWindowEnabled(pCStack_20);
+  if (iVar2 != 0) {
+    pwVar3 = ATL::CSimpleStringT<wchar_t,0>::GetBuffer((CSimpleStringT<wchar_t,0> *)aiStack_18);
+    pAVar4 = AfxGetModuleState();
+    (**(code **)(**(int **)(pAVar4 + 4) + 0xa0))(pwVar3);
+    ATL::CSimpleStringT<wchar_t,0>::ReleaseBuffer((CSimpleStringT<wchar_t,0> *)aiStack_18,-1);
+  }
+  FUN_00401810((undefined4 *)(aiStack_18[0] + -0x10));
+  return 0;
+}
+
+
+
 //==================== Catch@004295eb @ 0x004295EB (size 31) ====================
 
 undefined1 * Catch_004295eb(void)
@@ -40181,7 +43474,251 @@ undefined1 * Catch_004295eb(void)
     FUN_0041b170(*(int **)(unaff_EBP + -0x24));
   }
   *(undefined4 *)(unaff_EBP + -4) = 0;
-  return &LAB_00429578;
+  return (undefined1 *)0x429578;
+}
+
+
+
+//==================== Handler_0042960A @ 0x0042960A (size 1318) ====================
+
+/* WARNING: Function: __EH_prolog3 replaced with injection: EH_prolog3 */
+/* WARNING: Function: __EH_epilog3 replaced with injection: EH_epilog3 */
+
+undefined4 Handler_0042960A(wchar_t *param_1,LPWSTR param_2,undefined4 *param_3)
+
+{
+  LPWSTR pWVar1;
+  int iVar2;
+  LPWSTR pWVar3;
+  CFrameWnd *pCVar4;
+  undefined4 uVar5;
+  CWnd *this;
+  CObject *pCVar6;
+  BOOL BVar7;
+  HMENU pHVar8;
+  undefined4 *puVar9;
+  undefined4 *puVar10;
+  CBitmap *pCVar11;
+  DWORD DVar12;
+  ULONG_PTR *pUVar13;
+  int *piVar14;
+  uint uVar15;
+  uint uVar16;
+  undefined4 uStack_184;
+  undefined4 uStack_180;
+  HWND pHStack_164;
+  _IMAGEINFO a_Stack_120 [16];
+  RECT RStack_110;
+  tagRECT tStack_100;
+  RECT RStack_f0;
+  MENUITEMINFOW MStack_e0;
+  CClientDC aCStack_b0 [20];
+  tagRECT tStack_9c;
+  tagRECT tStack_8c;
+  CMenu aCStack_7c [4];
+  HMENU pHStack_78;
+  tagRECT tStack_6c;
+  CWnd *pCStack_5c;
+  tagRECT *ptStack_58;
+  byte abStack_54 [4];
+  CDC aCStack_50 [16];
+  undefined **appuStack_40 [5];
+  CImageList *pCStack_2c;
+  CObject *pCStack_28;
+  uint uStack_24;
+  int iStack_20;
+  CFrameWnd *pCStack_1c;
+  CObject *pCStack_18;
+  int aiStack_14 [3];
+  int iStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0x174;
+  iStack_8 = 0x429619;
+  ATL::CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>::
+  CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>
+            ((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_> *)aiStack_14);
+  iStack_8 = 0;
+  iVar2 = lstrlenW(L"ReBarWindow32");
+  pWVar3 = (LPWSTR)FID_conflict_PrepareWrite(aiStack_14,iVar2 + 1);
+  pWVar1 = param_2;
+  GetClassNameW(*(HWND *)param_2,pWVar3,iVar2 + 1);
+  ATL::CSimpleStringT<wchar_t,0>::ReleaseBuffer((CSimpleStringT<wchar_t,0> *)aiStack_14,-1);
+  pCStack_18 = (CObject *)CWnd::FromHandlePermanent(*(HWND__ **)pWVar1);
+  iVar2 = ATL::CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>::Compare
+                    ((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_> *)aiStack_14
+                     ,L"ReBarWindow32");
+  pCVar6 = pCStack_18;
+  if ((iVar2 == 0) && (pCStack_18 != (CObject *)0x0)) {
+    iVar2 = CObject::IsKindOf(pCStack_18,(CRuntimeClass *)&UNK_004652fc);
+    if (iVar2 != 0) {
+      pCVar4 = CWnd::GetParentFrame((CWnd *)pCVar6);
+      if ((pCVar4 != (CFrameWnd *)0x0) && (pCStack_1c != pCVar4)) {
+        uVar5 = Handler_0042960A(param_1,pWVar1,param_3);
+        goto LAB_004296b3;
+      }
+      func_0x0042fed8();
+      ATL::CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>::
+      CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>
+                ((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_> *)&param_1);
+      ATL::CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>::
+      CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>
+                ((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_> *)&param_2);
+      iStack_8._0_1_ = 3;
+      FUN_00425661((undefined4 *)aCStack_50);
+      iStack_8._0_1_ = 4;
+      CClientDC::CClientDC(aCStack_b0,(CWnd *)pCStack_1c);
+      uStack_184 = *(undefined4 *)(pCVar6 + 0x98);
+      iStack_8 = CONCAT31(iStack_8._1_3_,5);
+      uStack_180 = 0x10;
+      FUN_00426fe2(pCVar6,*(WPARAM *)(pWVar1 + 6),(LPARAM)&uStack_184);
+      FUN_00426fff(pCVar6,*(WPARAM *)(pWVar1 + 6),(LPARAM)&tStack_8c);
+      iVar2 = lstrlenW(L"ToolbarWindow32");
+      pWVar3 = (LPWSTR)FID_conflict_PrepareWrite(aiStack_14,iVar2 + 1);
+      GetClassNameW(pHStack_164,pWVar3,iVar2 + 1);
+      ATL::CSimpleStringT<wchar_t,0>::ReleaseBuffer((CSimpleStringT<wchar_t,0> *)aiStack_14,-1);
+      this = CWnd::FromHandlePermanent(pHStack_164);
+      pCStack_5c = this;
+      iVar2 = ATL::CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_>::Compare
+                        ((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsOS<wchar_t>_>_> *)
+                         aiStack_14,L"ToolbarWindow32");
+      if ((iVar2 == 0) && (this != (CWnd *)0x0)) {
+        iVar2 = CObject::IsKindOf((CObject *)this,(CRuntimeClass *)&PTR_s_CToolBar_004652c8);
+        if (iVar2 != 0) {
+          ptStack_58 = (tagRECT *)(pWVar1 + 0xc);
+          tStack_8c.right = ptStack_58->left;
+          CWnd::ClientToScreen((CWnd *)pCStack_18,&tStack_8c);
+          CWnd::ScreenToClient(this,&tStack_8c);
+          pCVar6 = (CObject *)func_0x00426f99();
+          pCStack_18 = pCVar6;
+          do {
+            pCVar6 = pCVar6 + -1;
+            pCStack_28 = pCVar6;
+            FUN_00426fac(this,(WPARAM)pCVar6,(LPARAM)&RStack_f0);
+            BVar7 = IntersectRect(&tStack_100,&tStack_8c,&RStack_f0);
+            if (BVar7 != 0) break;
+          } while (pCVar6 != (CObject *)0x0);
+          _memset(&MStack_e0,0,0x30);
+          MStack_e0.cbSize = 0x30;
+          pCStack_2c = (CImageList *)func_0x00426fc9();
+          func_0x00434c22();
+          appuStack_40[0] = CTypedPtrArray<CObArray,CBitmap*>::vftable;
+          iStack_8 = CONCAT31(iStack_8._1_3_,6);
+          CPtrArray::SetSize((CPtrArray *)appuStack_40,(int)pCStack_18 - (int)pCVar6,-1);
+          pHVar8 = CreatePopupMenu();
+          Attach(aCStack_7c,(int)pHVar8);
+          CDC::CreateCompatibleDC(aCStack_50,(CDC *)aCStack_b0);
+          uVar16 = 0;
+          while (pCVar6 < pCStack_18) {
+            CToolBar::GetButtonInfo
+                      ((CToolBar *)this,(int)pCVar6,&uStack_24,(uint *)abStack_54,&iStack_20);
+            if ((abStack_54[0] & 1) == 0) {
+              MStack_e0.fMask = 0x162;
+              iVar2 = FUN_004069a0(&param_1,uStack_24);
+              if (iVar2 == 0) {
+                ATL::CSimpleStringT<wchar_t,0>::Empty((CSimpleStringT<wchar_t,0> *)&param_2);
+              }
+              else {
+                AfxExtractSubString((CStringT<wchar_t,StrTraitMFC<wchar_t,ATL::ChTraitsCRT<wchar_t>_>_>
+                                     *)&param_2,param_1,1,L'\n');
+              }
+              puVar9 = FUN_0041ade6(8);
+              if (puVar9 == (undefined4 *)0x0) {
+                puVar9 = (undefined4 *)0x0;
+              }
+              else {
+                puVar9[1] = 0;
+                *puVar9 = CBitmap::vftable;
+              }
+              SetAtGrow(appuStack_40,uVar16,puVar9);
+              if (pCStack_2c == (CImageList *)0x0) {
+LAB_004299df:
+                MStack_e0.dwItemData = 0;
+              }
+              else {
+                iVar2 = AfxImageList_GetImageInfo
+                                  (*(_IMAGELIST **)(pCStack_2c + 4),iStack_20,a_Stack_120);
+                if (iVar2 == 0) goto LAB_004299df;
+                CopyRect(&tStack_6c,&RStack_110);
+                OffsetRect(&tStack_6c,-tStack_6c.left,-tStack_6c.top);
+                puVar9 = (undefined4 *)FUN_00429e6b(appuStack_40,uVar16);
+                CBitmap::CreateCompatibleBitmap
+                          ((CBitmap *)*puVar9,(CDC *)aCStack_b0,tStack_6c.right,tStack_6c.bottom);
+                puVar9 = (undefined4 *)FUN_00429e6b(appuStack_40,uVar16);
+                puVar10 = (undefined4 *)FUN_00429e6b(appuStack_40,uVar16);
+                pCVar11 = CDC::SelectObject(aCStack_50,(CBitmap *)*puVar9);
+                *puVar10 = pCVar11;
+                DVar12 = GetSysColor(4);
+                CDC::FillSolidRect(aCStack_50,&tStack_6c,DVar12);
+                CImageList::Draw(pCStack_2c,aCStack_50,iStack_20,(tagPOINT)0x0,1);
+                puVar9 = (undefined4 *)FUN_00429e6b(appuStack_40,uVar16);
+                puVar10 = (undefined4 *)FUN_00429e6b(appuStack_40,uVar16);
+                pCVar11 = CDC::SelectObject(aCStack_50,(CBitmap *)*puVar9);
+                *puVar10 = pCVar11;
+                pUVar13 = (ULONG_PTR *)FUN_00429e6b(appuStack_40,uVar16);
+                MStack_e0.dwItemData = *pUVar13;
+                pCVar6 = pCStack_28;
+                this = pCStack_5c;
+              }
+              MStack_e0.dwTypeData = param_2;
+              MStack_e0.wID = uStack_24;
+              MStack_e0.fType = 0x100;
+              uVar16 = uVar16 + 1;
+LAB_00429a1d:
+              InsertMenuItemW(pHStack_78,(UINT)pCVar6,1,&MStack_e0);
+            }
+            else if (uVar16 != 0) {
+              MStack_e0.fMask = 0x100;
+              MStack_e0.fType = 0x800;
+              goto LAB_00429a1d;
+            }
+            pCVar6 = pCVar6 + 1;
+            pCStack_28 = pCVar6;
+          }
+          CRect::CRect((CRect *)&tStack_9c,ptStack_58);
+          CWnd::ClientToScreen((CWnd *)pCStack_1c,&tStack_9c);
+          CMenu::TrackPopupMenu
+                    (aCStack_7c,0,tStack_9c.left,tStack_9c.bottom,(CWnd *)pCStack_1c,(tagRECT *)0x0)
+          ;
+          uVar15 = 0;
+          *param_3 = 0;
+          if (uVar16 != 0) {
+            do {
+              piVar14 = (int *)FUN_00429e6b(appuStack_40,uVar15);
+              if ((int *)*piVar14 != (int *)0x0) {
+                (**(code **)(*(int *)*piVar14 + 4))(1);
+              }
+              uVar15 = uVar15 + 1;
+            } while (uVar15 < uVar16);
+          }
+          iStack_8._0_1_ = 5;
+          FUN_00434c39(appuStack_40);
+          iStack_8._0_1_ = 4;
+          CClientDC::~CClientDC(aCStack_b0);
+          iStack_8._0_1_ = 3;
+          CDC::~CDC(aCStack_50);
+          FUN_00401810((undefined4 *)(param_2 + -8));
+          FUN_00401810((undefined4 *)(param_1 + -8));
+          iStack_8 = (uint)iStack_8._1_3_ << 8;
+          CChevronOwnerDrawMenu::~CChevronOwnerDrawMenu((CChevronOwnerDrawMenu *)aCStack_7c);
+          uVar5 = 1;
+          goto LAB_004296b3;
+        }
+      }
+      iStack_8._0_1_ = 4;
+      CClientDC::~CClientDC(aCStack_b0);
+      iStack_8._0_1_ = 3;
+      CDC::~CDC(aCStack_50);
+      FUN_00401810((undefined4 *)(param_2 + -8));
+      FUN_00401810((undefined4 *)(param_1 + -8));
+      iStack_8 = (uint)iStack_8._1_3_ << 8;
+      CChevronOwnerDrawMenu::~CChevronOwnerDrawMenu((CChevronOwnerDrawMenu *)aCStack_7c);
+    }
+  }
+  uVar5 = 0;
+LAB_004296b3:
+  FUN_00401810((undefined4 *)(aiStack_14[0] + -0x10));
+  return uVar5;
 }
 
 
@@ -40435,6 +43972,20 @@ CStatusBar::GetPaneInfo(CStatusBar *this,int param_1,uint *param_2,uint *param_3
 
 
 
+//==================== Handler_00429DBB @ 0x00429DBB (size 21) ====================
+
+int Handler_00429DBB(void)
+
+{
+  long lVar1;
+  CWnd *in_ECX;
+  
+  lVar1 = CWnd::Default(in_ECX);
+  return (-(uint)(lVar1 != 0x11) & 0xfffffff0) + 0x11;
+}
+
+
+
 //==================== OnBarStyleChange @ 0x00429DD0 (size 42) ====================
 
 /* Library Function - Single Match
@@ -40448,6 +43999,54 @@ void __thiscall CStatusBar::OnBarStyleChange(CStatusBar *this,ulong param_1,ulon
   if ((*(int *)(this + 0x20) != 0) && (((param_1 ^ param_2) & 0xf00) != 0)) {
     CWnd::SetWindowPos((CWnd *)this,(CWnd *)0x0,0,0,0,0,0x33);
   }
+  return;
+}
+
+
+
+//==================== thunk_FUN_004357db @ 0x00429DFA (size 5) ====================
+
+/* WARNING: Function: __EH_prolog3 replaced with injection: EH_prolog3 */
+/* WARNING: Function: __EH_epilog3 replaced with injection: EH_epilog3 */
+
+void thunk_FUN_004357db(void)
+
+{
+  CWnd *in_ECX;
+  CWindowDC *left;
+  tagRECT *top;
+  int in_stack_ffffffac;
+  int in_stack_ffffffb0;
+  int in_stack_ffffffb4;
+  int in_stack_ffffffb8;
+  CWindowDC aCStack_44 [4];
+  WPARAM WStack_40;
+  tagRECT tStack_30;
+  tagRECT tStack_20;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0x34;
+  uStack_8 = 0x4357e7;
+  CWindowDC::CWindowDC(aCStack_44,in_ECX);
+  uStack_8 = 0;
+  GetClientRect(*(HWND *)(in_ECX + 0x20),&tStack_30);
+  GetWindowRect(*(HWND *)(in_ECX + 0x20),&tStack_20);
+  CWnd::ScreenToClient(in_ECX,&tStack_20);
+  OffsetRect(&tStack_30,-tStack_20.left,-tStack_20.top);
+  FID_conflict_ExcludeClipRect
+            ((HDC)&tStack_30,in_stack_ffffffac,in_stack_ffffffb0,in_stack_ffffffb4,in_stack_ffffffb8
+            );
+  OffsetRect(&tStack_20,-tStack_20.left,-tStack_20.top);
+  top = &tStack_20;
+  left = aCStack_44;
+  (**(code **)(*(int *)in_ECX + 0x150))();
+  FID_conflict_ExcludeClipRect
+            ((HDC)&tStack_20,(int)left,(int)top,in_stack_ffffffac,in_stack_ffffffb0);
+  SendMessageW(*(HWND *)(in_ECX + 0x20),0x14,WStack_40,0);
+  (**(code **)(*(int *)in_ECX + 0x158))(aCStack_44,&tStack_20);
+  uStack_8 = 0xffffffff;
+  CWindowDC::~CWindowDC(aCStack_44);
   return;
 }
 
@@ -40767,6 +44366,25 @@ long __thiscall CStatusBar::OnGetText(CStatusBar *this,uint param_1,long param_2
     iVar3 = iVar3 + 1;
   }
   return iVar3;
+}
+
+
+
+//==================== Handler_0042A131 @ 0x0042A131 (size 38) ====================
+
+undefined4 Handler_0042A131(void)
+
+{
+  int iVar1;
+  CStatusBar *in_ECX;
+  undefined4 uVar2;
+  
+  uVar2 = 0;
+  iVar1 = CStatusBar::CommandToIndex(in_ECX,0);
+  if (-1 < iVar1) {
+    uVar2 = *(undefined4 *)(*(int *)(*(int *)(in_ECX + 0x78) + 0x10 + iVar1 * 0x14) + -0xc);
+  }
+  return uVar2;
 }
 
 
@@ -41200,6 +44818,45 @@ CStatusBar::SetPaneInfo(CStatusBar *this,int param_1,uint param_2,uint param_3,i
 
 
 
+//==================== Handler_0042A5B6 @ 0x0042A5B6 (size 22) ====================
+
+void Handler_0042A5B6(void)
+
+{
+  CNoTrackObject *pCVar1;
+  CStatusBar *in_ECX;
+  undefined4 unaff_ESI;
+  
+  CStatusBar::UpdateAllPanes(in_ECX,0,1);
+  pCVar1 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar1 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  (**(code **)(*(int *)in_ECX + 0x118))
+            (*(undefined4 *)(pCVar1 + 0x5c),*(undefined4 *)(pCVar1 + 0x60),
+             *(undefined4 *)(pCVar1 + 100),unaff_ESI);
+  return;
+}
+
+
+
+//==================== Handler_0042A5CC @ 0x0042A5CC (size 25) ====================
+
+void Handler_0042A5CC(void)
+
+{
+  CWnd *in_ECX;
+  
+  CWnd::Default(in_ECX);
+  CStatusBar::UpdateAllPanes((CStatusBar *)in_ECX,1,0);
+  return;
+}
+
+
+
 //==================== Enable @ 0x0042A5E5 (size 61) ====================
 
 /* Library Function - Single Match
@@ -41536,6 +45193,27 @@ void __thiscall CWinApp::OnFileNew(CWinApp *this)
     (**(code **)(**(int **)(this + 0x58) + 0x34))();
     return;
   }
+  return;
+}
+
+
+
+//==================== Handler_0042AA82 @ 0x0042AA82 (size 19) ====================
+
+void Handler_0042AA82(void)
+
+{
+  int in_ECX;
+  undefined **ppuStack_8;
+  
+  if (*(int *)(in_ECX + 0x58) == 0) {
+    ppuStack_8 = &PTR_vftable_0047a408;
+                    /* WARNING: Subroutine does not return */
+    __CxxThrowException_8(&ppuStack_8,&DAT_00471750);
+  }
+                    /* WARNING: Could not recover jumptable at 0x0042aa92. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(**(int **)(in_ECX + 0x58) + 0x38))();
   return;
 }
 
@@ -46398,6 +50076,19 @@ CRecentFileList::operator[](CRecentFileList *this,int param_1)
 
 
 
+//==================== Handler_0042E0BC @ 0x0042E0BC (size 19) ====================
+
+void Handler_0042E0BC(void)
+
+{
+  int in_ECX;
+  
+  SendMessageW(*(HWND *)(*(int *)(in_ECX + 0x20) + 0x20),0x10,0,0);
+  return;
+}
+
+
+
 //==================== HideApplication @ 0x0042E0CF (size 52) ====================
 
 /* Library Function - Single Match
@@ -46504,6 +50195,54 @@ int __thiscall CDocument::CanCloseFrame(CDocument *this,CFrameWnd *param_1)
 void FUN_0042e1b2(void)
 
 {
+  return;
+}
+
+
+
+//==================== Handler_0042E1B5 @ 0x0042E1B5 (size 27) ====================
+
+void Handler_0042E1B5(void)
+
+{
+  int iVar1;
+  int *in_ECX;
+  
+  iVar1 = (**(code **)(*in_ECX + 0x90))();
+  if (iVar1 != 0) {
+                    /* WARNING: Could not recover jumptable at 0x0042e1cb. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    (**(code **)(*in_ECX + 0x7c))();
+    return;
+  }
+  return;
+}
+
+
+
+//==================== Handler_0042E1D0 @ 0x0042E1D0 (size 8) ====================
+
+void Handler_0042E1D0(void)
+
+{
+  int *in_ECX;
+  
+                    /* WARNING: Could not recover jumptable at 0x0042e1d2. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*in_ECX + 0x9c))();
+  return;
+}
+
+
+
+//==================== Handler_0042E1D8 @ 0x0042E1D8 (size 13) ====================
+
+void Handler_0042E1D8(void)
+
+{
+  int *in_ECX;
+  
+  (**(code **)(*in_ECX + 0x98))(0,1);
   return;
 }
 
@@ -47985,6 +51724,86 @@ void __thiscall RemoveImageList(void *this,WPARAM param_1)
 
 
 
+//==================== Handler_0042F3C1 @ 0x0042F3C1 (size 38) ====================
+
+void Handler_0042F3C1(void)
+
+{
+  int iVar1;
+  AFX_MODULE_STATE *pAVar2;
+  int iVar3;
+  AFX_MODULE_THREAD_STATE *pAVar4;
+  LONG LVar5;
+  LONG LVar6;
+  int *piVar7;
+  CWnd *in_ECX;
+  undefined4 uStack_34;
+  undefined4 uStack_30;
+  undefined4 uStack_2c;
+  undefined4 uStack_28;
+  undefined4 uStack_c;
+  
+  uStack_c = 0x42f3cd;
+  RemoveImageList(in_ECX,0);
+  uStack_c = 0x42f3d6;
+  RemoveImageList(in_ECX,1);
+  uStack_c = 0x42f3df;
+  RemoveImageList(in_ECX,2);
+  iVar1 = FUN_0042d831();
+  if (iVar1 == 0) goto LAB_0041f437;
+  if (*(CWnd **)(iVar1 + 0x20) == in_ECX) {
+    pAVar2 = AfxGetModuleState();
+    if (pAVar2[0x14] == (AFX_MODULE_STATE)0x0) {
+      pAVar2 = AfxGetModuleState();
+      if (iVar1 == *(int *)(pAVar2 + 4)) {
+        iVar3 = AfxOleCanExitApp();
+        if (iVar3 == 0) goto LAB_0041f42c;
+      }
+      AfxPostQuitMessage(0);
+    }
+LAB_0041f42c:
+    *(undefined4 *)(iVar1 + 0x20) = 0;
+  }
+  if (*(CWnd **)(iVar1 + 0x24) == in_ECX) {
+    *(undefined4 *)(iVar1 + 0x24) = 0;
+  }
+LAB_0041f437:
+  if (*(int **)(in_ECX + 0x48) != (int *)0x0) {
+    (**(code **)(**(int **)(in_ECX + 0x48) + 0x50))();
+    *(undefined4 *)(in_ECX + 0x48) = 0;
+  }
+  if (*(int **)(in_ECX + 0x4c) != (int *)0x0) {
+    (**(code **)(**(int **)(in_ECX + 0x4c) + 4))(1);
+  }
+  *(undefined4 *)(in_ECX + 0x4c) = 0;
+  if (((byte)in_ECX[0x3c] & 1) != 0) {
+    pAVar4 = AfxGetModuleThreadState();
+    iVar1 = *(int *)(pAVar4 + 0x3c);
+    if ((iVar1 != 0) && (*(int *)(iVar1 + 0x20) != 0)) {
+      _memset(&uStack_34,0,0x30);
+      uStack_2c = *(undefined4 *)(in_ECX + 0x20);
+      uStack_34 = 0x2c;
+      uStack_30 = 1;
+      uStack_28 = uStack_2c;
+      SendMessageW(*(HWND *)(iVar1 + 0x20),0x433,0,(LPARAM)&uStack_34);
+    }
+  }
+  LVar5 = GetWindowLongW(*(HWND *)(in_ECX + 0x20),-4);
+  CWnd::Default(in_ECX);
+  LVar6 = GetWindowLongW(*(HWND *)(in_ECX + 0x20),-4);
+  if (LVar6 == LVar5) {
+    piVar7 = (int *)(**(code **)(*(int *)in_ECX + 0xf8))();
+    if (*piVar7 != 0) {
+      SetWindowLongW(*(HWND *)(in_ECX + 0x20),-4,*piVar7);
+    }
+  }
+  CWnd::Detach(in_ECX);
+  (**(code **)(*(int *)in_ECX + 0x11c))();
+  return;
+}
+
+
+
 //==================== FUN_0042f414 @ 0x0042F414 (size 6) ====================
 
 undefined4 FUN_0042f414(void)
@@ -48036,6 +51855,52 @@ undefined4 PreCreateWindow(int param_1)
 
 
 
+//==================== Handler_0042F46A @ 0x0042F46A (size 48) ====================
+
+void Handler_0042F46A(void)
+
+{
+  int *piVar1;
+  CNoTrackObject *pCVar2;
+  CFrameWnd *this;
+  CWnd *pCVar3;
+  CWnd *in_ECX;
+  undefined4 unaff_ESI;
+  
+  this = CWnd::GetParentFrame(in_ECX);
+  if (this != (CFrameWnd *)0x0) {
+    pCVar3 = (CWnd *)FUN_00426aa8((int)this);
+    if (pCVar3 == in_ECX) {
+      CFrameWnd::SetActiveView(this,(CView *)0x0,1);
+    }
+  }
+  if (*(int **)(in_ECX + 0x4c) != (int *)0x0) {
+    (**(code **)(**(int **)(in_ECX + 0x4c) + 4))(1,unaff_ESI);
+  }
+  piVar1 = *(int **)(in_ECX + 0x2c);
+  *(undefined4 *)(in_ECX + 0x4c) = 0;
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 0xc))(piVar1,0,0);
+  }
+  piVar1 = *(int **)(in_ECX + 0x28);
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 8))(piVar1);
+  }
+  pCVar2 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar2 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  (**(code **)(*(int *)in_ECX + 0x118))
+            (*(undefined4 *)(pCVar2 + 0x5c),*(undefined4 *)(pCVar2 + 0x60),
+             *(undefined4 *)(pCVar2 + 100),unaff_ESI);
+  return;
+}
+
+
+
 //==================== CalcWindowRect @ 0x0042F49A (size 114) ====================
 
 /* Library Function - Single Match
@@ -48075,6 +51940,32 @@ void __thiscall CView::CalcWindowRect(CView *this,tagRECT *param_1,uint param_2)
       param_1->bottom = param_1->bottom + iVar2;
     }
   }
+  return;
+}
+
+
+
+//==================== Handler_0042F50C @ 0x0042F50C (size 75) ====================
+
+/* WARNING: Function: __EH_prolog3_GS replaced with injection: EH_prolog3 */
+
+void Handler_0042F50C(void)
+
+{
+  CWnd *in_ECX;
+  CPaintDC aCStack_68 [96];
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0x58;
+  uStack_8 = 0x42f518;
+  CPaintDC::CPaintDC(aCStack_68,in_ECX);
+  uStack_8 = 0;
+  (**(code **)(*(int *)in_ECX + 0x160))(aCStack_68,0);
+  (**(code **)(*(int *)in_ECX + 0x174))(aCStack_68);
+  uStack_8 = 0xffffffff;
+  CPaintDC::~CPaintDC(aCStack_68);
+  FUN_00447e7f();
   return;
 }
 
@@ -48170,6 +52061,21 @@ undefined4 FUN_0042f5ae(void)
 void FUN_0042f5b4(void)
 
 {
+  return;
+}
+
+
+
+//==================== Handler_0042F5B7 @ 0x0042F5B7 (size 8) ====================
+
+void Handler_0042F5B7(void)
+
+{
+  int *in_ECX;
+  
+                    /* WARNING: Could not recover jumptable at 0x0042f5b9. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*in_ECX + 0x164))();
   return;
 }
 
@@ -48441,6 +52347,23 @@ void __thiscall CView::OnUpdateSplitCmd(CView *this,CCmdUI *param_1)
   }
   (*(code *)**(undefined4 **)param_1)(uVar2);
   return;
+}
+
+
+
+//==================== Handler_0042F852 @ 0x0042F852 (size 28) ====================
+
+bool Handler_0042F852(void)
+
+{
+  CSplitterWnd *pCVar1;
+  CWnd *in_ECX;
+  
+  pCVar1 = CView::GetParentSplitter(in_ECX,0);
+  if (pCVar1 != (CSplitterWnd *)0x0) {
+    (**(code **)(*(int *)pCVar1 + 0x17c))();
+  }
+  return pCVar1 != (CSplitterWnd *)0x0;
 }
 
 
@@ -56805,6 +60728,89 @@ CalcDynamicLayout(void *this,undefined4 param_1,undefined4 param_2,uint param_3)
 
 
 
+//==================== Handler_0043501C @ 0x0043501C (size 72) ====================
+
+undefined4 Handler_0043501C(void)
+
+{
+  int iVar1;
+  undefined4 uVar2;
+  CObject *in_ECX;
+  
+  iVar1 = CObject::IsKindOf(in_ECX,(CRuntimeClass *)&PTR_s_CToolBar_004652c8);
+  if ((iVar1 == 0) && (iVar1 = CObject::IsKindOf(in_ECX,(CRuntimeClass *)&UNK_004652a0), iVar1 == 0)
+     ) {
+    return 1;
+  }
+  if (*(int *)(in_ECX + 0x7c) != 0) {
+    func_0x004424dc(*(int *)(in_ECX + 0x7c));
+  }
+  uVar2 = func_0x00442490(*(undefined4 *)(in_ECX + 0x20),L"REBAR");
+  *(undefined4 *)(in_ECX + 0x7c) = uVar2;
+  return 1;
+}
+
+
+
+//==================== Handler_00435064 @ 0x00435064 (size 106) ====================
+
+void Handler_00435064(void)
+
+{
+  int *piVar1;
+  CFrameWnd *this;
+  CNoTrackObject *pCVar2;
+  int iVar3;
+  AFX_MODULE_THREAD_STATE *pAVar4;
+  CObject *in_ECX;
+  undefined4 unaff_ESI;
+  
+  iVar3 = CObject::IsKindOf(in_ECX,(CRuntimeClass *)&PTR_s_CToolBar_004652c8);
+  if (iVar3 == 0) {
+    iVar3 = CObject::IsKindOf(in_ECX,(CRuntimeClass *)&UNK_004652a0);
+    if (iVar3 == 0) goto LAB_0043509a;
+  }
+  iVar3 = func_0x0044244a();
+  if (iVar3 != 0) {
+    func_0x004424dc(*(undefined4 *)(in_ECX + 0x7c));
+  }
+LAB_0043509a:
+  pAVar4 = AfxGetModuleThreadState();
+  if (*(CObject **)(pAVar4 + 0x50) == in_ECX) {
+    (**(code **)(*(int *)in_ECX + 0x178))(0xffffffff);
+  }
+  this = *(CFrameWnd **)(in_ECX + 0x8c);
+  if (this != (CFrameWnd *)0x0) {
+    CFrameWnd::RemoveControlBar(this,(CControlBar *)in_ECX);
+    *(undefined4 *)(in_ECX + 0x8c) = 0;
+  }
+  if (*(int **)(in_ECX + 0x4c) != (int *)0x0) {
+    (**(code **)(**(int **)(in_ECX + 0x4c) + 4))(1,unaff_ESI);
+  }
+  piVar1 = *(int **)(in_ECX + 0x2c);
+  *(undefined4 *)(in_ECX + 0x4c) = 0;
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 0xc))(piVar1,0,0);
+  }
+  piVar1 = *(int **)(in_ECX + 0x28);
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 8))(piVar1);
+  }
+  pCVar2 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar2 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  (**(code **)(*(int *)in_ECX + 0x118))
+            (*(undefined4 *)(pCVar2 + 0x5c),*(undefined4 *)(pCVar2 + 0x60),
+             *(undefined4 *)(pCVar2 + 100),unaff_ESI);
+  return;
+}
+
+
+
 //==================== DestroyWindow @ 0x004350CE (size 43) ====================
 
 /* Library Function - Single Match
@@ -56830,6 +60836,35 @@ int __thiscall CControlBar::DestroyWindow(CControlBar *this)
   }
   iVar1 = CWnd::DestroyWindow((CWnd *)this);
   return iVar1;
+}
+
+
+
+//==================== Handler_004350F9 @ 0x004350F9 (size 73) ====================
+
+/* WARNING: Function: __EH_prolog3_GS replaced with injection: EH_prolog3 */
+
+void Handler_004350F9(void)
+
+{
+  int iVar1;
+  CWnd *in_ECX;
+  CPaintDC aCStack_68 [96];
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0x58;
+  uStack_8 = 0x435105;
+  CPaintDC::CPaintDC(aCStack_68,in_ECX);
+  uStack_8 = 0;
+  iVar1 = (**(code **)(*(int *)in_ECX + 0x168))();
+  if (iVar1 != 0) {
+    (**(code **)(*(int *)in_ECX + 0x14c))(aCStack_68);
+  }
+  uStack_8 = 0xffffffff;
+  CPaintDC::~CPaintDC(aCStack_68);
+  FUN_00447e7f();
+  return;
 }
 
 
@@ -57278,6 +61313,114 @@ void __thiscall CControlBar::OnWindowPosChanging(CControlBar *this,tagWINDOWPOS 
       InvalidateRect(*(HWND *)(this + 0x20),&local_18,1);
     }
   }
+  return;
+}
+
+
+
+//==================== Handler_0043571C @ 0x0043571C (size 156) ====================
+
+undefined4 Handler_0043571C(void)
+
+{
+  long lVar1;
+  HWND pHVar2;
+  CWnd *pCVar3;
+  int iVar4;
+  undefined4 uVar5;
+  CWnd *in_ECX;
+  
+  lVar1 = CWnd::Default(in_ECX);
+  if (lVar1 != -1) {
+    if (((byte)in_ECX[0x84] & 0x10) != 0) {
+      CWnd::EnableToolTips(in_ECX,1);
+    }
+    pHVar2 = GetParent(*(HWND *)(in_ECX + 0x20));
+    pCVar3 = CWnd::FromHandle(pHVar2);
+    iVar4 = (**(code **)(*(int *)pCVar3 + 0x128))();
+    if (iVar4 != 0) {
+      *(CWnd **)(in_ECX + 0x8c) = pCVar3;
+      CPtrList::AddTail((CPtrList *)(pCVar3 + 0x84),in_ECX);
+    }
+    iVar4 = CObject::IsKindOf((CObject *)in_ECX,(CRuntimeClass *)&PTR_s_CToolBar_004652c8);
+    if (((iVar4 != 0) ||
+        (iVar4 = CObject::IsKindOf((CObject *)in_ECX,(CRuntimeClass *)&UNK_004652a0), iVar4 != 0))
+       && (iVar4 = func_0x0044244a(), iVar4 != 0)) {
+      uVar5 = func_0x00442490(*(undefined4 *)(in_ECX + 0x20),L"REBAR");
+      *(undefined4 *)(in_ECX + 0x7c) = uVar5;
+    }
+    return 0;
+  }
+  return 0xffffffff;
+}
+
+
+
+//==================== Handler_004357B8 @ 0x004357B8 (size 35) ====================
+
+long Handler_004357B8(void)
+
+{
+  int iVar1;
+  long lVar2;
+  CControlBar *in_ECX;
+  
+  iVar1 = CControlBar::IsFloating(in_ECX);
+  if (iVar1 == 0) {
+    lVar2 = CWnd::Default((CWnd *)in_ECX);
+  }
+  else {
+    func_0x004219ee();
+    lVar2 = 3;
+  }
+  return lVar2;
+}
+
+
+
+//==================== FUN_004357db @ 0x004357DB (size 200) ====================
+
+/* WARNING: Function: __EH_prolog3 replaced with injection: EH_prolog3 */
+/* WARNING: Function: __EH_epilog3 replaced with injection: EH_epilog3 */
+
+void FUN_004357db(void)
+
+{
+  CWnd *in_ECX;
+  CWindowDC *left;
+  tagRECT *top;
+  int in_stack_ffffffac;
+  int in_stack_ffffffb0;
+  int in_stack_ffffffb4;
+  int in_stack_ffffffb8;
+  CWindowDC aCStack_44 [4];
+  WPARAM WStack_40;
+  tagRECT tStack_30;
+  tagRECT tStack_20;
+  undefined4 uStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0x34;
+  uStack_8 = 0x4357e7;
+  CWindowDC::CWindowDC(aCStack_44,in_ECX);
+  uStack_8 = 0;
+  GetClientRect(*(HWND *)(in_ECX + 0x20),&tStack_30);
+  GetWindowRect(*(HWND *)(in_ECX + 0x20),&tStack_20);
+  CWnd::ScreenToClient(in_ECX,&tStack_20);
+  OffsetRect(&tStack_30,-tStack_20.left,-tStack_20.top);
+  FID_conflict_ExcludeClipRect
+            ((HDC)&tStack_30,in_stack_ffffffac,in_stack_ffffffb0,in_stack_ffffffb4,in_stack_ffffffb8
+            );
+  OffsetRect(&tStack_20,-tStack_20.left,-tStack_20.top);
+  top = &tStack_20;
+  left = aCStack_44;
+  (**(code **)(*(int *)in_ECX + 0x150))();
+  FID_conflict_ExcludeClipRect
+            ((HDC)&tStack_20,(int)left,(int)top,in_stack_ffffffac,in_stack_ffffffb0);
+  SendMessageW(*(HWND *)(in_ECX + 0x20),0x14,WStack_40,0);
+  (**(code **)(*(int *)in_ECX + 0x158))(aCStack_44,&tStack_20);
+  uStack_8 = 0xffffffff;
+  CWindowDC::~CWindowDC(aCStack_44);
   return;
 }
 
@@ -58005,6 +62148,19 @@ long __thiscall CControlBar::OnIdleUpdateCmdUI(CControlBar *this,uint param_1,lo
     return 0;
   }
   return 0;
+}
+
+
+
+//==================== Handler_00436397 @ 0x00436397 (size 10) ====================
+
+void Handler_00436397(void)
+
+{
+  CControlBar *in_ECX;
+  
+  CControlBar::OnIdleUpdateCmdUI(in_ECX,1,0);
+  return;
 }
 
 
@@ -72422,6 +76578,21 @@ undefined ** FUN_004400ce(void)
 
 
 
+//==================== Handler_004400D4 @ 0x004400D4 (size 8) ====================
+
+void Handler_004400D4(void)
+
+{
+  int *in_ECX;
+  
+                    /* WARNING: Could not recover jumptable at 0x004400d6. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*in_ECX + 0x158))();
+  return;
+}
+
+
+
 //==================== GetCount @ 0x004400DC (size 19) ====================
 
 /* Library Function - Single Match
@@ -75579,6 +79750,19 @@ long __thiscall CToolTipCtrl::OnAddTool(CToolTipCtrl *this,uint param_1,long par
   }
   lVar3 = (**(code **)(*(int *)this + 0x118))(0x432,param_1,local_38);
   return lVar3;
+}
+
+
+
+//==================== Handler_00442AF5 @ 0x00442AF5 (size 23) ====================
+
+undefined4 Handler_00442AF5(void)
+
+{
+  int in_ECX;
+  
+  SendMessageW(*(HWND *)(in_ECX + 0x20),0x401,0,0);
+  return 0;
 }
 
 
@@ -80046,6 +84230,20 @@ long __thiscall CWnd::Default(CWnd *this)
                     (*(undefined4 *)(pCVar1 + 0x5c),*(undefined4 *)(pCVar1 + 0x60),
                      *(undefined4 *)(pCVar1 + 100));
   return lVar2;
+}
+
+
+
+//==================== Handler_0044629D @ 0x0044629D (size 14) ====================
+
+bool Handler_0044629D(void)
+
+{
+  long lVar1;
+  CWnd *in_ECX;
+  
+  lVar1 = CWnd::Default(in_ECX);
+  return lVar1 != 0;
 }
 
 
