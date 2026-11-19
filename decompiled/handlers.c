@@ -4647,6 +4647,612 @@ long __thiscall CDialog::OnCommandHelp(CDialog *this,uint param_1,long param_2)
 
 
 
+//==================== OnActivateTopLevel @ 0x0041E136 ====================
+
+/* Library Function - Single Match
+    protected: long __thiscall CWnd::OnActivateTopLevel(unsigned int,long)
+   
+   Library: Visual Studio 2008 Release */
+
+long __thiscall CWnd::OnActivateTopLevel(CWnd *this,uint param_1,long param_2)
+
+{
+  AFX_MODULE_THREAD_STATE *pAVar1;
+  
+  if ((short)param_1 == 0) {
+    pAVar1 = AfxGetModuleThreadState();
+    if ((*(int *)(pAVar1 + 0x48) != 0) &&
+       ((*(uint *)(*(int *)(pAVar1 + 0x48) + 4) & 0x40000000) == 0)) {
+      CancelToolTips(1);
+    }
+  }
+  return 0;
+}
+
+
+
+//==================== Handler_0041F3AD @ 0x0041F3AD ====================
+
+void Handler_0041F3AD(void)
+
+{
+  int *piVar1;
+  CNoTrackObject *pCVar2;
+  int *in_ECX;
+  undefined4 unaff_ESI;
+  
+  if ((int *)in_ECX[0x13] != (int *)0x0) {
+    (**(code **)(*(int *)in_ECX[0x13] + 4))(1);
+  }
+  piVar1 = (int *)in_ECX[0xb];
+  in_ECX[0x13] = 0;
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 0xc))(piVar1,0,0);
+  }
+  piVar1 = (int *)in_ECX[10];
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 8))(piVar1);
+  }
+  pCVar2 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar2 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  (**(code **)(*in_ECX + 0x118))
+            (*(undefined4 *)(pCVar2 + 0x5c),*(undefined4 *)(pCVar2 + 0x60),
+             *(undefined4 *)(pCVar2 + 100),unaff_ESI);
+  return;
+}
+
+
+
+//==================== OnNcDestroy @ 0x0041F3EA ====================
+
+/* Library Function - Single Match
+    protected: void __thiscall CWnd::OnNcDestroy(void)
+   
+   Library: Visual Studio 2008 Release */
+
+void __thiscall CWnd::OnNcDestroy(CWnd *this)
+
+{
+  int iVar1;
+  AFX_MODULE_STATE *pAVar2;
+  int iVar3;
+  AFX_MODULE_THREAD_STATE *pAVar4;
+  LONG LVar5;
+  LONG LVar6;
+  int *piVar7;
+  undefined4 local_34;
+  undefined4 local_30;
+  undefined4 local_2c;
+  undefined4 local_28;
+  
+  iVar1 = FUN_0042d831();
+  if (iVar1 == 0) goto LAB_0041f437;
+  if (*(CWnd **)(iVar1 + 0x20) == this) {
+    pAVar2 = AfxGetModuleState();
+    if (pAVar2[0x14] == (AFX_MODULE_STATE)0x0) {
+      pAVar2 = AfxGetModuleState();
+      if (iVar1 == *(int *)(pAVar2 + 4)) {
+        iVar3 = AfxOleCanExitApp();
+        if (iVar3 == 0) goto LAB_0041f42c;
+      }
+      AfxPostQuitMessage(0);
+    }
+LAB_0041f42c:
+    *(undefined4 *)(iVar1 + 0x20) = 0;
+  }
+  if (*(CWnd **)(iVar1 + 0x24) == this) {
+    *(undefined4 *)(iVar1 + 0x24) = 0;
+  }
+LAB_0041f437:
+  if (*(int **)(this + 0x48) != (int *)0x0) {
+    (**(code **)(**(int **)(this + 0x48) + 0x50))();
+    *(undefined4 *)(this + 0x48) = 0;
+  }
+  if (*(int **)(this + 0x4c) != (int *)0x0) {
+    (**(code **)(**(int **)(this + 0x4c) + 4))(1);
+  }
+  *(undefined4 *)(this + 0x4c) = 0;
+  if (((byte)this[0x3c] & 1) != 0) {
+    pAVar4 = AfxGetModuleThreadState();
+    iVar1 = *(int *)(pAVar4 + 0x3c);
+    if ((iVar1 != 0) && (*(int *)(iVar1 + 0x20) != 0)) {
+      _memset(&local_34,0,0x30);
+      local_2c = *(undefined4 *)(this + 0x20);
+      local_34 = 0x2c;
+      local_30 = 1;
+      local_28 = local_2c;
+      SendMessageW(*(HWND *)(iVar1 + 0x20),0x433,0,(LPARAM)&local_34);
+    }
+  }
+  LVar5 = GetWindowLongW(*(HWND *)(this + 0x20),-4);
+  Default(this);
+  LVar6 = GetWindowLongW(*(HWND *)(this + 0x20),-4);
+  if (LVar6 == LVar5) {
+    piVar7 = (int *)(**(code **)(*(int *)this + 0xf8))();
+    if (*piVar7 != 0) {
+      SetWindowLongW(*(HWND *)(this + 0x20),-4,*piVar7);
+    }
+  }
+  Detach(this);
+  (**(code **)(*(int *)this + 0x11c))();
+  return;
+}
+
+
+
+//==================== OnNTCtlColor @ 0x0041F55C ====================
+
+/* Library Function - Single Match
+    protected: long __thiscall CWnd::OnNTCtlColor(unsigned int,long)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+long __thiscall CWnd::OnNTCtlColor(CWnd *this,uint param_1,long param_2)
+
+{
+  CNoTrackObject *pCVar1;
+  long lVar2;
+  long local_10;
+  uint local_c;
+  int local_8;
+  
+  local_c = param_1;
+  local_10 = param_2;
+  pCVar1 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar1 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  local_8 = *(int *)(pCVar1 + 0x5c) + -0x132;
+  lVar2 = (**(code **)(*(int *)this + 0x110))(0x19,0,&local_10);
+  return lVar2;
+}
+
+
+
+//==================== OnSetFocus @ 0x0041F839 ====================
+
+/* Library Function - Single Match
+    protected: void __thiscall CWnd::OnSetFocus(class CWnd *)
+   
+   Library: Visual Studio 2008 Release */
+
+void __thiscall CWnd::OnSetFocus(CWnd *this,CWnd *param_1)
+
+{
+  int iVar1;
+  
+  if ((*(int *)(this + 0x4c) != 0) &&
+     (iVar1 = (**(code **)(**(int **)(this + 0x4c) + 0x90))(), iVar1 != 0)) {
+    return;
+  }
+  Default(this);
+  return;
+}
+
+
+
+//==================== Handler_0041F85E @ 0x0041F85E ====================
+
+bool Handler_0041F85E(void)
+
+{
+  SHORT SVar1;
+  ulong uVar2;
+  CWnd *pCVar3;
+  long lVar4;
+  CWnd *in_ECX;
+  
+  uVar2 = CWnd::GetExStyle(in_ECX);
+  if (((((uVar2 & 0x40000000) == 0) && (pCVar3 = AfxGetMainWnd(), pCVar3 != (CWnd *)0x0)) &&
+      (SVar1 = GetKeyState(0x10), -1 < SVar1)) &&
+     ((SVar1 = GetKeyState(0x11), -1 < SVar1 && (SVar1 = GetKeyState(0x12), -1 < SVar1)))) {
+    SendMessageW(*(HWND *)(pCVar3 + 0x20),0x111,0xe146,0);
+    return true;
+  }
+  lVar4 = CWnd::Default(in_ECX);
+  return lVar4 != 0;
+}
+
+
+
+//==================== OnGetObject @ 0x0041F8CA ====================
+
+/* Library Function - Single Match
+    protected: long __thiscall CWnd::OnGetObject(unsigned int,long)
+   
+   Library: Visual Studio 2008 Release */
+
+long __thiscall CWnd::OnGetObject(CWnd *this,uint param_1,long param_2)
+
+{
+  long lVar1;
+  int iVar2;
+  CWnd *local_8;
+  
+  local_8 = this;
+  if (this[0x24] != (CWnd)0x0) {
+    local_8 = (CWnd *)0x0;
+    iVar2 = (**(code **)(*(int *)this + 0xec))(param_1,param_2,&local_8);
+    if (-1 < iVar2) {
+      return (long)local_8;
+    }
+  }
+  lVar1 = Default(this);
+  return lVar1;
+}
+
+
+
+//==================== FID_conflict:OnHScroll @ 0x0041F908 ====================
+
+/* Library Function - Multiple Matches With Different Base Names
+    protected: void __thiscall CWnd::OnHScroll(unsigned int,unsigned int,class CScrollBar *)
+    protected: void __thiscall CWnd::OnVScroll(unsigned int,unsigned int,class CScrollBar *)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+void __thiscall
+FID_conflict_OnHScroll(void *this,undefined4 param_1,undefined4 param_2,CWnd *param_3)
+
+{
+  int iVar1;
+  
+  if ((param_3 != (CWnd *)0x0) &&
+     (iVar1 = CWnd::SendChildNotifyLastMsg(param_3,(long *)0x0), iVar1 != 0)) {
+    return;
+  }
+  CWnd::Default(this);
+  return;
+}
+
+
+
+//==================== OnEnterIdle @ 0x0041F92E ====================
+
+/* Library Function - Single Match
+    protected: void __thiscall CWnd::OnEnterIdle(unsigned int,class CWnd *)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+void __thiscall CWnd::OnEnterIdle(CWnd *this,uint param_1,CWnd *param_2)
+
+{
+  BOOL BVar1;
+  MSG local_20;
+  
+  while( true ) {
+    BVar1 = PeekMessageW(&local_20,(HWND)0x0,0x121,0x121,1);
+    if (BVar1 == 0) break;
+    DispatchMessageW(&local_20);
+  }
+  Default(this);
+  return;
+}
+
+
+
+//==================== OnCtlColor @ 0x0041F970 ====================
+
+/* Library Function - Single Match
+    protected: struct HBRUSH__ * __thiscall CWnd::OnCtlColor(class CDC *,class CWnd *,unsigned int)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+HBRUSH__ * __thiscall CWnd::OnCtlColor(CWnd *this,CDC *param_1,CWnd *param_2,uint param_3)
+
+{
+  int iVar1;
+  
+  iVar1 = SendChildNotifyLastMsg(param_2,(long *)&param_2);
+  if (iVar1 == 0) {
+    param_2 = (CWnd *)Default(this);
+  }
+  return (HBRUSH__ *)param_2;
+}
+
+
+
+//==================== FID_conflict:OnCharToItem @ 0x0041FD28 ====================
+
+/* Library Function - Multiple Matches With Different Base Names
+    protected: int __thiscall CWnd::OnCharToItem(unsigned int,class CListBox *,unsigned int)
+    protected: int __thiscall CWnd::OnVKeyToItem(unsigned int,class CListBox *,unsigned int)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+CWnd * __thiscall FID_conflict_OnCharToItem(void *this,undefined4 param_1,CWnd *param_2)
+
+{
+  int iVar1;
+  
+  if ((param_2 == (CWnd *)0x0) ||
+     (iVar1 = CWnd::SendChildNotifyLastMsg(param_2,(long *)&param_2), iVar1 == 0)) {
+    param_2 = (CWnd *)CWnd::Default(this);
+  }
+  return param_2;
+}
+
+
+
+//==================== OnMeasureItem @ 0x0041FD55 ====================
+
+/* Library Function - Single Match
+    protected: void __thiscall CWnd::OnMeasureItem(int,struct tagMEASUREITEMSTRUCT *)
+   
+   Library: Visual Studio 2008 Release */
+
+void __thiscall CWnd::OnMeasureItem(CWnd *this,int param_1,tagMEASUREITEMSTRUCT *param_2)
+
+{
+  CNoTrackObject *pCVar1;
+  CMenu *pCVar2;
+  CWnd *this_00;
+  int iVar3;
+  
+  if (*(int *)param_2 != 1) {
+    this_00 = GetDescendantWindow(*(HWND__ **)(this + 0x20),*(int *)(param_2 + 4),1);
+    if ((this_00 != (CWnd *)0x0) &&
+       (iVar3 = SendChildNotifyLastMsg(this_00,(long *)0x0), iVar3 != 0)) {
+      return;
+    }
+LAB_0041fdd1:
+    Default(this);
+    return;
+  }
+  pCVar1 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar1 != (CNoTrackObject *)0x0) {
+    if (*(int *)(pCVar1 + 0x74) == *(int *)(this + 0x20)) {
+      pCVar2 = CMenu::FromHandle(*(HMENU__ **)(pCVar1 + 0x78));
+    }
+    else {
+      pCVar2 = (CMenu *)(**(code **)(*(int *)this + 0x6c))();
+    }
+    if (pCVar2 != (CMenu *)0x0) {
+      pCVar2 = _AfxFindPopupMenuFromID(pCVar2,*(uint *)(param_2 + 8));
+      if (pCVar2 != (CMenu *)0x0) {
+        (**(code **)(*(int *)pCVar2 + 0x10))(param_2);
+      }
+      goto LAB_0041fdd1;
+    }
+  }
+                    /* WARNING: Subroutine does not return */
+  FUN_0041b278();
+}
+
+
+
+//==================== OnParentNotify @ 0x0041FF7D ====================
+
+/* Library Function - Single Match
+    protected: void __thiscall CWnd::OnParentNotify(unsigned int,long)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+void __thiscall CWnd::OnParentNotify(CWnd *this,uint param_1,long param_2)
+
+{
+  int iVar1;
+  
+  if ((((short)param_1 == 1) || ((short)param_1 == 2)) &&
+     (iVar1 = ReflectLastMsg((HWND__ *)param_2,(long *)0x0), iVar1 != 0)) {
+    return;
+  }
+  Default(this);
+  return;
+}
+
+
+
+//==================== OnDragList @ 0x0041FFAD ====================
+
+/* Library Function - Single Match
+    protected: long __thiscall CWnd::OnDragList(unsigned int,long)
+   
+   Libraries: Visual Studio 2005 Release, Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+long __thiscall CWnd::OnDragList(CWnd *this,uint param_1,long param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = ReflectLastMsg(*(HWND__ **)(param_2 + 4),&param_2);
+  if (iVar1 == 0) {
+    param_2 = Default(this);
+  }
+  return param_2;
+}
+
+
+
+//==================== OnDrawItem @ 0x004206D2 ====================
+
+/* Library Function - Single Match
+    protected: void __thiscall CWnd::OnDrawItem(int,struct tagDRAWITEMSTRUCT *)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+void __thiscall CWnd::OnDrawItem(CWnd *this,int param_1,tagDRAWITEMSTRUCT *param_2)
+
+{
+  CMenu *pCVar1;
+  int iVar2;
+  
+  if ((*(int *)param_2 == 1) &&
+     (pCVar1 = CMenu::FromHandlePermanent(*(HMENU__ **)(param_2 + 0x14)), pCVar1 != (CMenu *)0x0)) {
+    (**(code **)(*(int *)pCVar1 + 0xc))(param_2);
+    return;
+  }
+  iVar2 = ReflectLastMsg(*(HWND__ **)(param_2 + 0x14),(long *)0x0);
+  if (iVar2 == 0) {
+    Default(this);
+  }
+  return;
+}
+
+
+
+//==================== OnCompareItem @ 0x00420714 ====================
+
+/* Library Function - Single Match
+    protected: int __thiscall CWnd::OnCompareItem(int,struct tagCOMPAREITEMSTRUCT *)
+   
+   Libraries: Visual Studio 2005 Release, Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+int __thiscall CWnd::OnCompareItem(CWnd *this,int param_1,tagCOMPAREITEMSTRUCT *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = ReflectLastMsg(*(HWND__ **)(param_2 + 8),(long *)&param_2);
+  if (iVar1 == 0) {
+    param_2 = (tagCOMPAREITEMSTRUCT *)Default(this);
+  }
+  return (int)param_2;
+}
+
+
+
+//==================== OnDeleteItem @ 0x00420740 ====================
+
+/* Library Function - Single Match
+    protected: void __thiscall CWnd::OnDeleteItem(int,struct tagDELETEITEMSTRUCT *)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+void __thiscall CWnd::OnDeleteItem(CWnd *this,int param_1,tagDELETEITEMSTRUCT *param_2)
+
+{
+  int iVar1;
+  
+  iVar1 = ReflectLastMsg(*(HWND__ **)(param_2 + 0xc),(long *)0x0);
+  if (iVar1 == 0) {
+    Default(this);
+  }
+  return;
+}
+
+
+
+//==================== Handler_00420972 @ 0x00420972 ====================
+
+void Handler_00420972(void)
+
+{
+  CNoTrackObject *pCVar1;
+  AFX_MODULE_STATE *pAVar2;
+  ulong uVar3;
+  CWnd *in_ECX;
+  undefined4 unaff_ESI;
+  
+  pAVar2 = AfxGetModuleState();
+  if ((*(int *)(pAVar2 + 4) != 0) && (*(CWnd **)(*(int *)(pAVar2 + 4) + 0x20) == in_ECX)) {
+    FUN_00431f15(0x47ee10);
+  }
+  uVar3 = CWnd::GetExStyle(in_ECX);
+  if ((uVar3 & 0x40000000) == 0) {
+    CWnd::SendMessageToDescendants(*(HWND__ **)(in_ECX + 0x20),0x15,0,0,1,1);
+  }
+  pCVar1 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar1 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  (**(code **)(*(int *)in_ECX + 0x118))
+            (*(undefined4 *)(pCVar1 + 0x5c),*(undefined4 *)(pCVar1 + 0x60),
+             *(undefined4 *)(pCVar1 + 100),unaff_ESI);
+  return;
+}
+
+
+
+//==================== OnDevModeChange @ 0x004209BA ====================
+
+/* Library Function - Single Match
+    protected: void __thiscall CWnd::OnDevModeChange(wchar_t *)
+   
+   Libraries: Visual Studio 2008 Release, Visual Studio 2010 Release */
+
+void __thiscall CWnd::OnDevModeChange(CWnd *this,wchar_t *param_1)
+
+{
+  CWinApp *this_00;
+  AFX_MODULE_STATE *pAVar1;
+  ulong uVar2;
+  tagMSG *ptVar3;
+  
+  pAVar1 = AfxGetModuleState();
+  this_00 = *(CWinApp **)(pAVar1 + 4);
+  if ((this_00 != (CWinApp *)0x0) && (*(CWnd **)(this_00 + 0x20) == this)) {
+    CWinApp::DevModeChange(this_00,param_1);
+  }
+  uVar2 = GetExStyle(this);
+  if ((uVar2 & 0x40000000) == 0) {
+    ptVar3 = GetCurrentMessage();
+    SendMessageToDescendants
+              (*(HWND__ **)(this + 0x20),ptVar3->message,ptVar3->wParam,ptVar3->lParam,1,1);
+  }
+  return;
+}
+
+
+
+//==================== Handler_00420A0A @ 0x00420A0A ====================
+
+void Handler_00420A0A(void)
+
+{
+  CWnd *pCVar1;
+  ulong uVar2;
+  tagMSG *ptVar3;
+  CWnd *in_ECX;
+  
+  pCVar1 = AfxGetMainWnd();
+  if (pCVar1 == in_ECX) {
+    FUN_00431f5b(0x47ee10);
+  }
+  uVar2 = CWnd::GetExStyle(in_ECX);
+  if ((uVar2 & 0x40000000) == 0) {
+    ptVar3 = CWnd::GetCurrentMessage();
+    CWnd::SendMessageToDescendants
+              (*(HWND__ **)(in_ECX + 0x20),ptVar3->message,ptVar3->wParam,ptVar3->lParam,1,1);
+  }
+  CWnd::Default(in_ECX);
+  return;
+}
+
+
+
+//==================== Handler_00421B1B @ 0x00421B1B ====================
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void Handler_00421B1B(void)
+
+{
+  int in_ECX;
+  
+  _DAT_0047d1c0 = 0;
+  if (*(int *)(in_ECX + 0x4c) != 0) {
+    (**(code **)(**(int **)(in_ECX + 0x4c) + 0x50))(0xfffffd3f);
+  }
+  Handler_00420A0A(0,0);
+  return;
+}
+
+
+
 //==================== Handler_0042683C @ 0x0042683C ====================
 
 int Handler_0042683C(void)

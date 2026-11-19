@@ -28642,6 +28642,43 @@ int AfxUnhookWindowCreate(void)
 
 
 
+//==================== Handler_0041F3AD @ 0x0041F3AD (size 61) ====================
+
+void Handler_0041F3AD(void)
+
+{
+  int *piVar1;
+  CNoTrackObject *pCVar2;
+  int *in_ECX;
+  undefined4 unaff_ESI;
+  
+  if ((int *)in_ECX[0x13] != (int *)0x0) {
+    (**(code **)(*(int *)in_ECX[0x13] + 4))(1);
+  }
+  piVar1 = (int *)in_ECX[0xb];
+  in_ECX[0x13] = 0;
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 0xc))(piVar1,0,0);
+  }
+  piVar1 = (int *)in_ECX[10];
+  if (piVar1 != (int *)0x0) {
+    (**(code **)(*piVar1 + 8))(piVar1);
+  }
+  pCVar2 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar2 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  (**(code **)(*in_ECX + 0x118))
+            (*(undefined4 *)(pCVar2 + 0x5c),*(undefined4 *)(pCVar2 + 0x60),
+             *(undefined4 *)(pCVar2 + 100),unaff_ESI);
+  return;
+}
+
+
+
 //==================== OnNcDestroy @ 0x0041F3EA (size 275) ====================
 
 /* Library Function - Single Match
@@ -29036,6 +29073,30 @@ void __thiscall CWnd::OnSetFocus(CWnd *this,CWnd *param_1)
   }
   Default(this);
   return;
+}
+
+
+
+//==================== Handler_0041F85E @ 0x0041F85E (size 108) ====================
+
+bool Handler_0041F85E(void)
+
+{
+  SHORT SVar1;
+  ulong uVar2;
+  CWnd *pCVar3;
+  long lVar4;
+  CWnd *in_ECX;
+  
+  uVar2 = CWnd::GetExStyle(in_ECX);
+  if (((((uVar2 & 0x40000000) == 0) && (pCVar3 = AfxGetMainWnd(), pCVar3 != (CWnd *)0x0)) &&
+      (SVar1 = GetKeyState(0x10), -1 < SVar1)) &&
+     ((SVar1 = GetKeyState(0x11), -1 < SVar1 && (SVar1 = GetKeyState(0x12), -1 < SVar1)))) {
+    SendMessageW(*(HWND *)(pCVar3 + 0x20),0x111,0xe146,0);
+    return true;
+  }
+  lVar4 = CWnd::Default(in_ECX);
+  return lVar4 != 0;
 }
 
 
@@ -30888,6 +30949,40 @@ CWnd * __thiscall CWnd::GetTopLevelParent(CWnd *this)
 
 
 
+//==================== Handler_00420972 @ 0x00420972 (size 72) ====================
+
+void Handler_00420972(void)
+
+{
+  CNoTrackObject *pCVar1;
+  AFX_MODULE_STATE *pAVar2;
+  ulong uVar3;
+  CWnd *in_ECX;
+  undefined4 unaff_ESI;
+  
+  pAVar2 = AfxGetModuleState();
+  if ((*(int *)(pAVar2 + 4) != 0) && (*(CWnd **)(*(int *)(pAVar2 + 4) + 0x20) == in_ECX)) {
+    FUN_00431f15(0x47ee10);
+  }
+  uVar3 = CWnd::GetExStyle(in_ECX);
+  if ((uVar3 & 0x40000000) == 0) {
+    CWnd::SendMessageToDescendants(*(HWND__ **)(in_ECX + 0x20),0x15,0,0,1,1);
+  }
+  pCVar1 = CThreadLocalObject::GetData
+                     ((CThreadLocalObject *)&DAT_0047ee04,(_func_CNoTrackObject_ptr *)&LAB_0041b294)
+  ;
+  if (pCVar1 == (CNoTrackObject *)0x0) {
+                    /* WARNING: Subroutine does not return */
+    FUN_0041b278();
+  }
+  (**(code **)(*(int *)in_ECX + 0x118))
+            (*(undefined4 *)(pCVar1 + 0x5c),*(undefined4 *)(pCVar1 + 0x60),
+             *(undefined4 *)(pCVar1 + 100),unaff_ESI);
+  return;
+}
+
+
+
 //==================== OnDevModeChange @ 0x004209BA (size 80) ====================
 
 /* Library Function - Single Match
@@ -30914,6 +31009,32 @@ void __thiscall CWnd::OnDevModeChange(CWnd *this,wchar_t *param_1)
     SendMessageToDescendants
               (*(HWND__ **)(this + 0x20),ptVar3->message,ptVar3->wParam,ptVar3->lParam,1,1);
   }
+  return;
+}
+
+
+
+//==================== Handler_00420A0A @ 0x00420A0A (size 75) ====================
+
+void Handler_00420A0A(void)
+
+{
+  CWnd *pCVar1;
+  ulong uVar2;
+  tagMSG *ptVar3;
+  CWnd *in_ECX;
+  
+  pCVar1 = AfxGetMainWnd();
+  if (pCVar1 == in_ECX) {
+    FUN_00431f5b(0x47ee10);
+  }
+  uVar2 = CWnd::GetExStyle(in_ECX);
+  if ((uVar2 & 0x40000000) == 0) {
+    ptVar3 = CWnd::GetCurrentMessage();
+    CWnd::SendMessageToDescendants
+              (*(HWND__ **)(in_ECX + 0x20),ptVar3->message,ptVar3->wParam,ptVar3->lParam,1,1);
+  }
+  CWnd::Default(in_ECX);
   return;
 }
 
@@ -31942,6 +32063,25 @@ LAB_00421aca:
     }
   }
   return 0;
+}
+
+
+
+//==================== Handler_00421B1B @ 0x00421B1B (size 44) ====================
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void Handler_00421B1B(void)
+
+{
+  int in_ECX;
+  
+  _DAT_0047d1c0 = 0;
+  if (*(int *)(in_ECX + 0x4c) != 0) {
+    (**(code **)(**(int **)(in_ECX + 0x4c) + 0x50))(0xfffffd3f);
+  }
+  Handler_00420A0A(0,0);
+  return;
 }
 
 
@@ -43076,7 +43216,7 @@ CFrameWnd * __thiscall CFrameWnd::CFrameWnd(CFrameWnd *this)
 
 
 
-//==================== Handler_004290DD @ 0x004290DD (size 151) ====================
+//==================== Handler_004290DD @ 0x004290DD (size 90) ====================
 
 void Handler_004290DD(void)
 

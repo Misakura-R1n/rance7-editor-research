@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 import pefile
-from mfc_maps import find_message_maps, entry_kind, MESSAGE_NAMES
+from mfc_maps import find_message_maps, entry_kind, MESSAGE_NAMES, REGISTERED_MESSAGE
 
 
 def main():
@@ -26,15 +26,18 @@ def main():
         lines.append(f"=== MAP 0x{message_map['descriptor']:08X} entries@0x{message_map['table']:08X} ===")
         for entry in message_map["entries"]:
             message = MESSAGE_NAMES.get(entry["message"], f"MSG_0x{entry['message']:04X}")
+            signature = (f"0x{entry['signature']:08X}" if entry["message"] == REGISTERED_MESSAGE
+                         else f"{entry['signature']:3d}")
             lines.append(f"rdata@0x{entry['address']:08X} cmdID={entry['first_id']:6d}..{entry['last_id']:6d} "
-                         f"{message:20s} {entry_kind(entry):26s} sig={entry['signature']:3d} "
+                         f"{message:20s} {entry_kind(entry):26s} sig={signature} "
                          f"handler=0x{entry['handler']:08X} code=0x{entry['code']:08X}")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     document = {"schema": 1, "sample_sha256": hashlib.sha256(args.exe.read_bytes()).hexdigest(), "maps": maps}
-    args.output.with_suffix(".json").write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8")
+    args.output.with_suffix(".json").write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8", newline="\n")
     addresses = sorted({entry["handler"] for m in maps for entry in m["entries"]})
-    (args.output.parent / "handler_addrs.txt").write_text("".join(f"0x{address:08X}\n" for address in addresses), encoding="utf-8")
+    (args.output.parent / "handler_addrs.txt").write_text("".join(f"0x{address:08X}\n" for address in addresses),
+                                                          encoding="utf-8", newline="\n")
     print(f"maps={len(maps)} entries={sum(len(m['entries']) for m in maps)} unique_handlers={len(addresses)}")
 
 

@@ -1,4 +1,4 @@
-descriptor-backed maps: 21; entries: 227
+descriptor-backed maps: 22; entries: 256
 entry layout: nMessage, nCode, nID, nLastID, nSig, pfn (24 bytes)
 === MAP 0x00461B24 entries@0x00461B30 ===
 rdata@0x00461B30 cmdID=     1..     1 WM_COMMAND           ON_COMMAND/BN_CLICKED      sig= 57 handler=0x004400D4 code=0x00000000
@@ -8,9 +8,39 @@ rdata@0x00461B78 cmdID=     0..     0 MSG_0x0366           MSG_0x0366           
 rdata@0x00461B90 cmdID=     0..     0 MSG_0x0110           MSG_0x0110                 sig= 14 handler=0x0041B716 code=0x00000000
 rdata@0x00461BA8 cmdID=     0..     0 MSG_0x0030           MSG_0x0030                 sig= 14 handler=0x0041B6EF code=0x00000000
 rdata@0x00461BC0 cmdID=     0..     0 WM_PAINT             WM_PAINT                   sig= 19 handler=0x0041B3CC code=0x00000000
+=== MAP 0x004624A4 entries@0x004624B0 ===
+rdata@0x004624B0 cmdID=     0..     0 MSG_0x0138           MSG_0x0138                 sig= 14 handler=0x0041F55C code=0x00000000
+rdata@0x004624C8 cmdID=     0..     0 MSG_0x0133           MSG_0x0133                 sig= 14 handler=0x0041F55C code=0x00000000
+rdata@0x004624E0 cmdID=     0..     0 MSG_0x0135           MSG_0x0135                 sig= 14 handler=0x0041F55C code=0x00000000
+rdata@0x004624F8 cmdID=     0..     0 MSG_0x0134           MSG_0x0134                 sig= 14 handler=0x0041F55C code=0x00000000
+rdata@0x00462510 cmdID=     0..     0 MSG_0x0136           MSG_0x0136                 sig= 14 handler=0x0041F55C code=0x00000000
+rdata@0x00462528 cmdID=     0..     0 MSG_0x0132           MSG_0x0132                 sig= 14 handler=0x0041F55C code=0x00000000
+rdata@0x00462540 cmdID=     0..     0 MSG_0x0137           MSG_0x0137                 sig= 14 handler=0x0041F55C code=0x00000000
+rdata@0x00462558 cmdID=     0..     0 MSG_0x0007           MSG_0x0007                 sig= 35 handler=0x0041F839 code=0x00000000
+rdata@0x00462570 cmdID=     0..     0 MSG_0x002B           MSG_0x002B                 sig= 46 handler=0x004206D2 code=0x00000000
+rdata@0x00462588 cmdID=     0..     0 MSG_0x002C           MSG_0x002C                 sig= 46 handler=0x0041FD55 code=0x00000000
+rdata@0x004625A0 cmdID=     0..     0 MSG_0x0019           MSG_0x0019                 sig=  8 handler=0x0041F970 code=0x00000000
+rdata@0x004625B8 cmdID=     0..     0 MSG_0x0039           MSG_0x0039                 sig= 47 handler=0x00420714 code=0x00000000
+rdata@0x004625D0 cmdID=     0..     0 MSG_0x0121           MSG_0x0121                 sig= 26 handler=0x0041F92E code=0x00000000
+rdata@0x004625E8 cmdID=     0..     0 MSG_0x0114           MSG_0x0114                 sig= 42 handler=0x0041F908 code=0x00000000
+rdata@0x00462600 cmdID=     0..     0 MSG_0x0115           MSG_0x0115                 sig= 42 handler=0x0041F908 code=0x00000000
+rdata@0x00462618 cmdID=     0..     0 MSG_0x002D           MSG_0x002D                 sig= 46 handler=0x00420740 code=0x00000000
+rdata@0x00462630 cmdID=     0..     0 MSG_0x002F           MSG_0x002F                 sig= 10 handler=0x0041FD28 code=0x00000000
+rdata@0x00462648 cmdID=     0..     0 MSG_0x002E           MSG_0x002E                 sig= 10 handler=0x0041FD28 code=0x00000000
+rdata@0x00462660 cmdID=     0..     0 MSG_0x0082           MSG_0x0082                 sig= 19 handler=0x0041F3EA code=0x00000000
+rdata@0x00462678 cmdID=     0..     0 MSG_0x0210           MSG_0x0210                 sig= 30 handler=0x0041FF7D code=0x00000000
+rdata@0x00462690 cmdID=     0..     0 MSG_0x0015           MSG_0x0015                 sig= 19 handler=0x00420972 code=0x00000000
+rdata@0x004626A8 cmdID=     0..     0 MSG_0x001B           MSG_0x001B                 sig= 44 handler=0x004209BA code=0x00000000
+rdata@0x004626C0 cmdID=     0..     0 MSG_0x0053           MSG_0x0053                 sig=  7 handler=0x0041F85E code=0x00000000
+rdata@0x004626D8 cmdID=     0..     0 MSG_0x001A           MSG_0x001A                 sig= 45 handler=0x00421B1B code=0x00000000
+rdata@0x004626F0 cmdID=     0..     0 WM_DESTROY           WM_DESTROY                 sig= 19 handler=0x0041F3AD code=0x00000000
+rdata@0x00462708 cmdID=     0..     0 MSG_0x036E           MSG_0x036E                 sig= 14 handler=0x0041E136 code=0x00000000
+rdata@0x00462720 cmdID=     0..     0 MSG_0x007E           MSG_0x007E                 sig= 14 handler=0x00420A0A code=0x00000000
+rdata@0x00462738 cmdID=     0..     0 REGISTERED_MESSAGE   ON_REGISTERED_MESSAGE      sig=0x0047E9F0 handler=0x0041FFAD code=0x00000000
+rdata@0x00462750 cmdID=     0..     0 MSG_0x003D           MSG_0x003D                 sig= 14 handler=0x0041F8CA code=0x00000000
 === MAP 0x0046388C entries@0x00463898 ===
 rdata@0x00463898 cmdID=     0..     0 MSG_0x0116           MSG_0x0116                 sig= 33 handler=0x00426B2D code=0x00000000
-rdata@0x004638B0 cmdID=     0..     0 MSG_0x0117           MSG_0x0117                 sig= 34 handler=0x00427C54 code=0x00000000
+rdata@0x004638B0 cmdID=     0..     0 WM_INITMENUPOPUP     WM_INITMENUPOPUP           sig= 34 handler=0x00427C54 code=0x00000000
 rdata@0x004638C8 cmdID=     0..     0 MSG_0x011F           MSG_0x011F                 sig= 52 handler=0x00427DF5 code=0x00000000
 rdata@0x004638E0 cmdID=     0..     0 MSG_0x0120           MSG_0x0120                 sig= 15 handler=0x00428642 code=0x00000000
 rdata@0x004638F8 cmdID=     0..     0 MSG_0x0375           MSG_0x0375                 sig= 14 handler=0x00427F9A code=0x00000000

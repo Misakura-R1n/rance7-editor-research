@@ -8,7 +8,7 @@ Rance7Editor v1.07（《战国兰斯》内存修改器）的静态分析资料�
 
 1. [逆向分析报告](逆向分析报告.md)：程序结构、内存访问方式、功能入口和字段推断。
 2. [命令映射](analysis/cmd_map.txt)：102 条菜单关联记录，覆盖 79 个菜单命令 ID。
-3. [定向反编译](decompiled/handlers.c)：204 个不同处理函数（含 MFC 基类）；[函数清单](decompiled/functions.csv)与[全量反编译](decompiled/all_functions.c)用于继续追踪调用。
+3. [定向反编译](decompiled/handlers.c)收录 225 个不同消息处理入口（含 MFC 基类）。可通过[函数清单](decompiled/functions.csv)和[全量反编译](decompiled/all_functions.c)追踪调用。
 4. [来源与许可说明](NOTICE.md)。
 
 ## 分析对象
@@ -21,7 +21,7 @@ Rance7Editor v1.07（《战国兰斯》内存修改器）的静态分析资料�
 | 文件大小 | 716,288 字节 |
 | SHA-256 | `bd5d6330da4a27bba88a7754466a53d9fa0b530b8f7e978660d2f3c15255557d` |
 | 格式 | PE32 / x86，MFC |
-| 分析日期 | 2026-10-05 |
+| 最近静态复核 | 2026-11-19 |
 | 分析工具 | Ghidra 12.1.3、Python / pefile |
 
 文中的地址、字段和调用关系均对应上述样本，依据反编译代码、PE 资源和调用点分析。其他修改器或游戏版本需要重新核对。
@@ -30,7 +30,7 @@ Rance7Editor v1.07（《战国兰斯》内存修改器）的静态分析资料�
 
 ```text
 analysis/          导入表、字符串、消息映射及处理函数地址
-decompiled/        3,589 个函数的伪 C、函数清单及定向反编译
+decompiled/        3,594 个函数的伪 C、函数清单及定向反编译
 resources/         15 个对话框、菜单、字符串表和版本信息的文本转储
 scripts/           PE 解析、命令映射整理和静态读写调用统计
 ghidra_scripts/    Ghidra Java 导出脚本
@@ -93,13 +93,13 @@ New-Item -ItemType Directory -Force generated/ghidra_projects | Out-Null
 .\.venv\Scripts\python.exe scripts/verify_project.py $sample
 ```
 
-完整验证会重新生成 Python 分析结果并与归档比较。在 Windows 上还会通过系统资源接口比较菜单树和字符串编号，样本仅作为资源数据读取。它检查导出覆盖率与资料一致性，不验证所有反编译类型和游戏运行语义。
+完整验证会从样本重新生成 Python 归档，检查消息表字节、基类链、注册消息及处理入口覆盖率，并核对基本信息和武将的关键字段。在 Windows 上还会通过系统资源接口比较菜单树和字符串编号，样本仅作为数据读取。
 
 ## 已知限制
 
 - 反编译器推断的类型、调用约定和变量名可能不准确；全文也包含 CRT/MFC 等库函数。
 - 解析脚本支持范围与二进制结构见 [格式说明](docs/FORMATS.md)。数据节字符串输出为候选列表，可能包含非字符串数据。
-- 武将导出文件格式以及部分控件与结构字段的对应关系仍待补充。
+- 主报告列出了武将列表、游戏内存与磁盘文件各自的读写路径。`.psi` 记录的完整字段表、部分控件的字段映射以及游戏运行时表现仍待验证。
 
 ## 来源与许可
 

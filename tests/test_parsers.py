@@ -107,29 +107,56 @@ class ResourceTests(unittest.TestCase):
 
 
 class FakeSection:
-    def __init__(self, name, rva, data, flags):
+    def __init__(self, name, rva, data, flags, virtual_size=None):
         self.Name, self.VirtualAddress, self.data, self.Characteristics = name, rva, data, flags
+        self.Misc_VirtualSize = len(data) if virtual_size is None else virtual_size
 
     def get_data(self):
         return self.data
 
 
-def fake_pe(descriptor=True, handler=0x401000, terminate=True):
+def fake_pe(descriptor=True, handler=0x401000, terminate=True, middle_entry=None):
     data = bytearray(128)
     if descriptor:
         struct.pack_into("<II", data, 0, 0x401010, 0x402020)
     # The code belongs to this row, not the following row.
     struct.pack_into("<6I", data, 32, 0x111, 0, 32848, 32848, 57, handler)
-    struct.pack_into("<6I", data, 56, 0x111, 0xFFFFFFFF, 32848, 32848, 65, 0x401030)
+    update_offset = 56
+    if middle_entry is not None:
+        struct.pack_into("<6I", data, 56, *middle_entry)
+        update_offset += 24
+    struct.pack_into("<6I", data, update_offset, 0x111, 0xFFFFFFFF, 32848, 32848, 65, 0x401030)
     if not terminate:
-        data = data[:80]
+        data = data[:update_offset + 24]
     return SimpleNamespace(FILE_HEADER=SimpleNamespace(Machine=0x14C),
                            OPTIONAL_HEADER=SimpleNamespace(Magic=0x10B, ImageBase=0x400000),
-                           sections=[FakeSection(b".text\0", 0x1000, b"\x90" * 128, 0x20000000),
-                                     FakeSection(b".rdata\0", 0x2000, bytes(data), 0x40000000)])
+                           sections=[FakeSection(b".text\0", 0x1000, b"\x90" * 128, 0x60000020),
+                                     FakeSection(b".rdata\0", 0x2000, bytes(data), 0x40000000),
+                                     FakeSection(b".data\0", 0x3000, bytes(4), 0xC0000040, virtual_size=32)])
 
 
 class MessageMapTests(unittest.TestCase):
+    def test_registered_message_preserves_table_and_virtual_data_pointer(self):
+        row = (0xC000, 0, 0, 0, 0x40301C, 0x401050)
+        entries = find_message_maps(fake_pe(middle_entry=row))[0]["entries"]
+        self.assertEqual([entry_kind(e) for e in entries],
+                         ["ON_COMMAND/BN_CLICKED", "ON_REGISTERED_MESSAGE", "ON_UPDATE_COMMAND_UI"])
+        self.assertEqual((entries[1]["signature"], entries[1]["handler"]), row[4:])
+
+    def test_registered_message_requires_mapped_uint_and_zero_ids(self):
+        for row in ((0xC000, 0, 0, 0, 57, 0x401050),
+                    (0xC000, 0, 0, 0, 0x401010, 0x401050),
+                    (0xC000, 0, 0, 0, 0x40301E, 0x401050),
+                    (0xC000, 0, 1, 1, 0x40301C, 0x401050),
+                    (0xC000, 1, 0, 0, 0x40301C, 0x401050),
+                    (0x117, 0, 0, 0, 0x40301C, 0x401050)):
+            with self.subTest(row=row):
+                self.assertEqual(find_message_maps(fake_pe(middle_entry=row)), [])
+
+    def test_init_menu_popup_message_number(self):
+        self.assertEqual(entry_kind({"message": 0x117, "code": 0}), "WM_INITMENUPOPUP")
+        self.assertNotEqual(entry_kind({"message": 0x118, "code": 0}), "WM_INITMENUPOPUP")
+
     def test_command_and_update_use_own_entry_fields(self):
         maps = find_message_maps(fake_pe())
         self.assertEqual(len(maps), 1)
