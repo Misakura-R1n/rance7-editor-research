@@ -1,45 +1,72 @@
 # 资源与消息表格式
 
-这些读取器针对 README 中列出的 PE32 x86 样本。地址使用 PE 首选映像基址下的 VA；运行时模块重定位后不能直接使用这些绝对地址。
+本文说明脚本怎样从 `Rance7Editor.exe` 中读出菜单、对话框和消息表。脚本按这个 32 位 Windows 样本（PE32，x86）的格式读取。文中用 `0x` 开头的数表示十六进制。**偏移**表示离某个起点多少字节，例如 `+0x14` 表示从起点向后数 20 个字节。
 
-## PE 资源
+导出文件里的程序地址按 EXE 预设的加载位置计算，这种地址称为虚拟地址（VA）。如果 Windows 把程序加载到别处，实际地址也会跟着变化。[样本版本与校验值](../README.md)
 
-- **菜单**：标准 `MENUITEMTEMPLATE` 使用 `0x0010` 标识子菜单，`0x0080` 结束当前层的最后一个条目。子菜单条目没有命令 ID，普通条目和分隔线都需要读取完整的 ID 与字符串。菜单头的 offset 按字节跳过。当前读取器不支持 MENUEX，遇到该格式会报错。
-- **字符串表**：每个资源块固定包含 16 个槽位，空字符串也占位。编号为 `(块编号 - 1) × 16 + 槽位索引`，不能按非空字符串重新编号。
-- **对话框**：控件按 DWORD 对齐。类序号 `0x80`–`0x85` 分别表示 BUTTON、EDIT、STATIC、LISTBOX、SCROLLBAR、COMBOBOX；序号按整数读取。普通模板的非零 creation-data 长度包含长度 WORD，扩展模板的 extraCount 不包含它。
-- **版本资源**：`pefile` 返回的版本字符串字节按 UTF-8 解码，文本输出保留原中文。
+## 菜单、字符串和对话框
 
-结构依据：[MENUITEMTEMPLATE](https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-menuitemtemplate)、[MENUITEMTEMPLATEHEADER](https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-menuitemtemplateheader)、[STRINGTABLE](https://learn.microsoft.com/en-us/windows/win32/menurc/stringtable-resource)、[DLGITEMTEMPLATE](https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-dlgitemtemplate)、[DLGITEMTEMPLATEEX](https://learn.microsoft.com/en-us/windows/win32/dlgbox/dlgitemtemplateex)。
+### 菜单
 
-## MFC 消息表
+标准菜单（`MENUITEMTEMPLATE`）在开头用 `offset` 指明应跳过多少字节，之后才是菜单项。读取一项时，标志 `0x0010` 表示它有子菜单，`0x0080` 表示它是这一层的最后一项。
 
-本样本的 x86 `AFX_MSGMAP_ENTRY` 为 24 字节：
+子菜单本身没有命令编号。普通菜单项和分隔线都有编号和文字两部分，即使文字为空，也要把这两部分读完。遇到扩展菜单格式 `MENUEX` 时，脚本会报错。
 
-| 相对偏移 | DWORD 字段 |
+### 字符串表
+
+界面文字按块存放，每块有 16 个位置，空字符串也占一个编号。字符串编号等于 `(块编号 - 1) × 16 + 块内位置`，块内位置从 0 起算。例如第 1 块使用编号 0 至 15，即使其中有空位，第 2 块还是从 16 开始。
+
+### 对话框和版本信息
+
+按钮、输入框等界面元素统称为控件。每个控件在模板中的起始字节位置都是 4 的倍数。控件类型可用整数编号表示，`0x80` 至 `0x85` 依次对应按钮（BUTTON）、输入框（EDIT）、静态文字或图片（STATIC）、列表框（LISTBOX）、滚动条（SCROLLBAR）和组合框（COMBOBOX）。
+
+控件后面可以带一段附加数据（`creation-data`）。标准模板用两个字节（WORD）记录这段数据的长度。只要长度非零，数值就包含记录长度的这两个字节。扩展模板里的 `extraCount` 只计算后面附加数据的字节数。
+
+版本信息由 `pefile` 读取，脚本用 UTF-8 解码返回的字节，保留其中的中文。
+
+可按资源类型查阅微软的格式定义。[菜单项](https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-menuitemtemplate) · [菜单头](https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-menuitemtemplateheader) · [字符串表](https://learn.microsoft.com/en-us/windows/win32/menurc/stringtable-resource) · [标准对话框控件](https://learn.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-dlgitemtemplate) · [扩展对话框控件](https://learn.microsoft.com/en-us/windows/win32/dlgbox/dlgitemtemplateex)
+
+## 窗口消息怎样找到处理函数
+
+修改器使用 MFC 界面库。点击菜单、按下按钮等操作会产生窗口消息，MFC 查表找到负责处理的函数。本样本里的一条记录（`AFX_MSGMAP_ENTRY`）占 24 字节。下面六个字段各占 4 字节（一个 DWORD）。
+
+| 距记录开头的偏移 | 字段 | 含义 |
+|---|---|---|
+| `+0x00` | `nMessage` | 窗口消息编号 |
+| `+0x04` | `nCode` | 同一消息下的具体操作，例如执行菜单命令或更新菜单状态 |
+| `+0x08` | `nID` | 适用的命令或控件编号范围的起点 |
+| `+0x0C` | `nLastID` | 上述编号范围的终点 |
+| `+0x10` | `nSig` | 普通消息在这里记录怎样调用函数，注册消息在这里记录一个地址 |
+| `+0x14` | `pfn` | 处理函数的起始地址 |
+
+脚本先在只读数据区（`.rdata`）查找**描述符**。描述符给出这张表的起始地址，以及怎样找到上一级窗口类（基类）的表。脚本从起始地址逐条读取，遇到六个字段全为零的记录就停止，同时检查每个处理函数的地址是否落在能执行代码的区域。本样本共找到 22 张非空表。验证脚本还会逐级查找基类的表，检查其中的非空表是否全部收录。
+
+### 普通消息和注册消息
+
+对普通消息，脚本接受 `nSig` 为 1 至 255 的记录，这个编号告诉 MFC 怎样调用处理函数。
+
+有些消息的编号要在程序运行时才确定，称为注册消息。它们在表内使用标记 `nMessage=0xC000`，`nCode`、`nID` 和 `nLastID` 都是 0。此时 `nSig` 指向保存实际消息编号的变量。脚本检查这个变量（UINT）的 4 个字节是否都在可读且不可执行的数据区内。程序加载时由系统填零的部分也算在内。
+
+例如，`CWnd::OnDragList` 的记录位于 `0x462738`。其中 `nSig=0x47E9F0`，意思是运行时到 `0x47E9F0` 读取实际消息编号。JSON 的 `signature` 保留这个原始数值，文本清单用十六进制显示地址。
+
+### 菜单命令
+
+对 `WM_COMMAND` 消息，当前记录的 `nCode=0` 表示执行命令或处理按钮点击，`nCode=0xFFFFFFFF` 表示更新菜单状态。同一个菜单编号可以对应多条记录，也可以出现在不同窗口类的表里。[MFC 消息表说明](https://learn.microsoft.com/en-us/cpp/mfc/tn006-message-maps)
+
+| 导出文件 | 可以查到什么 |
 |---|---|
-| +0x00 | nMessage |
-| +0x04 | nCode |
-| +0x08 | nID |
-| +0x0C | nLastID |
-| +0x10 | nSig |
-| +0x14 | pfn |
+| [cmd_map.txt](../analysis/cmd_map.txt) | 菜单资源中出现的命令、菜单路径和对应函数。不同窗口类使用同一编号时，分别保留记录。 |
+| [msgmap_handlers.json](../analysis/msgmap_handlers.json) | 每张表的内容、每条记录的地址和样本 SHA-256。`make_cmd_map.py` 会核对这个校验值，再从样本读取菜单路径。 |
+| [handler_addrs.txt](../analysis/handler_addrs.txt) | 所有不同的处理函数地址，包括从 MFC 基类继承的函数。 |
 
-读取器在 `.rdata` 中寻找引用条目数组的描述符，逐项读取到全零终止项，并检查处理入口落在可执行节。归档收录 22 张非空表。验证器还沿样本的基类取表函数检查继承链中引用的非空表是否全部收录。
+## 怎样读反编译结果和文字清单
 
-普通消息的 `nSig` 是 1–255 范围内的调用签名编号。注册消息使用标记 `nMessage=0xC000`，`nCode`、`nID` 和 `nLastID` 均为 0。此时 `nSig` 保存运行时消息号变量的地址，读取器检查完整的 4 字节 UINT 位于可读、不可执行节的虚拟范围内。该范围包括加载时补零的区域。样本的 `CWnd::OnDragList` 条目位于 `0x462738`，其中 `nSig=0x47E9F0`。JSON 的 `signature` 字段保留这个原始 DWORD，文本转储将该地址显示为十六进制。
+`all_functions.c` 和 `handlers.c` 是 Ghidra 根据机器指令写出的伪 C。有些函数把参数放在 CPU 的寄存器里，几个函数也可能共用末尾几条指令，或在运行时才确定要跳到哪里。以下三处可以用原始指令核对。
 
-`nMessage=WM_COMMAND` 时，当前条目的 `nCode=0` 表示命令/按钮单击处理，`nCode=0xFFFFFFFF` 表示界面状态更新。`cmd_map.txt` 只列出在菜单资源中出现的命令，保留不同类消息表中的同 ID 记录；它不是所有窗口消息的清单。
+- `FUN_00408C70` 从 ESI 寄存器指向的数据中取游戏进程句柄，从 EDX 寄存器取模块起始地址。只看伪 C 中的参数列表会漏掉这两项。
+- `FUN_004088D0` 和 `FUN_00408A90` 在伪 C 里都标成 `void`，看起来没有返回值。实际指令用 EAX 寄存器返回结果，前者返回游戏进程编号（PID），后者在找到 VM 模块时返回它的起始地址。
+- 解锁游戏插图（CG）、音乐和通关奖励时，菜单函数在末尾直接跳到执行解锁的循环。三个循环分别位于 `0x40AB60`、`0x40ABE0`、`0x40AC60`。Ghidra 把循环展开到菜单函数的伪 C 中，读者很难看出它在比较哪个值。看原始指令就很明确，例如 CG 循环在 `0x40ABA2` 把刚读出的 4 字节数值与 1 比较，已经是 1 就跳过写入。
 
-`msgmap_handlers.json` 包含结构化表、条目地址和样本 SHA-256。`make_cmd_map.py` 校验输入样本的哈希，菜单路径直接从样本提取。`handler_addrs.txt` 列出所有表中的不同处理函数地址，包含 MFC 基类函数。
+`functions.csv` 每行列出一个函数。如果名称或参数里有逗号，CSV 会用引号把整个字段括起来。`size` 统计 Ghidra 归入该函数的字节数，这些字节在程序里可能分布在几处。
 
-消息与处理函数规则见 [MFC TN006: Message Maps](https://learn.microsoft.com/en-us/cpp/mfc/tn006-message-maps)。
-
-## 反编译与字符串候选
-
-`all_functions.c` 和 `handlers.c` 保留 Ghidra 自动推断的伪 C。函数原型、寄存器参数、共享尾部和间接跳转可能推断不完整，涉及读写条件时应同时查看机器指令。例如 `FUN_00408C70` 使用 ESI 上下文与 EDX 参数，伪 C 的常规调用约定不能完整表示其接口；`FUN_004088D0` / `FUN_00408A90` 被误推断为 `void`，实际通过 EAX 返回 PID / VM 模块基址。
-
-CG、音乐和通关奖励入口的尾跳转被反编译器展开，入口伪 C 中的比较表达式丢失了与读取缓冲区的联系。三段实际循环分别位于 `0x40AB60`、`0x40ABE0`、`0x40AC60`。例如 CG 循环在 `0x40ABA2` 比较刚读取的 DWORD 与 1，值相等就跳过写入。
-
-`functions.csv` 的名称与参数列按 CSV 规则引用，名称中的逗号不会增加列数。`size` 是 Ghidra 函数体包含的地址数，不代表一个连续的字节区间。
-
-数据节中的 GBK/UTF-8 与 UTF-16LE 提取结果是字符串候选，原始数据也可能恰好满足字符过滤条件；地址用于回查字节，候选列表不能用于证明字段语义。
+文字清单列出数据区中能按 GBK、UTF-8 或 UTF-16LE 读成文字的字节。普通数据偶尔也符合这个条件。要确认一段文字指的是什么，可以用清单里的地址回查原始字节，再看哪些代码使用了它。
